@@ -372,10 +372,9 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
 
     nuevas = reviews.to_dict(orient="records")
 
-    # Merge con histórico: nunca pisar reseñas ya guardadas.
-    # Clave de deduplicación: (edificio, usuario) — un usuario solo puede
-    # tener una reseña por lugar en Google Maps.
-    # Ganamos siempre la fecha más antigua (más precisa históricamente).
+    # Merge con histórico: agregar solo reseñas más nuevas que el último
+    # registro existente por edificio. Así nunca pisamos granularidad histórica
+    # y evitamos duplicados cuando Google Maps pasa de "hace X meses" a "hace X años".
     historico = []
     if os.path.exists(OUTPUT_REVIEWS):
         with open(OUTPUT_REVIEWS, encoding="utf-8") as f:
@@ -384,26 +383,31 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
             except Exception:
                 historico = []
 
-    indice = {(r["edificio"], r["usuario"]): r for r in historico}
+    # Fecha más reciente ya registrada por edificio
+    ultimo_registro = {}
+    for r in historico:
+        ed, fecha = r.get("edificio"), r.get("fecha")
+        if fecha and (ed not in ultimo_registro or fecha > ultimo_registro[ed]):
+            ultimo_registro[ed] = fecha
 
+    hoy = datetime.now().strftime("%Y-%m-%d")
     nuevas_agregadas = 0
     for r in nuevas:
-        clave = (r["edificio"], r["usuario"])
-        if clave not in indice:
-            indice[clave] = r
+        ed    = r.get("edificio")
+        fecha = r.get("fecha")
+        if not fecha:
+            continue
+        corte = ultimo_registro.get(ed, "0000-00-00")
+        # Solo agregar si es más reciente que el último registro Y no es futura
+        if corte < fecha <= hoy:
+            historico.append(r)
             nuevas_agregadas += 1
-        else:
-            # Conservar la fecha más antigua (mejor granularidad histórica)
-            fecha_existente = indice[clave].get("fecha")
-            fecha_nueva     = r.get("fecha")
-            if fecha_existente and fecha_nueva and fecha_nueva < fecha_existente:
-                indice[clave]["fecha"] = fecha_nueva
 
-    merged = sorted(indice.values(), key=lambda r: (r["edificio"], r.get("fecha") or ""))
-    print(f"Reseñas nuevas agregadas: {nuevas_agregadas} | Total histórico: {len(merged)}")
+    historico.sort(key=lambda r: (r.get("edificio", ""), r.get("fecha") or ""))
+    print(f"Reseñas nuevas agregadas: {nuevas_agregadas} | Total histórico: {len(historico)}")
 
     with open(OUTPUT_REVIEWS, "w", encoding="utf-8") as f:
-        json.dump(merged, f, ensure_ascii=False, indent=2, default=_json_serializer)
+        json.dump(historico, f, ensure_ascii=False, indent=2, default=_json_serializer)
     print(f"reviews.json guardado en: {OUTPUT_REVIEWS}")
 
     metrics = df_metrics.copy()
