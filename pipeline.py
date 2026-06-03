@@ -370,14 +370,40 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
         lambda d: d.strftime("%Y-%m-%d") if pd.notna(d) else None
     )
 
+    nuevas = reviews.to_dict(orient="records")
+
+    # Merge con histórico: nunca pisar reseñas ya guardadas.
+    # Clave de deduplicación: (edificio, usuario) — un usuario solo puede
+    # tener una reseña por lugar en Google Maps.
+    # Ganamos siempre la fecha más antigua (más precisa históricamente).
+    historico = []
+    if os.path.exists(OUTPUT_REVIEWS):
+        with open(OUTPUT_REVIEWS, encoding="utf-8") as f:
+            try:
+                historico = json.load(f)
+            except Exception:
+                historico = []
+
+    indice = {(r["edificio"], r["usuario"]): r for r in historico}
+
+    nuevas_agregadas = 0
+    for r in nuevas:
+        clave = (r["edificio"], r["usuario"])
+        if clave not in indice:
+            indice[clave] = r
+            nuevas_agregadas += 1
+        else:
+            # Conservar la fecha más antigua (mejor granularidad histórica)
+            fecha_existente = indice[clave].get("fecha")
+            fecha_nueva     = r.get("fecha")
+            if fecha_existente and fecha_nueva and fecha_nueva < fecha_existente:
+                indice[clave]["fecha"] = fecha_nueva
+
+    merged = sorted(indice.values(), key=lambda r: (r["edificio"], r.get("fecha") or ""))
+    print(f"Reseñas nuevas agregadas: {nuevas_agregadas} | Total histórico: {len(merged)}")
+
     with open(OUTPUT_REVIEWS, "w", encoding="utf-8") as f:
-        json.dump(
-            reviews.to_dict(orient="records"),
-            f,
-            ensure_ascii=False,
-            indent=2,
-            default=_json_serializer,
-        )
+        json.dump(merged, f, ensure_ascii=False, indent=2, default=_json_serializer)
     print(f"reviews.json guardado en: {OUTPUT_REVIEWS}")
 
     metrics = df_metrics.copy()
