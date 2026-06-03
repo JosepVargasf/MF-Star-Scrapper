@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useAuth } from './hooks/useAuth'
+import LoginScreen from './components/LoginScreen'
 import { useData } from './hooks/useData'
 import KpiCards from './components/KpiCards'
 import RankingEdificios from './components/RankingEdificios'
@@ -10,6 +12,16 @@ import VolumenReseñas from './components/VolumenReseñas'
 import './App.css'
 
 export default function App() {
+  const { user, error: authError, login, logout } = useAuth()
+
+  // user=undefined → cargando auth; user=null → no autenticado
+  if (user === undefined) return <div className="splash"><div className="spinner" /></div>
+  if (!user) return <LoginScreen onLogin={login} error={authError} />
+
+  return <Dashboard user={user} onLogout={logout} />
+}
+
+function Dashboard({ user, onLogout }) {
   const { metrics, reviews, loading, error } = useData()
   const [selectedProjects, setSelectedProjects] = useState(new Set())
 
@@ -66,6 +78,11 @@ export default function App() {
             <p>Opinión de arrendatarios · Edificios multifamily · Chile</p>
           </div>
           {lastUpdate && <div className="topbar-badge">Datos a {lastUpdate}</div>}
+          <div className="topbar-user">
+            <img src={user.photoURL} className="user-avatar" alt={user.displayName} referrerPolicy="no-referrer" />
+            <span className="user-name">{user.displayName?.split(' ')[0]}</span>
+            <button className="logout-btn" onClick={onLogout} title="Cerrar sesión">↩</button>
+          </div>
         </header>
 
         <div className="content">
