@@ -272,17 +272,12 @@ async def _extract_reviews_from_page(page: Page, building_query: str) -> list:
     return reviews
 
 
-async def fetch_reviews(building_query: str, headless: bool = True, debug: bool = False) -> list:
-    """
-    Descarga todas las reseñas de Google Maps para un edificio usando Playwright.
+MAX_RETRIES   = 3
+RETRY_BACKOFF = 5  # segundos base; se multiplica por intento (5s, 10s, 15s)
 
-    Args:
-        building_query: nombre completo del edificio (ej: 'INSITU Irarrázaval, Santiago, Chile')
-        headless: si False, abre el browser visible (útil para depurar)
 
-    Returns:
-        Lista de dicts con schema {Edificio, Fecha, Score, Texto, Usuario}
-    """
+async def _fetch_once(building_query: str, headless: bool, debug: bool) -> list:
+    """Intento único de scraping. Lanza excepción si algo falla."""
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(headless=headless)
         context = await browser.new_context(
@@ -407,12 +402,35 @@ async def fetch_reviews(building_query: str, headless: bool = True, debug: bool 
             reviews = await _extract_reviews_from_page(page, building_query)
 
         except Exception as e:
-            print(f"[ERROR] {building_query}: {type(e).__name__}: {e}")
-            reviews = []
+            await browser.close()
+            raise
         finally:
             await browser.close()
 
     return reviews
+
+
+async def fetch_reviews(building_query: str, headless: bool = True, debug: bool = False) -> list:
+    """
+    Descarga reseñas de Google Maps con reintentos automáticos (máx. MAX_RETRIES).
+    Un fallo puntual no aborta el proceso global — retorna lista vacía tras agotar intentos.
+
+    Args:
+        building_query: nombre completo del edificio
+        headless: si False, abre el browser visible
+    """
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            return await _fetch_once(building_query, headless=headless, debug=debug)
+        except Exception as e:
+            wait = RETRY_BACKOFF * attempt
+            if attempt < MAX_RETRIES:
+                print(f"[RETRY {attempt}/{MAX_RETRIES}] {building_query}: {type(e).__name__} — reintentando en {wait}s")
+                await asyncio.sleep(wait)
+            else:
+                print(f"[FAILED] {building_query}: agotados {MAX_RETRIES} intentos. Último error: {type(e).__name__}: {e}")
+
+    return []
 
 
 async def fetch_all_buildings(buildings: list = BUILDINGS, max_workers: int = 3) -> list:
