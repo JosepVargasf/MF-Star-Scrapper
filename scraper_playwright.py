@@ -1,13 +1,15 @@
 """
 Scraper de reseñas Google Maps con Playwright (reemplaza Outscraper).
-Módulo principal — HU-01: configuración base y funciones puras.
-HU-02: implementación de fetch_reviews con browser.
+HU-01: configuración base y funciones puras.
+HU-02: fetch_reviews con browser.
 """
 
 import re
+import asyncio
 from datetime import datetime, timezone
 from dateutil.parser import parse as parse_date
 from dateutil.relativedelta import relativedelta
+from playwright.async_api import async_playwright, Page, TimeoutError as PlaywrightTimeout
 
 # ---------------------------------------------------------------------------
 # Constantes
@@ -125,12 +127,261 @@ def filter_last_month(reviews: list) -> list:
 
 
 # ---------------------------------------------------------------------------
-# Fetch con Playwright (HU-02 — pendiente de implementar)
+# Parseo de fechas relativas de Google Maps
 # ---------------------------------------------------------------------------
 
-async def fetch_reviews(building_query: str) -> list:
+_RELATIVE_DATE_MAP = {
+    # español
+    'segundo': 'seconds', 'segundos': 'seconds',
+    'minuto': 'minutes',  'minutos': 'minutes',
+    'hora': 'hours',      'horas': 'hours',
+    'día': 'days',        'días': 'days',
+    'dia': 'days',        'dias': 'days',
+    'semana': 'weeks',    'semanas': 'weeks',
+    'mes': 'months',      'meses': 'months',
+    'año': 'years',       'años': 'years',
+    'ano': 'years',       'anos': 'years',
+    # inglés (por si acaso)
+    'second': 'seconds',  'seconds': 'seconds',
+    'minute': 'minutes',  'minutes': 'minutes',
+    'hour': 'hours',      'hours': 'hours',
+    'day': 'days',        'days': 'days',
+    'week': 'weeks',      'weeks': 'weeks',
+    'month': 'months',    'months': 'months',
+    'year': 'years',      'years': 'years',
+}
+
+def parse_relative_date(text: str) -> datetime | None:
     """
-    Descarga las reseñas de Google Maps para un edificio usando Playwright.
-    Implementado en HU-02.
+    Convierte fechas relativas de Google Maps a datetime.
+    Ejemplos: 'hace 2 meses', 'hace 1 semana', '3 days ago'.
     """
-    raise NotImplementedError("fetch_reviews se implementa en HU-02")
+    if not text:
+        return None
+    text = text.strip().lower()
+
+    # Intentar parseo directo primero (fechas absolutas)
+    try:
+        d = parse_date(text, fuzzy=True)
+        return d.replace(tzinfo=timezone.utc) if d.tzinfo is None else d
+    except Exception:
+        pass
+
+    # Parseo de fechas relativas: "hace N unidad" o "N unit ago"
+    match = re.search(r'(\d+)\s+(\w+)', text)
+    if not match:
+        # "hace un mes", "hace una semana"
+        match = re.search(r'un[ao]?\s+(\w+)', text)
+        if match:
+            unit_str = match.group(1)
+            n = 1
+        else:
+            return None
+    else:
+        n = int(match.group(1))
+        unit_str = match.group(2)
+
+    unit = _RELATIVE_DATE_MAP.get(unit_str)
+    if not unit:
+        return None
+
+    now = datetime.now(timezone.utc)
+    return now - relativedelta(**{unit: n})
+
+
+# ---------------------------------------------------------------------------
+# Selectores Google Maps (pueden cambiar con actualizaciones de Google)
+# ---------------------------------------------------------------------------
+
+SEL_REVIEWS_TAB    = 'button[aria-label*="eseña"], button[aria-label*="eview"]'
+SEL_SORT_BUTTON    = 'button[aria-label*="rdenar"], button[aria-label*="ort review"]'
+SEL_SORT_NEWEST    = '[data-index="1"]'          # "Más recientes" es la segunda opción
+SEL_REVIEW_CARD    = 'div[data-review-id]'
+SEL_AUTHOR         = 'div.d4r55, button.WEBjve span, div[class*="fontBodyMedium"] span'
+SEL_RATING         = 'span[aria-label*="estrell"], span[aria-label*="star"]'
+SEL_DATE           = 'span.rsqaWe, span[class*="xRkPPb"]'
+SEL_TEXT           = 'span.wiI7pd, div[class*="MyEned"] span'
+SEL_EXPAND_TEXT    = 'button[aria-label*="ás"], button.w8nwRe'
+SEL_SCROLL_PANEL   = 'div[role="main"] div.m6QErb[tabindex="-1"]'
+
+MAX_SCROLL_ATTEMPTS = 40
+SCROLL_PAUSE_MS     = 1200
+
+
+# ---------------------------------------------------------------------------
+# Fetch con Playwright (HU-02)
+# ---------------------------------------------------------------------------
+
+async def _extract_reviews_from_page(page: Page, building_query: str) -> list:
+    """Extrae todas las reseñas visibles en el panel de reseñas."""
+    base_name = normalize_building_name(building_query)
+    is_park = base_name == 'park santiago'
+    reviews = []
+
+    cards = await page.query_selector_all(SEL_REVIEW_CARD)
+    for card in cards:
+        # Expandir texto truncado si existe el botón
+        try:
+            expand_btn = await card.query_selector(SEL_EXPAND_TEXT)
+            if expand_btn:
+                await expand_btn.click()
+                await page.wait_for_timeout(300)
+        except Exception:
+            pass
+
+        # Autor
+        author_el = await card.query_selector(SEL_AUTHOR)
+        author = (await author_el.inner_text()).strip() if author_el else ''
+
+        # Rating: extrae el número del aria-label ("4 estrellas" → 4)
+        rating_el = await card.query_selector(SEL_RATING)
+        rating = None
+        if rating_el:
+            aria = await rating_el.get_attribute('aria-label') or ''
+            m = re.search(r'(\d+)', aria)
+            rating = int(m.group(1)) if m else None
+
+        # Fecha relativa
+        date_el = await card.query_selector(SEL_DATE)
+        date_text = (await date_el.inner_text()).strip() if date_el else ''
+        fecha = parse_relative_date(date_text)
+
+        # Texto
+        text_el = await card.query_selector(SEL_TEXT)
+        text = (await text_el.inner_text()).strip() if text_el else ''
+
+        # Filtrar falsos positivos de Park Santiago
+        if is_park and is_park_santiago_false_positive(text):
+            continue
+
+        raw = {'author': author, 'rating': rating, 'date': fecha, 'text': text}
+
+        # parse_review espera date como datetime, lo pasamos directo
+        try:
+            review = {
+                'Edificio': base_name,
+                'Fecha': fecha,
+                'Score': float(rating) if rating is not None else 0.0,
+                'Texto': str(text),
+                'Usuario': str(author),
+            }
+            reviews.append(review)
+        except ValueError:
+            continue
+
+    return reviews
+
+
+async def fetch_reviews(building_query: str, headless: bool = True) -> list:
+    """
+    Descarga todas las reseñas de Google Maps para un edificio usando Playwright.
+
+    Args:
+        building_query: nombre completo del edificio (ej: 'INSITU Irarrázaval, Santiago, Chile')
+        headless: si False, abre el browser visible (útil para depurar)
+
+    Returns:
+        Lista de dicts con schema {Edificio, Fecha, Score, Texto, Usuario}
+    """
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(headless=headless)
+        context = await browser.new_context(
+            locale='es-CL',
+            timezone_id='America/Santiago',
+            user_agent=(
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/124.0.0.0 Safari/537.36'
+            ),
+        )
+        page = await context.new_page()
+
+        try:
+            # 1. Buscar el edificio en Google Maps
+            search_url = f"https://www.google.com/maps/search/{building_query.replace(' ', '+')}"
+            await page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
+            await page.wait_for_timeout(2000)
+
+            # 2. Aceptar cookies si aparece el banner
+            try:
+                accept_btn = page.locator('button:has-text("Aceptar todo"), button:has-text("Accept all")')
+                if await accept_btn.count() > 0:
+                    await accept_btn.first.click()
+                    await page.wait_for_timeout(1000)
+            except Exception:
+                pass
+
+            # 3. Hacer clic en la pestaña de reseñas
+            try:
+                reviews_tab = page.locator(SEL_REVIEWS_TAB).first
+                await reviews_tab.wait_for(timeout=10000)
+                await reviews_tab.click()
+                await page.wait_for_timeout(2000)
+            except PlaywrightTimeout:
+                print(f"[WARN] No se encontró pestaña de reseñas para: {building_query}")
+                return []
+
+            # 4. Ordenar por más recientes
+            try:
+                sort_btn = page.locator(SEL_SORT_BUTTON).first
+                await sort_btn.wait_for(timeout=5000)
+                await sort_btn.click()
+                await page.wait_for_timeout(1000)
+                newest_opt = page.locator(SEL_SORT_NEWEST).first
+                await newest_opt.click()
+                await page.wait_for_timeout(2000)
+            except Exception:
+                pass  # Si falla el orden, seguimos igual
+
+            # 5. Scroll para cargar todas las reseñas
+            scroll_panel = page.locator(SEL_SCROLL_PANEL).first
+            prev_count = 0
+            stable_rounds = 0
+
+            for _ in range(MAX_SCROLL_ATTEMPTS):
+                await scroll_panel.evaluate('el => el.scrollBy(0, el.scrollHeight)')
+                await page.wait_for_timeout(SCROLL_PAUSE_MS)
+
+                current_count = await page.locator(SEL_REVIEW_CARD).count()
+                if current_count == prev_count:
+                    stable_rounds += 1
+                    if stable_rounds >= 3:
+                        break  # No aparecen más reseñas
+                else:
+                    stable_rounds = 0
+                prev_count = current_count
+
+            # 6. Extraer todas las reseñas visibles
+            reviews = await _extract_reviews_from_page(page, building_query)
+
+        except Exception as e:
+            print(f"[ERROR] {building_query}: {type(e).__name__}: {e}")
+            reviews = []
+        finally:
+            await browser.close()
+
+    return reviews
+
+
+async def fetch_all_buildings(buildings: list = BUILDINGS, max_workers: int = 3) -> list:
+    """Descarga reseñas de todos los edificios en paralelo (semáforo de max_workers)."""
+    sem = asyncio.Semaphore(max_workers)
+
+    async def fetch_limited(query):
+        async with sem:
+            print(f"[→] Scrapeando: {query}")
+            result = await fetch_reviews(query)
+            print(f"[✓] {query}: {len(result)} reseñas")
+            return result
+
+    tasks = [fetch_limited(b) for b in buildings]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    all_reviews = []
+    for b, res in zip(buildings, results):
+        if isinstance(res, Exception):
+            print(f"[ERROR] {b}: {res}")
+        else:
+            all_reviews.extend(res)
+
+    return all_reviews
