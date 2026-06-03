@@ -1,0 +1,58 @@
+name: Monthly Scrape
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"   # Día 1 de cada mes a las 06:00 UTC
+  workflow_dispatch:       # Permite ejecución manual desde GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install chromium --with-deps
+
+      - name: Run pipeline
+        run: python pipeline.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/reviews.json data/metrics.json data/informe_multifamily.xlsx
+          git diff --staged --quiet || git commit -m "data: actualización mensual $(date +'%Y-%m')"
+          git push
+
+      - name: Notify on failure
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "[MF Star Scrapper] Fallo en el workflow mensual"
+          to: jose.vargas@situ.cl
+          from: ${{ secrets.MAIL_USERNAME }}
+          body: |
+            El workflow mensual de MF Star Scrapper falló.
+
+            Repositorio: ${{ github.repository }}
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Por favor revisa el log y ejecuta el pipeline manualmente si es necesario:
+              python pipeline.py
