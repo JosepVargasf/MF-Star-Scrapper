@@ -193,16 +193,16 @@ def parse_relative_date(text: str) -> datetime | None:
 # Selectores Google Maps (pueden cambiar con actualizaciones de Google)
 # ---------------------------------------------------------------------------
 
-SEL_REVIEWS_TAB    = 'button[aria-label*="eseña"], button[aria-label*="eview"]'
+SEL_REVIEWS_TAB    = 'button[role="tab"][data-tab-index="1"]'
 SEL_SORT_BUTTON    = 'button[aria-label*="rdenar"], button[aria-label*="ort review"]'
-SEL_SORT_NEWEST    = '[data-index="1"]'          # "Más recientes" es la segunda opción
-SEL_REVIEW_CARD    = 'div[data-review-id]'
-SEL_AUTHOR         = 'div.d4r55, button.WEBjve span, div[class*="fontBodyMedium"] span'
-SEL_RATING         = 'span[aria-label*="estrell"], span[aria-label*="star"]'
-SEL_DATE           = 'span.rsqaWe, span[class*="xRkPPb"]'
-SEL_TEXT           = 'span.wiI7pd, div[class*="MyEned"] span'
-SEL_EXPAND_TEXT    = 'button[aria-label*="ás"], button.w8nwRe'
-SEL_SCROLL_PANEL   = 'div[role="main"] div.m6QErb[tabindex="-1"]'
+SEL_SORT_NEWEST    = '[data-index="1"]'
+SEL_REVIEW_CARD    = 'div.jftiEf'
+SEL_AUTHOR         = 'div.d4r55'
+SEL_RATING         = 'span.kvMYJc'              # role="img" aria-label="N estrellas"
+SEL_DATE           = 'span.rsqaWe'
+SEL_TEXT           = 'span.wiI7pd'
+SEL_EXPAND_TEXT    = 'button.w8nwRe'
+SEL_SCROLL_PANEL   = 'div.m6QErb.DxyBCb'
 
 MAX_SCROLL_ATTEMPTS = 40
 SCROLL_PAUSE_MS     = 1200
@@ -272,7 +272,7 @@ async def _extract_reviews_from_page(page: Page, building_query: str) -> list:
     return reviews
 
 
-async def fetch_reviews(building_query: str, headless: bool = True) -> list:
+async def fetch_reviews(building_query: str, headless: bool = True, debug: bool = False) -> list:
     """
     Descarga todas las reseñas de Google Maps para un edificio usando Playwright.
 
@@ -311,17 +311,51 @@ async def fetch_reviews(building_query: str, headless: bool = True) -> list:
             except Exception:
                 pass
 
-            # 3. Hacer clic en la pestaña de reseñas
+            if debug:
+                await page.screenshot(path="debug_01_after_search.png", full_page=True)
+                print("[DEBUG] Screenshot guardado: debug_01_after_search.png")
+
+            # 2b. Si la búsqueda devuelve una lista, hacer clic en el primer resultado
+            try:
+                first_result = page.locator('a[href*="/maps/place/"]').first
+                await first_result.wait_for(timeout=5000)
+                await first_result.click()
+                await page.wait_for_timeout(2000)
+                if debug:
+                    await page.screenshot(path="debug_02_after_click_result.png", full_page=True)
+                    print("[DEBUG] Screenshot guardado: debug_02_after_click_result.png")
+            except Exception:
+                pass  # Ya estamos en el panel del lugar directamente
+
+            # 3. Esperar a que Maps reformatee el URL del lado del cliente (~5s) y recargar
+            await page.wait_for_timeout(5000)
+            final_url = page.url
+            await page.goto(final_url, wait_until='domcontentloaded', timeout=30000)
+            await page.wait_for_timeout(3000)
+
+            # 4. Hacer clic en la pestaña de reseñas
             try:
                 reviews_tab = page.locator(SEL_REVIEWS_TAB).first
                 await reviews_tab.wait_for(timeout=10000)
                 await reviews_tab.click()
                 await page.wait_for_timeout(2000)
+                if debug:
+                    await page.screenshot(path="debug_02_after_reviews_tab.png", full_page=True)
+                    print("[DEBUG] Screenshot guardado: debug_02_after_reviews_tab.png")
             except PlaywrightTimeout:
+                if debug:
+                    await page.screenshot(path="debug_02_reviews_tab_NOT_FOUND.png", full_page=True)
+                    # Imprimir todos los botones visibles para encontrar el selector correcto
+                    buttons = await page.query_selector_all('button')
+                    print(f"[DEBUG] Botones encontrados en la página ({len(buttons)}):")
+                    for btn in buttons[:20]:
+                        label = await btn.get_attribute('aria-label') or ''
+                        text = (await btn.inner_text()).strip()[:50]
+                        print(f"  aria-label='{label}' | text='{text}'")
                 print(f"[WARN] No se encontró pestaña de reseñas para: {building_query}")
                 return []
 
-            # 4. Ordenar por más recientes
+            # 5. Ordenar por más recientes
             try:
                 sort_btn = page.locator(SEL_SORT_BUTTON).first
                 await sort_btn.wait_for(timeout=5000)
@@ -333,7 +367,19 @@ async def fetch_reviews(building_query: str, headless: bool = True) -> list:
             except Exception:
                 pass  # Si falla el orden, seguimos igual
 
-            # 5. Scroll para cargar todas las reseñas
+            # 6. Leer total de reseñas declarado por Google Maps
+            total_reviews = None
+            try:
+                count_el = page.locator('div.jANrlb div.fontBodySmall').first
+                count_text = await count_el.inner_text()
+                m = re.search(r'(\d+)', count_text)
+                if m:
+                    total_reviews = int(m.group(1))
+                    print(f"[INFO] Total reseñas declaradas: {total_reviews}")
+            except Exception:
+                pass
+
+            # 7. Scroll hasta tener todas las reseñas o agotar intentos
             scroll_panel = page.locator(SEL_SCROLL_PANEL).first
             prev_count = 0
             stable_rounds = 0
@@ -343,15 +389,21 @@ async def fetch_reviews(building_query: str, headless: bool = True) -> list:
                 await page.wait_for_timeout(SCROLL_PAUSE_MS)
 
                 current_count = await page.locator(SEL_REVIEW_CARD).count()
+                print(f"[SCROLL] {current_count}/{total_reviews or '?'} reseñas cargadas")
+
+                # Parar si ya tenemos todas
+                if total_reviews and current_count >= total_reviews:
+                    break
+
                 if current_count == prev_count:
                     stable_rounds += 1
                     if stable_rounds >= 3:
-                        break  # No aparecen más reseñas
+                        break
                 else:
                     stable_rounds = 0
                 prev_count = current_count
 
-            # 6. Extraer todas las reseñas visibles
+            # 9. Extraer todas las reseñas visibles
             reviews = await _extract_reviews_from_page(page, building_query)
 
         except Exception as e:
