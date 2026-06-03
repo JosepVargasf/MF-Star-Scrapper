@@ -178,7 +178,7 @@ def _classify(text: str, senti: str):
 def enrich(df: pd.DataFrame) -> pd.DataFrame:
     """Agrega PrimerNombre, Sexo, Sentimiento, Temas, Amenidades al DataFrame."""
     df = df.copy()
-    df["Fecha"] = pd.to_datetime(df["Fecha"], errors="coerce")
+    df["Fecha"] = pd.to_datetime(df["Fecha"], errors="coerce", utc=True)
     df["PrimerNombre"] = df["Usuario"].str.split().str[0].fillna("")
     df["Sexo"] = df["PrimerNombre"].apply(
         lambda n: detector.get_gender(n) if n else "unknown"
@@ -197,7 +197,7 @@ def enrich(df: pd.DataFrame) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 
 def build_metrics(df: pd.DataFrame) -> pd.DataFrame:
-    mes_ant = datetime.now() - relativedelta(months=1)
+    mes_ant = pd.Timestamp(datetime.now() - relativedelta(months=1))
     rows = []
     for b, grp in df.groupby("Edificio"):
         total   = len(grp)
@@ -223,7 +223,7 @@ def build_resumen(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for b, grp in df.groupby("Edificio"):
         for m, label in [(None, "Hist"), (12, "12m"), (6, "6m"), (3, "3m")]:
-            cutoff = None if m is None else datetime.now() - relativedelta(months=m)
+            cutoff = None if m is None else pd.Timestamp(datetime.now() - relativedelta(months=m))
             dh  = grp if cutoff is None else grp[grp["Fecha"] >= cutoff]
             tot = len(dh)
             rows.append({
@@ -313,18 +313,19 @@ def export_excel(df: pd.DataFrame, df_metrics: pd.DataFrame):
     df_neg_dist = _dist_with_gender(df_neg_raw, "Temas",     "Tema")
     df_am_dist  = _dist_with_gender(df,         "Amenidades","Amenidad")
 
-    pivot_pos = pd.crosstab(
-        df_pos_raw["Edificio"],
-        df_pos_raw["Temas"].explode()
-    ).reset_index()
-    pivot_neg = pd.crosstab(
-        df_neg_raw["Edificio"],
-        df_neg_raw["Temas"].explode()
-    ).reset_index()
-    pivot_am = pd.crosstab(
-        df["Edificio"],
-        df["Amenidades"].explode()
-    ).reset_index()
+    def _pivot(df_src, col):
+        exp = df_src[["Edificio", col]].explode(col).dropna(subset=[col])
+        exp["_n"] = 1
+        return (
+            exp.groupby(["Edificio", col])["_n"]
+            .sum()
+            .unstack(fill_value=0)
+            .reset_index()
+        )
+
+    pivot_pos = _pivot(df_pos_raw, "Temas")
+    pivot_neg = _pivot(df_neg_raw, "Temas")
+    pivot_am  = _pivot(df,         "Amenidades")
 
     df_resumen       = build_resumen(df)
     evol_promedio    = build_evolucion(df)
@@ -402,15 +403,17 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
 # Punto de entrada
 # ---------------------------------------------------------------------------
 
-async def main(filter_month: bool = False):
+async def main(buildings: list = None, filter_month: bool = False):
     """
-    Scrapea todos los edificios, enriquece y exporta Excel + JSON.
+    Scrapea edificios, enriquece y exporta Excel + JSON.
 
-    filter_month=False captura el histórico completo (igual que el scraper antiguo).
-    filter_month=True  captura solo el último mes (útil para actualizaciones mensuales).
+    buildings: lista de edificios a scrapear (None = todos)
+    filter_month=False captura el histórico completo.
+    filter_month=True  captura solo el último mes.
     """
-    print(f"[{datetime.now():%Y-%m-%d %H:%M}] Iniciando scrape de {len(BUILDINGS)} edificios...")
-    rows = await fetch_all_buildings(filter_month=filter_month)
+    targets = buildings or BUILDINGS
+    print(f"[{datetime.now():%Y-%m-%d %H:%M}] Iniciando scrape de {len(targets)} edificios...")
+    rows = await fetch_all_buildings(buildings=targets, filter_month=filter_month)
 
     if not rows:
         print("No se obtuvieron reseñas. Verifica la conexión.")
@@ -421,6 +424,8 @@ async def main(filter_month: bool = False):
     df = pd.DataFrame(rows)
     print("Enriqueciendo reseñas (género, sentimiento, temas)...")
     df = enrich(df)
+    # Normalizar timezone: todo el pipeline trabaja con fechas naive (UTC implícito)
+    df["Fecha"] = df["Fecha"].dt.tz_localize(None)
 
     df_metrics = build_metrics(df)
 
@@ -434,4 +439,8 @@ async def main(filter_month: bool = False):
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    import sys
+    # Uso: python pipeline.py "INSITU Irarrázaval, Santiago, Chile"
+    # Sin args: corre todos los edificios
+    test_buildings = sys.argv[1:] if len(sys.argv) > 1 else None
+    asyncio.run(main(buildings=test_buildings))
