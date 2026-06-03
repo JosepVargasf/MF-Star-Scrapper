@@ -29,17 +29,24 @@ BUILDINGS = [
     'IMU San Cristóbal, Santiago, Chile',
     'Spot Nueva Kennedy, Santiago, Chile',
     'Soho Barrio Italia, Santiago, Chile',
-    'Park Santiago, Santiago, Chile',
-    'The Place, Santiago, Chile',
+    'Park Santiago Santo Domingo, Santiago, Chile',
+    'The Place La Gloria, Las Condes, Chile',
 ]
 
 # ---------------------------------------------------------------------------
 # Funciones puras (sin red, testeables en Capa 1)
 # ---------------------------------------------------------------------------
 
+# Alias para búsquedas más específicas → nombre canónico en los datos
+_NAME_ALIASES = {
+    'park santiago santo domingo': 'park santiago',
+    'the place la gloria':         'the place',
+}
+
 def normalize_building_name(building_query: str) -> str:
     """Extrae el nombre base del edificio en minúsculas, sin la ciudad."""
-    return building_query.split(',')[0].strip().lower()
+    raw = building_query.split(',')[0].strip().lower()
+    return _NAME_ALIASES.get(raw, raw)
 
 
 def is_park_santiago_false_positive(text: str) -> bool:
@@ -220,7 +227,7 @@ SCROLL_PAUSE_MS     = 1200
 async def _extract_reviews_from_page(page: Page, building_query: str) -> list:
     """Extrae todas las reseñas visibles en el panel de reseñas."""
     base_name = normalize_building_name(building_query)
-    is_park = base_name == 'park santiago'
+    is_park = 'park santiago' in base_name
     reviews = []
 
     cards = await page.query_selector_all(SEL_REVIEW_CARD)
