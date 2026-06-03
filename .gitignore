@@ -6,6 +6,10 @@ data/
 *.xlsx
 *.csv
 
+# Excepción: JSON del visor sí se versiona
+!visor/public/data/
+!visor/public/data/*.json
+
 # Ejecutables compilados
 dist/
 build/
