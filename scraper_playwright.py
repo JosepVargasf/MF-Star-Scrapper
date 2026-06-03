@@ -18,7 +18,7 @@ from playwright.async_api import async_playwright, Page, TimeoutError as Playwri
 BUILDINGS = [
     'INSITU Irarrázaval, Santiago, Chile',
     'INSITU Echaurren, Santiago, Chile',
-    'Somma Plaza Ñuloa, Santiago, Chile',
+    'Somma Plaza Ñuñoa, Santiago, Chile',
     'Somma Inés de Suárez, Santiago, Chile',
     'Somma Asturias, Santiago, Chile',
     'Ronda Santo Domingo, Santiago, Chile',
@@ -151,6 +151,8 @@ _RELATIVE_DATE_MAP = {
     'year': 'years',      'years': 'years',
 }
 
+_RELATIVE_KEYWORDS = {'hace', 'ago', 'un', 'una'}
+
 def parse_relative_date(text: str) -> datetime | None:
     """
     Convierte fechas relativas de Google Maps a datetime.
@@ -160,12 +162,15 @@ def parse_relative_date(text: str) -> datetime | None:
         return None
     text = text.strip().lower()
 
-    # Intentar parseo directo primero (fechas absolutas)
-    try:
-        d = parse_date(text, fuzzy=True)
-        return d.replace(tzinfo=timezone.utc) if d.tzinfo is None else d
-    except Exception:
-        pass
+    # Solo intentar parseo directo si NO es una fecha relativa.
+    # dateutil fuzzy=True interpreta "hace 3 meses" como día 3 del mes actual.
+    is_relative = any(kw in text for kw in _RELATIVE_KEYWORDS)
+    if not is_relative:
+        try:
+            d = parse_date(text, fuzzy=True)
+            return d.replace(tzinfo=timezone.utc) if d.tzinfo is None else d
+        except Exception:
+            pass
 
     # Parseo de fechas relativas: "hace N unidad" o "N unit ago"
     match = re.search(r'(\d+)\s+(\w+)', text)

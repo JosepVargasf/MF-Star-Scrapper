@@ -1,0 +1,49 @@
+name: Deploy Visor
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'data/reviews.json'
+      - 'data/metrics.json'
+      - 'visor/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: visor/package-lock.json
+
+      - name: Install dependencies
+        working-directory: visor
+        run: npm ci
+
+      - name: Copy data files
+        run: |
+          mkdir -p visor/public/data
+          cp data/reviews.json visor/public/data/reviews.json
+          cp data/metrics.json visor/public/data/metrics.json
+
+      - name: Build visor
+        working-directory: visor
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: visor/dist
+          publish_branch: gh-pages
+          commit_message: 'deploy: visor ${{ github.sha }}'
