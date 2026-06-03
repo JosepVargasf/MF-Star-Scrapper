@@ -28,6 +28,9 @@ OUTPUT_XLSX    = os.path.join(DATA_DIR, "informe_multifamily.xlsx")
 OUTPUT_REVIEWS = os.path.join(DATA_DIR, "reviews.json")
 OUTPUT_METRICS = os.path.join(DATA_DIR, "metrics.json")
 
+# Copia automática al visor (dev local)
+VISOR_DATA_DIR = os.path.join(os.path.dirname(__file__), "visor", "public", "data")
+
 # ---------------------------------------------------------------------------
 # NLP setup
 # ---------------------------------------------------------------------------
@@ -391,12 +394,19 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
 
     with open(OUTPUT_METRICS, "w", encoding="utf-8") as f:
         json.dump(
-            metrics.to_dict(orient="records"),
+            metrics.where(metrics.notna(), other=None).to_dict(orient="records"),
             f,
             ensure_ascii=False,
             indent=2,
         )
     print(f"metrics.json guardado en: {OUTPUT_METRICS}")
+
+    # Sincronizar al visor local si existe
+    if os.path.isdir(VISOR_DATA_DIR):
+        import shutil
+        shutil.copy2(OUTPUT_REVIEWS, os.path.join(VISOR_DATA_DIR, "reviews.json"))
+        shutil.copy2(OUTPUT_METRICS, os.path.join(VISOR_DATA_DIR, "metrics.json"))
+        print(f"Visor actualizado en: {VISOR_DATA_DIR}")
 
 
 # ---------------------------------------------------------------------------
