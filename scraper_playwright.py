@@ -449,9 +449,9 @@ async def fetch_all_buildings(
 
     async def fetch_limited(query):
         async with sem:
-            print(f"[→] Scrapeando: {query}")
+            print(f"[>>] Scrapeando: {query}")
             result = await fetch_reviews(query)
-            print(f"[✓] {query}: {len(result)} reseñas totales")
+            print(f"[OK] {query}: {len(result)} reseñas totales")
             return result
 
     tasks = [fetch_limited(b) for b in buildings]
@@ -467,6 +467,6 @@ async def fetch_all_buildings(
     if filter_month:
         before = len(all_reviews)
         all_reviews = filter_last_month(all_reviews)
-        print(f"[FILTRO] {before} reseñas totales → {len(all_reviews)} del último mes")
+        print(f"[FILTRO] {before} resenas totales -> {len(all_reviews)} del ultimo mes")
 
     return all_reviews
