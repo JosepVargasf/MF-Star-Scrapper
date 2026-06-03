@@ -32,7 +32,10 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/reviews.json data/metrics.json data/informe_multifamily.xlsx
+          cp data/reviews.json visor/public/data/reviews.json
+          cp data/metrics.json visor/public/data/metrics.json
+          git add -f data/reviews.json data/metrics.json data/informe_multifamily.xlsx
+          git add visor/public/data/reviews.json visor/public/data/metrics.json
           git diff --staged --quiet || git commit -m "data: actualización mensual $(date +'%Y-%m')"
           git push
 

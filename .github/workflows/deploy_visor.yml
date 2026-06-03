@@ -30,12 +30,6 @@ jobs:
         working-directory: visor
         run: npm ci
 
-      - name: Copy data files
-        run: |
-          mkdir -p visor/public/data
-          cp data/reviews.json visor/public/data/reviews.json
-          cp data/metrics.json visor/public/data/metrics.json
-
       - name: Build visor
         working-directory: visor
         run: npm run build
