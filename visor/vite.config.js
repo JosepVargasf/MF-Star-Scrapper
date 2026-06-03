@@ -11,4 +11,13 @@ export default defineConfig({
       interval: 1000,
     },
   },
+  optimizeDeps: {
+    include: ['firebase/app', 'firebase/auth'],
+  },
+  build: {
+    rolldownOptions: {
+      external: [],
+    },
+    chunkSizeWarningLimit: 700,
+  },
 })
