@@ -1,0 +1,36 @@
+﻿# Variables de entorno (API keys)
+.env
+
+# Datos generados
+data/
+*.xlsx
+*.csv
+
+# Ejecutables compilados
+dist/
+build/
+*.exe
+*.spec
+
+# Presentaciones
+*.pptx
+*.ppt
+
+# Documentos Word
+*.docx
+*.doc
+
+# Versiones antiguas
+old/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
