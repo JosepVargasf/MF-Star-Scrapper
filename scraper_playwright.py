@@ -433,15 +433,25 @@ async def fetch_reviews(building_query: str, headless: bool = True, debug: bool 
     return []
 
 
-async def fetch_all_buildings(buildings: list = BUILDINGS, max_workers: int = 3) -> list:
-    """Descarga reseñas de todos los edificios en paralelo (semáforo de max_workers)."""
+async def fetch_all_buildings(
+    buildings: list = BUILDINGS,
+    max_workers: int = 3,
+    filter_month: bool = True,
+) -> list:
+    """
+    Descarga reseñas de todos los edificios en paralelo.
+
+    Args:
+        filter_month: si True, aplica filter_last_month al resultado final
+                      para no reprocesar histórico innecesariamente.
+    """
     sem = asyncio.Semaphore(max_workers)
 
     async def fetch_limited(query):
         async with sem:
             print(f"[→] Scrapeando: {query}")
             result = await fetch_reviews(query)
-            print(f"[✓] {query}: {len(result)} reseñas")
+            print(f"[✓] {query}: {len(result)} reseñas totales")
             return result
 
     tasks = [fetch_limited(b) for b in buildings]
@@ -453,5 +463,10 @@ async def fetch_all_buildings(buildings: list = BUILDINGS, max_workers: int = 3)
             print(f"[ERROR] {b}: {res}")
         else:
             all_reviews.extend(res)
+
+    if filter_month:
+        before = len(all_reviews)
+        all_reviews = filter_last_month(all_reviews)
+        print(f"[FILTRO] {before} reseñas totales → {len(all_reviews)} del último mes")
 
     return all_reviews
