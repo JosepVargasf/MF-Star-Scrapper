@@ -9,3 +9,6 @@ textblob
 gender-guesser
 googletrans==4.0.0rc1
 python-dotenv
+playwright
+pytest
+pytest-asyncio
