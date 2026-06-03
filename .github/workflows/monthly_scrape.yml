@@ -41,6 +41,12 @@ jobs:
           git diff --staged --quiet || git commit -m "data: actualización mensual $(date +'%Y-%m')"
           git push
 
+      - name: Trigger deploy visor
+        if: success()
+        run: gh workflow run deploy_visor.yml --ref master
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Notify on failure
         if: failure()
         uses: dawidd6/action-send-mail@v3
