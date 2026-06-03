@@ -1034,6 +1034,120 @@ body {
   .nav-item { font-size: 0.7rem; padding: 5px 7px; }
 }
 
+/* ── Login ── */
+.login-wrap {
+  min-height: 100vh;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.login-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.login-error {
+  background: #fff1f2;
+  color: #be123c;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  width: 100%;
+}
+
+.login-btn:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-color: #cbd5e1;
+}
+
+.login-google-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* ── Topbar user ── */
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.user-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.logout-btn {
+  padding: 4px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.logout-btn:hover { background: #fee2e2; color: #dc2626; border-color: #fca5a5; }
+
 /* ── Splash / loading ── */
 .splash {
   display: flex;
