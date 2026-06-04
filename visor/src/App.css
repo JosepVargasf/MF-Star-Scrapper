@@ -968,6 +968,80 @@ body {
   padding-left: 10px;
 }
 
+/* ── HeatmapTemas ── */
+.hm-wrap {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.hm-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.74rem;
+}
+
+.hm-th {
+  padding: 6px 8px;
+  font-weight: 700;
+  color: #64748b;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  border-bottom: 2px solid #e2e8f0;
+  background: #fff;
+}
+
+.hm-th-edificio { text-align: left; min-width: 160px; }
+.hm-th-tema { text-align: center; min-width: 80px; }
+
+.hm-tema-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.67rem;
+}
+
+.hm-td {
+  padding: 6px 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.hm-td-edificio {
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+  background: #fff;
+}
+
+.hm-td-cell {
+  text-align: center;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.72rem;
+  transition: background 0.2s;
+  cursor: default;
+}
+
+.hm-legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.hm-leg-label { font-size: 0.68rem; color: #94a3b8; }
+
+.hm-leg-gradient {
+  height: 10px;
+  flex: 1;
+  max-width: 200px;
+  border-radius: 4px;
+}
+
 /* ── Responsive ── */
 
 /* Tablet: sidebar colapsa a barra horizontal */

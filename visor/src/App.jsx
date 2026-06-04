@@ -10,6 +10,7 @@ import KeywordsCategorias from './components/KeywordsCategorias'
 import SentimientoTemas from './components/SentimientoTemas'
 import VolumenReseñas from './components/VolumenReseñas'
 import TemasGenero from './components/TemasGenero'
+import HeatmapTemas from './components/HeatmapTemas'
 import './App.css'
 
 export default function App() {
@@ -62,6 +63,7 @@ function Dashboard({ user, onLogout }) {
           <a href="#evolucion"    className="nav-item"><span className="nav-icon" />Evolución</a>
           <a href="#causas"       className="nav-item"><span className="nav-icon" />Causas</a>
           <a href="#temasgenero" className="nav-item"><span className="nav-icon" />Género</a>
+          <a href="#heatmap"     className="nav-item"><span className="nav-icon" />Heatmap</a>
           <a href="#distribucion" className="nav-item"><span className="nav-icon" />Distribución</a>
           <a href="#temas"        className="nav-item"><span className="nav-icon" />Temas</a>
         </nav>
@@ -115,6 +117,10 @@ function Dashboard({ user, onLogout }) {
 
           <div id="temasgenero">
             <TemasGenero reviews={reviews} />
+          </div>
+
+          <div id="heatmap">
+            <HeatmapTemas reviews={reviews} />
           </div>
 
           <div className="grid-2" id="distribucion">
