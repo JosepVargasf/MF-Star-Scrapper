@@ -1,6 +1,6 @@
-[
+﻿[
   {
-    "edificio": "imu san cristóbal",
+    "edificio": "imu san cristÃ³bal",
     "calif_actual": 4.31,
     "calif_previo": 4.17,
     "variacion": 0.14,
@@ -20,7 +20,7 @@
     "neg_pct": 0.0
   },
   {
-    "edificio": "insitu irarrázaval",
+    "edificio": "insitu irarrÃ¡zaval",
     "calif_actual": 4.61,
     "calif_previo": 4.58,
     "variacion": 0.03,
@@ -92,15 +92,15 @@
   {
     "edificio": "somma asturias",
     "calif_actual": 3.54,
-    "calif_previo": NaN,
-    "variacion": NaN,
+    "calif_previo": null,
+    "variacion": null,
     "resenastot": 57,
     "nuevas_mes": 0,
     "pos_pct": 61.4,
     "neg_pct": 33.3
   },
   {
-    "edificio": "somma inés de suárez",
+    "edificio": "somma inÃ©s de suÃ¡rez",
     "calif_actual": 3.46,
     "calif_previo": 3.48,
     "variacion": -0.02,
@@ -120,10 +120,10 @@
     "neg_pct": 7.1
   },
   {
-    "edificio": "somma plaza ñuñoa",
+    "edificio": "somma plaza Ã±uÃ±oa",
     "calif_actual": 3.58,
-    "calif_previo": NaN,
-    "variacion": NaN,
+    "calif_previo": null,
+    "variacion": null,
     "resenastot": 210,
     "nuevas_mes": 0,
     "pos_pct": 63.8,
@@ -132,8 +132,8 @@
   {
     "edificio": "spot nueva kennedy",
     "calif_actual": 4.1,
-    "calif_previo": NaN,
-    "variacion": NaN,
+    "calif_previo": null,
+    "variacion": null,
     "resenastot": 112,
     "nuevas_mes": 0,
     "pos_pct": 77.7,
