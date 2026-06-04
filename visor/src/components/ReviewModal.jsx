@@ -33,8 +33,6 @@ export default function ReviewModal({ reviews, tema, sentimiento, edificio, onCl
     })
     .sort((a, b) => b.fecha?.localeCompare(a.fecha))
 
-  const sStyle = SENTIMENT_STYLE[sentimiento] ?? SENTIMENT_STYLE['Neutra']
-
   return (
     <div className="rm-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
       <div className="rm-panel">
