@@ -152,7 +152,7 @@ export default function EvolucionMensual({ reviews }) {
 
       {mode === 'anual' ? (
         <ResponsiveContainer width="100%" height={280}>
-          <BarChart data={data} margin={{ left: 0, right: 16, top: 12, bottom: 4 }} barCategoryGap="30%">
+          <BarChart data={data} margin={{ left: 0, right: 16, top: 28, bottom: 4 }} barCategoryGap="30%">
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
             <XAxis dataKey="mes" tick={{ fontSize: 12, fill: '#475569', fontWeight: 600 }} axisLine={false} tickLine={false} />
             <YAxis domain={[1, 5]} tickCount={5} tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} width={28} />
