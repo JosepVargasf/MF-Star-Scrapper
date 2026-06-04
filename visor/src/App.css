@@ -993,16 +993,14 @@ body {
 }
 
 .hm-th-edificio { text-align: left; min-width: 160px; }
-.hm-th-tema { text-align: center; min-width: 80px; }
+.hm-th-tema { text-align: center; min-width: 90px; max-width: 110px; }
 
 .hm-tema-label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  max-height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 0.67rem;
+  font-size: 0.6rem;
+  white-space: normal;
+  line-height: 1.3;
+  word-break: break-word;
+  text-align: center;
 }
 
 .hm-td {
