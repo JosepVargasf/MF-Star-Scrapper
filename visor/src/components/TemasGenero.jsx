@@ -4,7 +4,7 @@ import {
   ResponsiveContainer, Legend, LabelList,
 } from 'recharts'
 
-const FEMALE_COLOR = '#a855f7'
+const FEMALE_COLOR = '#ec4899'
 const MALE_COLOR   = '#0ea5e9'
 const OTROS_COLOR  = '#e2e8f0'
 
