@@ -21,6 +21,27 @@ import gender_guesser.detector as gender_det
 from scraper_playwright import fetch_all_buildings, BUILDINGS
 
 # ---------------------------------------------------------------------------
+# Mapping edificio → comuna y operador
+# ---------------------------------------------------------------------------
+EDIFICIO_META = {
+    'insitu irarrázaval':   {'comuna': 'Ñuñoa',       'operador': 'InSitu'},
+    'insitu echaurren':     {'comuna': 'Santiago',     'operador': 'InSitu'},
+    'somma plaza ñuñoa':    {'comuna': 'Ñuñoa',       'operador': 'GreyStar'},
+    'somma inés de suárez': {'comuna': 'Providencia',  'operador': 'GreyStar'},
+    'somma asturias':       {'comuna': 'Las Condes',   'operador': 'GreyStar'},
+    'ronda santo domingo':  {'comuna': 'Santiago',     'operador': 'GreyStar'},
+    'somma plaza bustamante':{'comuna': 'Ñuñoa',      'operador': 'GreyStar'},
+    'nativo riesco':        {'comuna': 'Las Condes',   'operador': 'LarGroup'},
+    'nomad holley':         {'comuna': 'Providencia',  'operador': 'LarGroup'},
+    'nomad bellet':         {'comuna': 'Providencia',  'operador': 'LarGroup'},
+    'imu san cristóbal':    {'comuna': 'Providencia',  'operador': 'LarGroup'},
+    'spot nueva kennedy':   {'comuna': 'Las Condes',   'operador': 'LarGroup'},
+    'soho barrio italia':   {'comuna': 'Ñuñoa',       'operador': 'Renovate Inmobiliaria'},
+    'park santiago':        {'comuna': 'Santiago',     'operador': 'LarGroup'},
+    'the place':            {'comuna': 'Las Condes',   'operador': 'Grupo Coloso'},
+}
+
+# ---------------------------------------------------------------------------
 # Rutas de salida
 # ---------------------------------------------------------------------------
 DATA_DIR       = os.path.join(os.path.dirname(__file__), "data")
@@ -192,6 +213,8 @@ def enrich(df: pd.DataFrame) -> pd.DataFrame:
     df[["Temas", "Amenidades"]] = df.apply(
         lambda r: _classify(r["Texto"], r["Sentimiento"]), axis=1, result_type="expand"
     )
+    df["Comuna"]   = df["Edificio"].map(lambda e: EDIFICIO_META.get(e.lower(), {}).get("comuna",   ""))
+    df["Operador"] = df["Edificio"].map(lambda e: EDIFICIO_META.get(e.lower(), {}).get("operador", ""))
     return df
 
 
@@ -357,7 +380,7 @@ def export_excel(df: pd.DataFrame, df_metrics: pd.DataFrame):
         raise
 
 
-def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
+def export_json(df: pd.DataFrame):
     os.makedirs(DATA_DIR, exist_ok=True)
 
     reviews = df.copy()
@@ -403,6 +426,14 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
             historico.append(r)
             nuevas_agregadas += 1
 
+    # Backfill comuna/operador en todo el histórico
+    for r in historico:
+        meta = EDIFICIO_META.get((r.get("edificio") or "").lower(), {})
+        if not r.get("comuna"):
+            r["comuna"]   = meta.get("comuna",   "")
+        if not r.get("operador"):
+            r["operador"] = meta.get("operador", "")
+
     historico.sort(key=lambda r: (r.get("edificio", ""), r.get("fecha") or ""))
     print(f"Reseñas nuevas agregadas: {nuevas_agregadas} | Total histórico: {len(historico)}")
 
@@ -410,6 +441,8 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
         json.dump(historico, f, ensure_ascii=False, indent=2, default=_json_serializer)
     print(f"reviews.json guardado en: {OUTPUT_REVIEWS}")
 
+
+def _write_metrics_json(df_metrics: pd.DataFrame):
     metrics = df_metrics.copy()
     metrics.columns = [
         c.lower()
@@ -421,17 +454,14 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
         .replace("califprevio","calif_previo")
         for c in metrics.columns
     ]
-
+    # Usar pandas to_json para garantizar que NaN → null (json.dump los deja como NaN)
+    json_str = metrics.to_json(orient="records", force_ascii=False, indent=2)
     with open(OUTPUT_METRICS, "w", encoding="utf-8") as f:
-        json.dump(
-            metrics.where(metrics.notna(), other=None).to_dict(orient="records"),
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
+        f.write(json_str)
     print(f"metrics.json guardado en: {OUTPUT_METRICS}")
 
-    # Sincronizar al visor local si existe
+
+def _sync_visor():
     if os.path.isdir(VISOR_DATA_DIR):
         import shutil
         shutil.copy2(OUTPUT_REVIEWS, os.path.join(VISOR_DATA_DIR, "reviews.json"))
@@ -467,13 +497,24 @@ async def main(buildings: list = None, filter_month: bool = False):
     # Normalizar timezone: todo el pipeline trabaja con fechas naive (UTC implícito)
     df["Fecha"] = df["Fecha"].dt.tz_localize(None)
 
-    df_metrics = build_metrics(df)
+    # Primero exportar JSON: merge histórico de reviews
+    print("Exportando JSON...")
+    export_json(df)
+
+    # Leer el histórico completo para métricas y Excel
+    df_historico = pd.read_json(OUTPUT_REVIEWS, encoding="utf-8")
+    df_historico.columns = [c.title() for c in df_historico.columns]
+    df_historico = df_historico.rename(columns={"Primer_Nombre": "PrimerNombre"})
+    if "Fecha" in df_historico.columns:
+        df_historico["Fecha"] = pd.to_datetime(df_historico["Fecha"], errors="coerce")
+
+    # Métricas y Excel siempre desde el histórico completo
+    df_metrics_hist = build_metrics(df_historico)
+    _write_metrics_json(df_metrics_hist)
+    _sync_visor()
 
     print("Exportando Excel...")
-    export_excel(df, df_metrics)
-
-    print("Exportando JSON...")
-    export_json(df, df_metrics)
+    export_excel(df_historico, df_metrics_hist)
 
     print("Listo.")
 

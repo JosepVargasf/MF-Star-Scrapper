@@ -98,7 +98,9 @@ export default function VolumenReseñas({ reviews }) {
       <div className="vr-filter">
         <button
           className={`kpi-chip${selectedEds.size === allEdificios.length ? ' active' : ''}`}
-          onClick={() => setSelectedEds(new Set(allEdificios))}
+          onClick={() => setSelectedEds(
+            selectedEds.size === allEdificios.length ? new Set() : new Set(allEdificios)
+          )}
         >
           Todos
         </button>

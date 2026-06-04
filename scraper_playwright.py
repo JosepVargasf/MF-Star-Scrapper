@@ -253,10 +253,21 @@ async def _extract_reviews_from_page(page: Page, building_query: str) -> list:
             m = re.search(r'(\d+)', aria)
             rating = int(m.group(1)) if m else None
 
-        # Fecha relativa
+        # Fecha: intentar primero aria-label (fecha exacta), luego texto relativo
         date_el = await card.query_selector(SEL_DATE)
-        date_text = (await date_el.inner_text()).strip() if date_el else ''
-        fecha = parse_relative_date(date_text)
+        fecha = None
+        if date_el:
+            aria_date = await date_el.get_attribute('aria-label') or ''
+            if aria_date:
+                try:
+                    fecha = parse_date(aria_date)
+                    if fecha.tzinfo is None:
+                        fecha = fecha.replace(tzinfo=timezone.utc)
+                except Exception:
+                    fecha = None
+            if not fecha:
+                date_text = (await date_el.inner_text()).strip()
+                fecha = parse_relative_date(date_text)
 
         # Texto
         text_el = await card.query_selector(SEL_TEXT)
