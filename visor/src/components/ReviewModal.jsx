@@ -40,9 +40,6 @@ export default function ReviewModal({ reviews, tema, sentimiento, edificio, onCl
       <div className="rm-panel">
         <div className="rm-header">
           <div className="rm-header-left">
-            <div className="rm-badge" style={{ background: sStyle.bg, color: sStyle.color }}>
-              {sStyle.label}
-            </div>
             <div>
               <h2 className="rm-title">"{tema}"</h2>
               <p className="rm-sub">{filtered.length} reseña{filtered.length !== 1 ? 's' : ''} · {(!edificio || edificio === 'todos') ? 'Todos los edificios' : edificio}</p>

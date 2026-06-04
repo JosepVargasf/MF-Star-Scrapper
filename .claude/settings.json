@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(python -c ' *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git fetch *)",
+      "Bash(git commit -m 'fix\\(pipeline\\): generar Excel desde histórico acumulado, no solo scrape actual *)",
+      "Bash(git commit -m 'fix\\(pipeline\\): métricas y Excel siempre desde histórico completo, no solo scrape actual *)",
+      "Bash(git commit -m 'fix\\(pipeline\\): NaN→null en metrics.json usando pandas to_json en vez de json.dump *)",
+      "Bash(git commit -m 'fix\\(visor\\): capitalización de edificios, encoding limpio y toggle Todos en volumen *)",
+      "Bash(gh label *)",
+      "Bash(git commit -m 'feat\\(HU-22\\): temas positivos y negativos con breakdown por género *)",
+      "Bash(git commit -m 'feat\\(HU-28\\): toggle mensual/acumulado en evolución del rating *)",
+      "Bash(git commit -m 'feat\\(HU-23\\): heatmap de temas por edificio con toggle positivos/negativos *)",
+      "Bash(git commit -m 'fix\\(HU-23\\): etiquetas de temas en heatmap horizontales y más pequeñas *)",
+      "Bash(git commit -m 'feat\\(HU-29\\): toggle ranking por estrellas en Ranking de Edificios *)",
+      "Bash(git commit -m 'feat\\(HU-24\\): amenidades por edificio integrado en heatmap con toggle Temas/Amenidades *)",
+      "Bash(git commit -m 'feat\\(HU-26\\): modo anual en evolución del rating con barras agrupadas por año *)",
+      "Bash(git commit -m 'fix\\(HU-26\\): más padding superior en gráfico anual para etiquetas de valor 5 *)",
+      "Bash(git commit -m 'feat\\(HU-27\\): panel de métricas detalladas ordenable por columna *)",
+      "Bash(git commit -m 'feat\\(HU-30\\): filtro global por comuna y operador en todo el dashboard *)",
+      "Bash(git commit -m 'fix\\(HU-30\\): mover useMemo antes de returns condicionales \\(Rules of Hooks\\) *)",
+      "Bash(git commit -m 'fix: fecha de última actualización en formato dd/mm/aaaa *)",
+      "Bash(git commit -m 'fix: topbar sticky para que quede visible al hacer scroll *)"
+    ]
+  }
+}
