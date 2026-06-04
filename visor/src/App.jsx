@@ -27,24 +27,16 @@ function Dashboard({ user, onLogout }) {
   const [filterComuna,     setFilterComuna]     = useState('todas')
   const [filterOperador,   setFilterOperador]   = useState('todos')
 
-  if (loading) return <div className="splash"><div className="spinner" /><p>Cargando datos...</p></div>
-  if (error)   return <div className="splash error">Error al cargar datos: {String(error)}</div>
+  // Todos los hooks ANTES de cualquier return condicional
+  const edificiosActivos = useMemo(() => new Set(
+    reviews
+      .filter(r =>
+        (filterComuna   === 'todas' || r.comuna   === filterComuna) &&
+        (filterOperador === 'todos' || r.operador === filterOperador)
+      )
+      .map(r => r.edificio)
+  ), [reviews, filterComuna, filterOperador])
 
-  const lastUpdate = reviews.reduce((max, r) => r.fecha > max ? r.fecha : max, '')
-
-  // Edificios activos según filtros de comuna y operador
-  const edificiosActivos = useMemo(() => {
-    return new Set(
-      reviews
-        .filter(r =>
-          (filterComuna   === 'todas' || r.comuna   === filterComuna) &&
-          (filterOperador === 'todos' || r.operador === filterOperador)
-        )
-        .map(r => r.edificio)
-    )
-  }, [reviews, filterComuna, filterOperador])
-
-  // Datos filtrados
   const reviewsFiltradas = useMemo(() =>
     reviews.filter(r => edificiosActivos.has(r.edificio))
   , [reviews, edificiosActivos])
@@ -52,6 +44,13 @@ function Dashboard({ user, onLogout }) {
   const metricsFiltradas = useMemo(() =>
     metrics.filter(m => edificiosActivos.has(m.edificio))
   , [metrics, edificiosActivos])
+
+  const lastUpdate = useMemo(() =>
+    reviews.reduce((max, r) => r.fecha > max ? r.fecha : max, '')
+  , [reviews])
+
+  if (loading) return <div className="splash"><div className="spinner" /><p>Cargando datos...</p></div>
+  if (error)   return <div className="splash error">Error al cargar datos: {String(error)}</div>
 
   function handleToggle(ed) {
     if (ed === null) { setSelectedProjects(new Set()); return }
