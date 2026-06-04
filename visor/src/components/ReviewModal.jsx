@@ -2,12 +2,6 @@ import { useEffect } from 'react'
 
 const STARS = n => '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n))
 
-const SENTIMENT_STYLE = {
-  'Positiva': { bg: '#f0fdf4', color: '#166534', label: '👍 Positiva' },
-  'Negativa': { bg: '#fff1f2', color: '#991b1b', label: '👎 Negativa' },
-  'Neutra':   { bg: '#fefce8', color: '#854d0e', label: '😐 Neutra'   },
-}
-
 function Avatar({ name }) {
   const initials = name?.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?'
   const hue = (name?.charCodeAt(0) ?? 0) * 37 % 360
