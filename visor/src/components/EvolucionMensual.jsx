@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine,
+  AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, ReferenceLine, Cell, LabelList,
 } from 'recharts'
 
 const PALETTE = ['#6366f1','#10b981','#f59e0b','#0ea5e9','#a855f7','#ec4899','#14b8a6','#f97316']
@@ -28,9 +28,9 @@ function CustomTooltip({ active, payload, label, mode }) {
 
 export default function EvolucionMensual({ reviews }) {
   const edificios = [...new Set(reviews.map(r => r.edificio))].sort()
-  const [primary, setPrimary]   = useState(edificios[0] ?? '')
-  const [compare, setCompare]   = useState('')
-  const [mode, setMode]         = useState('mensual') // 'mensual' | 'acumulado'
+  const [primary, setPrimary] = useState(edificios[0] ?? '')
+  const [compare, setCompare] = useState('')
+  const [mode, setMode]       = useState('mensual') // 'mensual' | 'acumulado' | 'anual'
 
   const byEdificio = useMemo(() => {
     const map = {}
@@ -47,6 +47,10 @@ export default function EvolucionMensual({ reviews }) {
   const meses = useMemo(() =>
     [...new Set(reviews.map(r => r.fecha?.slice(0, 7)).filter(Boolean))].sort()
   , [reviews])
+
+  const años = useMemo(() =>
+    [...new Set(meses.map(m => m.slice(0, 4)))].sort()
+  , [meses])
 
   function mensualSeries(ed) {
     return meses.map(mes => {
@@ -65,20 +69,36 @@ export default function EvolucionMensual({ reviews }) {
     })
   }
 
+  function anualSeries(ed) {
+    return años.map(año => {
+      const mesesDelAño = meses.filter(m => m.startsWith(año))
+      const scores = mesesDelAño.flatMap(m => byEdificio[ed]?.[m] ?? [])
+      return scores.length ? +(scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(2) : null
+    })
+  }
+
   const data = useMemo(() => {
+    if (mode === 'anual') {
+      const pSeries = anualSeries(primary)
+      const cSeries = compare ? anualSeries(compare) : null
+      return años.map((año, i) => {
+        const row = { mes: año, [primary]: pSeries[i] }
+        if (compare) row[compare] = cSeries[i]
+        return row
+      })
+    }
     const seriesFn = mode === 'acumulado' ? acumuladoSeries : mensualSeries
     const pSeries  = seriesFn(primary)
     const cSeries  = compare ? seriesFn(compare) : null
-
     return meses.map((mes, i) => {
       const row = { mes, [primary]: pSeries[i] }
       if (compare) row[compare] = cSeries[i]
       return row
     })
-  }, [meses, byEdificio, primary, compare, mode])
+  }, [meses, años, byEdificio, primary, compare, mode])
 
   function stats(ed) {
-    const seriesFn = mode === 'acumulado' ? acumuladoSeries : mensualSeries
+    const seriesFn = mode === 'anual' ? anualSeries : mode === 'acumulado' ? acumuladoSeries : mensualSeries
     const vals = seriesFn(ed).filter(v => v != null)
     if (!vals.length) return null
     const avg   = vals.reduce((a, b) => a + b, 0) / vals.length
@@ -93,20 +113,23 @@ export default function EvolucionMensual({ reviews }) {
   const colorP = PALETTE[0]
   const colorC = PALETTE[1]
 
+  const subtitles = {
+    mensual:   'Promedio de calificación mes a mes',
+    acumulado: 'Promedio acumulado de todas las reseñas hasta cada mes',
+    anual:     'Promedio de calificación por año',
+  }
+
   return (
     <div className="card card-full">
       <div className="card-header">
         <div>
           <h2>Evolución del Rating</h2>
-          <p className="card-sub">
-            {mode === 'mensual'
-              ? 'Promedio de calificación mes a mes'
-              : 'Promedio acumulado de todas las reseñas hasta cada mes'}
-          </p>
+          <p className="card-sub">{subtitles[mode]}</p>
         </div>
         <div className="tab-group">
-          <button className={`tab${mode === 'mensual'    ? ' active' : ''}`} onClick={() => setMode('mensual')}>Mensual</button>
-          <button className={`tab${mode === 'acumulado'  ? ' active' : ''}`} onClick={() => setMode('acumulado')}>Acumulado</button>
+          <button className={`tab${mode === 'mensual'   ? ' active' : ''}`} onClick={() => setMode('mensual')}>Mensual</button>
+          <button className={`tab${mode === 'acumulado' ? ' active' : ''}`} onClick={() => setMode('acumulado')}>Acumulado</button>
+          <button className={`tab${mode === 'anual'     ? ' active' : ''}`} onClick={() => setMode('anual')}>Anual</button>
         </div>
       </div>
 
@@ -127,35 +150,55 @@ export default function EvolucionMensual({ reviews }) {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height={300}>
-        <AreaChart data={data} margin={{ left: 0, right: 16, top: 12, bottom: 4 }}>
-          <defs>
-            <linearGradient id="gradP" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%"  stopColor={colorP} stopOpacity={0.15} />
-              <stop offset="95%" stopColor={colorP} stopOpacity={0} />
-            </linearGradient>
+      {mode === 'anual' ? (
+        <ResponsiveContainer width="100%" height={280}>
+          <BarChart data={data} margin={{ left: 0, right: 16, top: 12, bottom: 4 }} barCategoryGap="30%">
+            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+            <XAxis dataKey="mes" tick={{ fontSize: 12, fill: '#475569', fontWeight: 600 }} axisLine={false} tickLine={false} />
+            <YAxis domain={[1, 5]} tickCount={5} tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} width={28} />
+            <ReferenceLine y={4} stroke="#cbd5e1" strokeDasharray="5 3" />
+            <Tooltip content={<CustomTooltip mode={mode} />} />
+            <Bar dataKey={primary} fill={colorP} radius={[6,6,0,0]} maxBarSize={60}>
+              <LabelList dataKey={primary} position="top" style={{ fontSize: 11, fontWeight: 700, fill: colorP }} formatter={v => v?.toFixed(2)} />
+            </Bar>
             {compare && (
-              <linearGradient id="gradC" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%"  stopColor={colorC} stopOpacity={0.15} />
-                <stop offset="95%" stopColor={colorC} stopOpacity={0} />
-              </linearGradient>
+              <Bar dataKey={compare} fill={colorC} radius={[6,6,0,0]} maxBarSize={60}>
+                <LabelList dataKey={compare} position="top" style={{ fontSize: 11, fontWeight: 700, fill: colorC }} formatter={v => v?.toFixed(2)} />
+              </Bar>
             )}
-          </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
-          <XAxis dataKey="mes" tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
-          <YAxis domain={[1, 5]} tickCount={5} tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} width={28} />
-          <ReferenceLine y={4} stroke="#cbd5e1" strokeDasharray="5 3" label={{ value: '4★', position: 'right', fontSize: 10, fill: '#94a3b8' }} />
-          <Tooltip content={<CustomTooltip mode={mode} />} />
-          <Area type="monotone" dataKey={primary} stroke={colorP} strokeWidth={2.5}
-            fill="url(#gradP)" dot={{ r: 3.5, fill: colorP, strokeWidth: 0 }}
-            activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }} connectNulls />
-          {compare && (
-            <Area type="monotone" dataKey={compare} stroke={colorC} strokeWidth={2.5}
-              fill="url(#gradC)" dot={{ r: 3.5, fill: colorC, strokeWidth: 0 }}
+          </BarChart>
+        </ResponsiveContainer>
+      ) : (
+        <ResponsiveContainer width="100%" height={300}>
+          <AreaChart data={data} margin={{ left: 0, right: 16, top: 12, bottom: 4 }}>
+            <defs>
+              <linearGradient id="gradP" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%"  stopColor={colorP} stopOpacity={0.15} />
+                <stop offset="95%" stopColor={colorP} stopOpacity={0} />
+              </linearGradient>
+              {compare && (
+                <linearGradient id="gradC" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%"  stopColor={colorC} stopOpacity={0.15} />
+                  <stop offset="95%" stopColor={colorC} stopOpacity={0} />
+                </linearGradient>
+              )}
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+            <XAxis dataKey="mes" tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
+            <YAxis domain={[1, 5]} tickCount={5} tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} width={28} />
+            <ReferenceLine y={4} stroke="#cbd5e1" strokeDasharray="5 3" label={{ value: '4★', position: 'right', fontSize: 10, fill: '#94a3b8' }} />
+            <Tooltip content={<CustomTooltip mode={mode} />} />
+            <Area type="monotone" dataKey={primary} stroke={colorP} strokeWidth={2.5}
+              fill="url(#gradP)" dot={{ r: 3.5, fill: colorP, strokeWidth: 0 }}
               activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }} connectNulls />
-          )}
-        </AreaChart>
-      </ResponsiveContainer>
+            {compare && (
+              <Area type="monotone" dataKey={compare} stroke={colorC} strokeWidth={2.5}
+                fill="url(#gradC)" dot={{ r: 3.5, fill: colorC, strokeWidth: 0 }}
+                activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }} connectNulls />
+            )}
+          </AreaChart>
+        </ResponsiveContainer>
+      )}
 
       <div className="evol-stats">
         <StatBlock label={primary} s={stP} color={colorP} mode={mode} />
@@ -175,7 +218,7 @@ function StatBlock({ label, s, color, mode }) {
       <div className="evol-stat-row">
         <div className="evol-stat-item">
           <span className="evol-stat-val">{s.avg.toFixed(2)}</span>
-          <span className="evol-stat-key">{mode === 'acumulado' ? 'Prom. del acumulado' : 'Promedio'}</span>
+          <span className="evol-stat-key">Promedio</span>
         </div>
         <div className="evol-stat-item">
           <span className="evol-stat-val">{s.max.toFixed(2)}</span>
@@ -189,7 +232,7 @@ function StatBlock({ label, s, color, mode }) {
           <span className={`evol-stat-val ${trendUp ? 'positive' : trendDn ? 'negative' : ''}`}>
             {trendUp ? '↑' : trendDn ? '↓' : '→'} {Math.abs(s.trend).toFixed(2)}
           </span>
-          <span className="evol-stat-key">{mode === 'acumulado' ? 'Δ acumulado' : 'Tendencia'}</span>
+          <span className="evol-stat-key">{mode === 'anual' ? 'Δ año a año' : mode === 'acumulado' ? 'Δ acumulado' : 'Tendencia'}</span>
         </div>
       </div>
     </div>
