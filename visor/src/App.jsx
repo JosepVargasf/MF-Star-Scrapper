@@ -45,9 +45,12 @@ function Dashboard({ user, onLogout }) {
     metrics.filter(m => edificiosActivos.has(m.edificio))
   , [metrics, edificiosActivos])
 
-  const lastUpdate = useMemo(() =>
-    reviews.reduce((max, r) => r.fecha > max ? r.fecha : max, '')
-  , [reviews])
+  const lastUpdate = useMemo(() => {
+    const iso = reviews.reduce((max, r) => r.fecha > max ? r.fecha : max, '')
+    if (!iso) return ''
+    const [y, m, d] = iso.slice(0, 10).split('-')
+    return `${d}/${m}/${y}`
+  }, [reviews])
 
   if (loading) return <div className="splash"><div className="spinner" /><p>Cargando datos...</p></div>
   if (error)   return <div className="splash error">Error al cargar datos: {String(error)}</div>
