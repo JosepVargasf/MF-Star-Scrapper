@@ -100,7 +100,7 @@ function Dashboard({ user, onLogout }) {
           </div>
 
           <div id="ranking">
-            <RankingEdificios metrics={metrics} />
+            <RankingEdificios metrics={metrics} reviews={reviews} />
           </div>
 
           <div id="volumen">
