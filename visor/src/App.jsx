@@ -11,6 +11,7 @@ import SentimientoTemas from './components/SentimientoTemas'
 import VolumenReseñas from './components/VolumenReseñas'
 import TemasGenero from './components/TemasGenero'
 import HeatmapTemas from './components/HeatmapTemas'
+import MetricasDetalladas from './components/MetricasDetalladas'
 import './App.css'
 
 export default function App() {
@@ -59,6 +60,7 @@ function Dashboard({ user, onLogout }) {
         <nav className="nav">
           <a href="#kpis"         className="nav-item"><span className="nav-icon" />Resumen</a>
           <a href="#ranking"      className="nav-item"><span className="nav-icon" />Ranking</a>
+          <a href="#metricas"    className="nav-item"><span className="nav-icon" />Métricas</a>
           <a href="#volumen"      className="nav-item"><span className="nav-icon" />Volumen</a>
           <a href="#evolucion"    className="nav-item"><span className="nav-icon" />Evolución</a>
           <a href="#causas"       className="nav-item"><span className="nav-icon" />Causas</a>
@@ -101,6 +103,10 @@ function Dashboard({ user, onLogout }) {
 
           <div id="ranking">
             <RankingEdificios metrics={metrics} reviews={reviews} />
+          </div>
+
+          <div id="metricas">
+            <MetricasDetalladas metrics={metrics} />
           </div>
 
           <div id="volumen">

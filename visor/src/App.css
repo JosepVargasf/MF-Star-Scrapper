@@ -921,6 +921,84 @@ body {
 .tt-neg-val { color: #ef4444; font-weight: 600; }
 .tt-tot-val { color: #94a3b8; }
 
+/* ── MetricasDetalladas ── */
+.md-wrap { overflow-x: auto; }
+
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.md-th {
+  padding: 8px 12px;
+  font-size: 0.67rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: color 0.12s;
+}
+
+.md-th:hover { color: #334155; }
+.md-th-left  { text-align: left; }
+
+.md-sort-icon        { color: #cbd5e1; margin-left: 4px; font-size: 0.65rem; }
+.md-sort-icon.active { color: #6366f1; }
+
+.md-td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.md-td-edificio {
+  font-weight: 600;
+  white-space: nowrap;
+  color: #0f172a;
+}
+
+.md-td-center { text-align: center; }
+.md-row-even  { background: #fafafa; }
+.md-muted     { color: #94a3b8; }
+
+.md-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 100px;
+}
+
+.md-bar {
+  height: 6px;
+  border-radius: 3px;
+  flex: 1;
+  transition: width 0.3s;
+}
+
+.md-bar-val { font-size: 0.72rem; font-weight: 700; color: #334155; flex-shrink: 0; }
+
+.md-up      { color: #059669; font-weight: 700; }
+.md-dn      { color: #dc2626; font-weight: 700; }
+.md-neutral { color: #94a3b8; }
+
+.md-pos { color: #059669; font-weight: 600; }
+.md-neg { color: #dc2626; font-weight: 600; }
+
+.md-badge-new {
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+}
+
 /* ── TemasGenero ── */
 .tg-legend {
   display: flex;
