@@ -6,7 +6,7 @@ import {
 
 const PALETTE = ['#6366f1','#10b981','#f59e0b','#0ea5e9','#a855f7','#ec4899','#14b8a6','#f97316']
 
-function CustomTooltip({ active, payload, label, edificios }) {
+function CustomTooltip({ active, payload, label, mode }) {
   if (!active || !payload?.length) return null
   const items = payload.filter(p => p.value != null)
   return (
@@ -21,14 +21,16 @@ function CustomTooltip({ active, payload, label, edificios }) {
           <strong>{p.value?.toFixed(2)} ★</strong>
         </p>
       ))}
+      {mode === 'acumulado' && <p style={{ fontSize: '0.65rem', color: '#94a3b8', marginTop: 4 }}>Promedio acumulado hasta este mes</p>}
     </div>
   )
 }
 
 export default function EvolucionMensual({ reviews }) {
   const edificios = [...new Set(reviews.map(r => r.edificio))].sort()
-  const [primary, setPrimary] = useState(edificios[0] ?? '')
-  const [compare, setCompare] = useState('')
+  const [primary, setPrimary]   = useState(edificios[0] ?? '')
+  const [compare, setCompare]   = useState('')
+  const [mode, setMode]         = useState('mensual') // 'mensual' | 'acumulado'
 
   const byEdificio = useMemo(() => {
     const map = {}
@@ -46,34 +48,48 @@ export default function EvolucionMensual({ reviews }) {
     [...new Set(reviews.map(r => r.fecha?.slice(0, 7)).filter(Boolean))].sort()
   , [reviews])
 
-  const data = useMemo(() => meses.map(mes => {
-    const row = { mes }
-    const scP = byEdificio[primary]?.[mes] ?? []
-    row[primary] = scP.length ? +(scP.reduce((a, b) => a + b, 0) / scP.length).toFixed(2) : null
-    if (compare) {
-      const scC = byEdificio[compare]?.[mes] ?? []
-      row[compare] = scC.length ? +(scC.reduce((a, b) => a + b, 0) / scC.length).toFixed(2) : null
-    }
-    return row
-  }), [meses, byEdificio, primary, compare])
+  function mensualSeries(ed) {
+    return meses.map(mes => {
+      const sc = byEdificio[ed]?.[mes] ?? []
+      return sc.length ? +(sc.reduce((a, b) => a + b, 0) / sc.length).toFixed(2) : null
+    })
+  }
 
-  // Resumen tabla
+  function acumuladoSeries(ed) {
+    let sum = 0, count = 0
+    return meses.map(mes => {
+      const sc = byEdificio[ed]?.[mes] ?? []
+      sum   += sc.reduce((a, b) => a + b, 0)
+      count += sc.length
+      return count ? +(sum / count).toFixed(2) : null
+    })
+  }
+
+  const data = useMemo(() => {
+    const seriesFn = mode === 'acumulado' ? acumuladoSeries : mensualSeries
+    const pSeries  = seriesFn(primary)
+    const cSeries  = compare ? seriesFn(compare) : null
+
+    return meses.map((mes, i) => {
+      const row = { mes, [primary]: pSeries[i] }
+      if (compare) row[compare] = cSeries[i]
+      return row
+    })
+  }, [meses, byEdificio, primary, compare, mode])
+
   function stats(ed) {
-    const vals = meses.map(m => {
-      const sc = byEdificio[ed]?.[m] ?? []
-      return sc.length ? sc.reduce((a, b) => a + b, 0) / sc.length : null
-    }).filter(v => v != null)
+    const seriesFn = mode === 'acumulado' ? acumuladoSeries : mensualSeries
+    const vals = seriesFn(ed).filter(v => v != null)
     if (!vals.length) return null
-    const avg = vals.reduce((a, b) => a + b, 0) / vals.length
-    const max = Math.max(...vals)
-    const min = Math.min(...vals)
+    const avg   = vals.reduce((a, b) => a + b, 0) / vals.length
+    const max   = Math.max(...vals)
+    const min   = Math.min(...vals)
     const trend = vals.length >= 2 ? vals[vals.length - 1] - vals[0] : 0
     return { avg, max, min, trend }
   }
 
-  const stP = stats(primary)
-  const stC = compare ? stats(compare) : null
-
+  const stP    = stats(primary)
+  const stC    = compare ? stats(compare) : null
   const colorP = PALETTE[0]
   const colorC = PALETTE[1]
 
@@ -81,8 +97,16 @@ export default function EvolucionMensual({ reviews }) {
     <div className="card card-full">
       <div className="card-header">
         <div>
-          <h2>Evolución Mensual del Rating</h2>
-          <p className="card-sub">Promedio de calificación mes a mes</p>
+          <h2>Evolución del Rating</h2>
+          <p className="card-sub">
+            {mode === 'mensual'
+              ? 'Promedio de calificación mes a mes'
+              : 'Promedio acumulado de todas las reseñas hasta cada mes'}
+          </p>
+        </div>
+        <div className="tab-group">
+          <button className={`tab${mode === 'mensual'    ? ' active' : ''}`} onClick={() => setMode('mensual')}>Mensual</button>
+          <button className={`tab${mode === 'acumulado'  ? ' active' : ''}`} onClick={() => setMode('acumulado')}>Acumulado</button>
         </div>
       </div>
 
@@ -121,41 +145,27 @@ export default function EvolucionMensual({ reviews }) {
           <XAxis dataKey="mes" tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
           <YAxis domain={[1, 5]} tickCount={5} tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} width={28} />
           <ReferenceLine y={4} stroke="#cbd5e1" strokeDasharray="5 3" label={{ value: '4★', position: 'right', fontSize: 10, fill: '#94a3b8' }} />
-          <Tooltip content={<CustomTooltip />} />
-          <Area
-            type="monotone"
-            dataKey={primary}
-            stroke={colorP}
-            strokeWidth={2.5}
-            fill="url(#gradP)"
-            dot={{ r: 3.5, fill: colorP, strokeWidth: 0 }}
-            activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }}
-            connectNulls
-          />
+          <Tooltip content={<CustomTooltip mode={mode} />} />
+          <Area type="monotone" dataKey={primary} stroke={colorP} strokeWidth={2.5}
+            fill="url(#gradP)" dot={{ r: 3.5, fill: colorP, strokeWidth: 0 }}
+            activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }} connectNulls />
           {compare && (
-            <Area
-              type="monotone"
-              dataKey={compare}
-              stroke={colorC}
-              strokeWidth={2.5}
-              fill="url(#gradC)"
-              dot={{ r: 3.5, fill: colorC, strokeWidth: 0 }}
-              activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }}
-              connectNulls
-            />
+            <Area type="monotone" dataKey={compare} stroke={colorC} strokeWidth={2.5}
+              fill="url(#gradC)" dot={{ r: 3.5, fill: colorC, strokeWidth: 0 }}
+              activeDot={{ r: 6, strokeWidth: 2, stroke: '#fff' }} connectNulls />
           )}
         </AreaChart>
       </ResponsiveContainer>
 
       <div className="evol-stats">
-        <StatBlock label={primary} s={stP} color={colorP} />
-        {stC && <StatBlock label={compare} s={stC} color={colorC} />}
+        <StatBlock label={primary} s={stP} color={colorP} mode={mode} />
+        {stC && <StatBlock label={compare} s={stC} color={colorC} mode={mode} />}
       </div>
     </div>
   )
 }
 
-function StatBlock({ label, s, color }) {
+function StatBlock({ label, s, color, mode }) {
   if (!s) return null
   const trendUp = s.trend > 0.05
   const trendDn = s.trend < -0.05
@@ -165,7 +175,7 @@ function StatBlock({ label, s, color }) {
       <div className="evol-stat-row">
         <div className="evol-stat-item">
           <span className="evol-stat-val">{s.avg.toFixed(2)}</span>
-          <span className="evol-stat-key">Promedio</span>
+          <span className="evol-stat-key">{mode === 'acumulado' ? 'Prom. del acumulado' : 'Promedio'}</span>
         </div>
         <div className="evol-stat-item">
           <span className="evol-stat-val">{s.max.toFixed(2)}</span>
@@ -179,7 +189,7 @@ function StatBlock({ label, s, color }) {
           <span className={`evol-stat-val ${trendUp ? 'positive' : trendDn ? 'negative' : ''}`}>
             {trendUp ? '↑' : trendDn ? '↓' : '→'} {Math.abs(s.trend).toFixed(2)}
           </span>
-          <span className="evol-stat-key">Tendencia</span>
+          <span className="evol-stat-key">{mode === 'acumulado' ? 'Δ acumulado' : 'Tendencia'}</span>
         </div>
       </div>
     </div>
