@@ -357,7 +357,7 @@ def export_excel(df: pd.DataFrame, df_metrics: pd.DataFrame):
         raise
 
 
-def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
+def export_json(df: pd.DataFrame):
     os.makedirs(DATA_DIR, exist_ok=True)
 
     reviews = df.copy()
@@ -410,6 +410,8 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
         json.dump(historico, f, ensure_ascii=False, indent=2, default=_json_serializer)
     print(f"reviews.json guardado en: {OUTPUT_REVIEWS}")
 
+
+def _write_metrics_json(df_metrics: pd.DataFrame):
     metrics = df_metrics.copy()
     metrics.columns = [
         c.lower()
@@ -421,7 +423,6 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
         .replace("califprevio","calif_previo")
         for c in metrics.columns
     ]
-
     with open(OUTPUT_METRICS, "w", encoding="utf-8") as f:
         json.dump(
             metrics.where(metrics.notna(), other=None).to_dict(orient="records"),
@@ -431,7 +432,8 @@ def export_json(df: pd.DataFrame, df_metrics: pd.DataFrame):
         )
     print(f"metrics.json guardado en: {OUTPUT_METRICS}")
 
-    # Sincronizar al visor local si existe
+
+def _sync_visor():
     if os.path.isdir(VISOR_DATA_DIR):
         import shutil
         shutil.copy2(OUTPUT_REVIEWS, os.path.join(VISOR_DATA_DIR, "reviews.json"))
@@ -467,23 +469,23 @@ async def main(buildings: list = None, filter_month: bool = False):
     # Normalizar timezone: todo el pipeline trabaja con fechas naive (UTC implícito)
     df["Fecha"] = df["Fecha"].dt.tz_localize(None)
 
-    df_metrics = build_metrics(df)
-
-    # Primero exportar JSON (merge histórico acumulado)
+    # Primero exportar JSON: merge histórico de reviews
     print("Exportando JSON...")
-    export_json(df, df_metrics)
+    export_json(df)
 
-    # Luego Excel con el histórico completo ya guardado
-    print("Exportando Excel...")
+    # Leer el histórico completo para métricas y Excel
     df_historico = pd.read_json(OUTPUT_REVIEWS, encoding="utf-8")
     df_historico.columns = [c.title() for c in df_historico.columns]
-    df_historico = df_historico.rename(columns={
-        "Primer_Nombre": "PrimerNombre",
-        "Calif_Actual":  "CalifActual",
-    })
+    df_historico = df_historico.rename(columns={"Primer_Nombre": "PrimerNombre"})
     if "Fecha" in df_historico.columns:
         df_historico["Fecha"] = pd.to_datetime(df_historico["Fecha"], errors="coerce")
+
+    # Métricas y Excel siempre desde el histórico completo
     df_metrics_hist = build_metrics(df_historico)
+    _write_metrics_json(df_metrics_hist)
+    _sync_visor()
+
+    print("Exportando Excel...")
     export_excel(df_historico, df_metrics_hist)
 
     print("Listo.")
