@@ -2,12 +2,6 @@ import { useEffect } from 'react'
 
 const STARS = n => '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n))
 
-const SENTIMENT_STYLE = {
-  'Positiva': { bg: '#f0fdf4', color: '#166534', label: '👍 Positiva' },
-  'Negativa': { bg: '#fff1f2', color: '#991b1b', label: '👎 Negativa' },
-  'Neutra':   { bg: '#fefce8', color: '#854d0e', label: '😐 Neutra'   },
-}
-
 function Avatar({ name }) {
   const initials = name?.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase() || '?'
   const hue = (name?.charCodeAt(0) ?? 0) * 37 % 360
@@ -33,16 +27,11 @@ export default function ReviewModal({ reviews, tema, sentimiento, edificio, onCl
     })
     .sort((a, b) => b.fecha?.localeCompare(a.fecha))
 
-  const sStyle = SENTIMENT_STYLE[sentimiento] ?? SENTIMENT_STYLE['Neutra']
-
   return (
     <div className="rm-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
       <div className="rm-panel">
         <div className="rm-header">
           <div className="rm-header-left">
-            <div className="rm-badge" style={{ background: sStyle.bg, color: sStyle.color }}>
-              {sStyle.label}
-            </div>
             <div>
               <h2 className="rm-title">"{tema}"</h2>
               <p className="rm-sub">{filtered.length} reseña{filtered.length !== 1 ? 's' : ''} · {(!edificio || edificio === 'todos') ? 'Todos los edificios' : edificio}</p>
