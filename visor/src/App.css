@@ -921,6 +921,53 @@ body {
 .tt-neg-val { color: #ef4444; font-weight: 600; }
 .tt-tot-val { color: #94a3b8; }
 
+/* ── TemasGenero ── */
+.tg-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.tg-legend span { display: flex; align-items: center; gap: 5px; }
+
+.tg-dot {
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.tg-note {
+  color: #94a3b8;
+  font-size: 0.67rem;
+  margin-left: auto;
+}
+
+.tg-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) { .tg-cols { grid-template-columns: 1fr; } }
+
+.tg-chart-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tg-chart-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #334155;
+  border-left: 3px solid;
+  padding-left: 10px;
+}
+
 /* ── Responsive ── */
 
 /* Tablet: sidebar colapsa a barra horizontal */

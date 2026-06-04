@@ -9,6 +9,7 @@ import DistribucionEstrellas from './components/DistribucionEstrellas'
 import KeywordsCategorias from './components/KeywordsCategorias'
 import SentimientoTemas from './components/SentimientoTemas'
 import VolumenReseñas from './components/VolumenReseñas'
+import TemasGenero from './components/TemasGenero'
 import './App.css'
 
 export default function App() {
@@ -60,6 +61,7 @@ function Dashboard({ user, onLogout }) {
           <a href="#volumen"      className="nav-item"><span className="nav-icon" />Volumen</a>
           <a href="#evolucion"    className="nav-item"><span className="nav-icon" />Evolución</a>
           <a href="#causas"       className="nav-item"><span className="nav-icon" />Causas</a>
+          <a href="#temasgenero" className="nav-item"><span className="nav-icon" />Género</a>
           <a href="#distribucion" className="nav-item"><span className="nav-icon" />Distribución</a>
           <a href="#temas"        className="nav-item"><span className="nav-icon" />Temas</a>
         </nav>
@@ -109,6 +111,10 @@ function Dashboard({ user, onLogout }) {
 
           <div id="causas">
             <SentimientoTemas reviews={reviews} />
+          </div>
+
+          <div id="temasgenero">
+            <TemasGenero reviews={reviews} />
           </div>
 
           <div className="grid-2" id="distribucion">
