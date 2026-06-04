@@ -423,13 +423,10 @@ def _write_metrics_json(df_metrics: pd.DataFrame):
         .replace("califprevio","calif_previo")
         for c in metrics.columns
     ]
+    # Usar pandas to_json para garantizar que NaN → null (json.dump los deja como NaN)
+    json_str = metrics.to_json(orient="records", force_ascii=False, indent=2)
     with open(OUTPUT_METRICS, "w", encoding="utf-8") as f:
-        json.dump(
-            metrics.where(metrics.notna(), other=None).to_dict(orient="records"),
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
+        f.write(json_str)
     print(f"metrics.json guardado en: {OUTPUT_METRICS}")
 
 
