@@ -469,11 +469,22 @@ async def main(buildings: list = None, filter_month: bool = False):
 
     df_metrics = build_metrics(df)
 
-    print("Exportando Excel...")
-    export_excel(df, df_metrics)
-
+    # Primero exportar JSON (merge histórico acumulado)
     print("Exportando JSON...")
     export_json(df, df_metrics)
+
+    # Luego Excel con el histórico completo ya guardado
+    print("Exportando Excel...")
+    df_historico = pd.read_json(OUTPUT_REVIEWS, encoding="utf-8")
+    df_historico.columns = [c.title() for c in df_historico.columns]
+    df_historico = df_historico.rename(columns={
+        "Primer_Nombre": "PrimerNombre",
+        "Calif_Actual":  "CalifActual",
+    })
+    if "Fecha" in df_historico.columns:
+        df_historico["Fecha"] = pd.to_datetime(df_historico["Fecha"], errors="coerce")
+    df_metrics_hist = build_metrics(df_historico)
+    export_excel(df_historico, df_metrics_hist)
 
     print("Listo.")
 
