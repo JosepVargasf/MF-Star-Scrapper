@@ -35,5 +35,9 @@ export function useData() {
       .finally(() => setLoading(false))
   }, [])
 
-  return { metrics, reviews, loading, error }
+  // Extraer comunas y operadores únicos
+  const comunas   = [...new Set(reviews.map(r => r.comuna).filter(Boolean))].sort()
+  const operadores = [...new Set(reviews.map(r => r.operador).filter(Boolean))].sort()
+
+  return { metrics, reviews, loading, error, comunas, operadores }
 }

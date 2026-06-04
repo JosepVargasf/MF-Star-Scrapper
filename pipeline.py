@@ -21,6 +21,27 @@ import gender_guesser.detector as gender_det
 from scraper_playwright import fetch_all_buildings, BUILDINGS
 
 # ---------------------------------------------------------------------------
+# Mapping edificio → comuna y operador
+# ---------------------------------------------------------------------------
+EDIFICIO_META = {
+    'insitu irarrázaval':   {'comuna': 'Ñuñoa',       'operador': 'InSitu'},
+    'insitu echaurren':     {'comuna': 'Santiago',     'operador': 'InSitu'},
+    'somma plaza ñuñoa':    {'comuna': 'Ñuñoa',       'operador': 'GreyStar'},
+    'somma inés de suárez': {'comuna': 'Providencia',  'operador': 'GreyStar'},
+    'somma asturias':       {'comuna': 'Las Condes',   'operador': 'GreyStar'},
+    'ronda santo domingo':  {'comuna': 'Santiago',     'operador': 'GreyStar'},
+    'somma plaza bustamante':{'comuna': 'Ñuñoa',      'operador': 'GreyStar'},
+    'nativo riesco':        {'comuna': 'Las Condes',   'operador': 'LarGroup'},
+    'nomad holley':         {'comuna': 'Providencia',  'operador': 'LarGroup'},
+    'nomad bellet':         {'comuna': 'Providencia',  'operador': 'LarGroup'},
+    'imu san cristóbal':    {'comuna': 'Providencia',  'operador': 'LarGroup'},
+    'spot nueva kennedy':   {'comuna': 'Las Condes',   'operador': 'LarGroup'},
+    'soho barrio italia':   {'comuna': 'Ñuñoa',       'operador': 'Renovate Inmobiliaria'},
+    'park santiago':        {'comuna': 'Santiago',     'operador': 'LarGroup'},
+    'the place':            {'comuna': 'Las Condes',   'operador': 'Grupo Coloso'},
+}
+
+# ---------------------------------------------------------------------------
 # Rutas de salida
 # ---------------------------------------------------------------------------
 DATA_DIR       = os.path.join(os.path.dirname(__file__), "data")
@@ -192,6 +213,8 @@ def enrich(df: pd.DataFrame) -> pd.DataFrame:
     df[["Temas", "Amenidades"]] = df.apply(
         lambda r: _classify(r["Texto"], r["Sentimiento"]), axis=1, result_type="expand"
     )
+    df["Comuna"]   = df["Edificio"].map(lambda e: EDIFICIO_META.get(e.lower(), {}).get("comuna",   ""))
+    df["Operador"] = df["Edificio"].map(lambda e: EDIFICIO_META.get(e.lower(), {}).get("operador", ""))
     return df
 
 
@@ -402,6 +425,14 @@ def export_json(df: pd.DataFrame):
         if corte < fecha <= hoy:
             historico.append(r)
             nuevas_agregadas += 1
+
+    # Backfill comuna/operador en todo el histórico
+    for r in historico:
+        meta = EDIFICIO_META.get((r.get("edificio") or "").lower(), {})
+        if not r.get("comuna"):
+            r["comuna"]   = meta.get("comuna",   "")
+        if not r.get("operador"):
+            r["operador"] = meta.get("operador", "")
 
     historico.sort(key=lambda r: (r.get("edificio", ""), r.get("fecha") or ""))
     print(f"Reseñas nuevas agregadas: {nuevas_agregadas} | Total histórico: {len(historico)}")

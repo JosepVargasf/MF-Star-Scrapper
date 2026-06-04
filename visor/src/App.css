@@ -1312,6 +1312,42 @@ body {
 .login-google-icon { width: 18px; height: 18px; flex-shrink: 0; }
 
 /* ── Topbar user ── */
+.topbar-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.topbar-select {
+  padding: 5px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #334155;
+  background: #f8fafc;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.12s;
+}
+
+.topbar-select:focus { border-color: #6366f1; }
+
+.topbar-clear {
+  padding: 5px 10px;
+  border: 1px solid #fca5a5;
+  border-radius: 7px;
+  background: #fff1f2;
+  color: #dc2626;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.topbar-clear:hover { background: #fee2e2; }
+
 .topbar-user {
   display: flex;
   align-items: center;
