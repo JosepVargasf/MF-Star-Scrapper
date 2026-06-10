@@ -26,11 +26,11 @@ from scraper_playwright import fetch_all_buildings, BUILDINGS
 EDIFICIO_META = {
     'insitu irarrázaval':   {'comuna': 'Ñuñoa',       'operador': 'InSitu'},
     'insitu echaurren':     {'comuna': 'Santiago',     'operador': 'InSitu'},
-    'somma plaza ñuñoa':    {'comuna': 'Ñuñoa',       'operador': 'GreyStar'},
-    'somma inés de suárez': {'comuna': 'Providencia',  'operador': 'GreyStar'},
-    'somma asturias':       {'comuna': 'Las Condes',   'operador': 'GreyStar'},
-    'ronda santo domingo':  {'comuna': 'Santiago',     'operador': 'GreyStar'},
-    'somma plaza bustamante':{'comuna': 'Ñuñoa',      'operador': 'GreyStar'},
+    'somma plaza ñuñoa':    {'comuna': 'Ñuñoa',       'operador': 'Greystar'},
+    'somma inés de suárez': {'comuna': 'Providencia',  'operador': 'Greystar'},
+    'somma asturias':       {'comuna': 'Las Condes',   'operador': 'Greystar'},
+    'ronda santo domingo':  {'comuna': 'Santiago',     'operador': 'Greystar'},
+    'somma plaza bustamante':{'comuna': 'Ñuñoa',      'operador': 'Greystar'},
     'nativo riesco':        {'comuna': 'Las Condes',   'operador': 'LarGroup'},
     'nomad holley':         {'comuna': 'Providencia',  'operador': 'LarGroup'},
     'nomad bellet':         {'comuna': 'Providencia',  'operador': 'LarGroup'},
@@ -38,7 +38,15 @@ EDIFICIO_META = {
     'spot nueva kennedy':   {'comuna': 'Las Condes',   'operador': 'LarGroup'},
     'soho barrio italia':   {'comuna': 'Ñuñoa',       'operador': 'Renovate Inmobiliaria'},
     'park santiago':        {'comuna': 'Santiago',     'operador': 'LarGroup'},
-    'the place':            {'comuna': 'Las Condes',   'operador': 'Grupo Coloso'},
+    'the place':                        {'comuna': 'Ñuñoa',        'operador': 'Grupo Coloso'},
+    'somma las clarisas':               {'comuna': 'Las Condes',   'operador': 'Greystar'},
+    'imu san cristobal ines matte urrejola': {'comuna': 'Providencia', 'operador': 'LarGroup'},
+    'spot residence manquehue':         {'comuna': 'Las Condes',   'operador': 'LarGroup'},
+    'blend apoquindo':                  {'comuna': 'Las Condes',   'operador': 'LarGroup'},
+    'collective bustamante':            {'comuna': 'Ñuñoa',        'operador': 'LarGroup'},
+    'edificio brooklyn la florida':     {'comuna': 'La Florida',   'operador': 'LarGroup'},
+    'somma vista calán':                {'comuna': 'Las Condes',   'operador': 'Greystar'},
+    'boldo club de campo':              {'comuna': 'Vitacura',     'operador': 'LarGroup'},
 }
 
 # ---------------------------------------------------------------------------
@@ -380,8 +388,22 @@ def export_excel(df: pd.DataFrame, df_metrics: pd.DataFrame):
         raise
 
 
+def _backup_reviews():
+    """Copia reviews.json a data/backups/reviews_YYYYMMDD_HHMMSS.json antes de sobreescribir."""
+    if not os.path.exists(OUTPUT_REVIEWS):
+        return
+    backup_dir = os.path.join(DATA_DIR, "backups")
+    os.makedirs(backup_dir, exist_ok=True)
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    dest  = os.path.join(backup_dir, f"reviews_{stamp}.json")
+    import shutil
+    shutil.copy2(OUTPUT_REVIEWS, dest)
+    print(f"[BACKUP] {dest}")
+
+
 def export_json(df: pd.DataFrame):
     os.makedirs(DATA_DIR, exist_ok=True)
+    _backup_reviews()
 
     reviews = df.copy()
     reviews.columns = [c.lower().replace("ñ", "n") for c in reviews.columns]
@@ -461,6 +483,132 @@ def _write_metrics_json(df_metrics: pd.DataFrame):
     print(f"metrics.json guardado en: {OUTPUT_METRICS}")
 
 
+def _text_key(text: str) -> str:
+    """Primeros 60 chars del texto en minúsculas, sin espacios extra."""
+    return ' '.join((text or '').lower().split())[:60]
+
+
+def deduplicate_historical():
+    """
+    Elimina duplicados del histórico por (edificio, usuario, texto_key).
+    Cuando hay dos entradas iguales, conserva la de fecha más reciente
+    (asumiendo que es la más precisa del scraper nuevo).
+    Hace backup antes de modificar.
+    """
+    if not os.path.exists(OUTPUT_REVIEWS):
+        print("[DEDUP] No existe reviews.json")
+        return
+
+    _backup_reviews()
+
+    with open(OUTPUT_REVIEWS, encoding='utf-8') as f:
+        historico = json.load(f)
+
+    seen: dict[tuple, int] = {}   # key → índice del registro a conservar
+    to_remove = set()
+
+    for i, r in enumerate(historico):
+        key = (
+            (r.get('edificio') or '').lower(),
+            (r.get('usuario')  or '').lower(),
+            _text_key(r.get('texto') or ''),
+        )
+        if key in seen:
+            j = seen[key]
+            fecha_i = r.get('fecha') or ''
+            fecha_j = historico[j].get('fecha') or ''
+            # Conservar el más reciente (mejor fecha del scraper nuevo)
+            if fecha_i > fecha_j:
+                to_remove.add(j)
+                seen[key] = i
+            else:
+                to_remove.add(i)
+        else:
+            seen[key] = i
+
+    antes  = len(historico)
+    historico = [r for i, r in enumerate(historico) if i not in to_remove]
+    print(f"[DEDUP] {antes} → {len(historico)} registros ({antes - len(historico)} duplicados eliminados)")
+
+    with open(OUTPUT_REVIEWS, 'w', encoding='utf-8') as f:
+        json.dump(historico, f, ensure_ascii=False, indent=2, default=_json_serializer)
+    print(f"[DEDUP] reviews.json guardado")
+
+
+def refine_historical_dates(nuevas_rows: list):
+    """
+    Para cada reseña recién scrapeada, busca su equivalente en el histórico
+    por (edificio + usuario + texto) y actualiza la fecha si la nueva es
+    más precisa (viene del timestamp exacto del scraper).
+
+    Además agrega registros nuevos que no existan en el histórico.
+    Guarda el resultado y hace backup previo.
+    """
+    _backup_reviews()
+
+    historico = []
+    if os.path.exists(OUTPUT_REVIEWS):
+        with open(OUTPUT_REVIEWS, encoding="utf-8") as f:
+            try:
+                historico = json.load(f)
+            except Exception:
+                historico = []
+
+    # Índice del histórico: (edificio, usuario, texto_key) → posición
+    hist_index: dict[tuple, int] = {}
+    for i, r in enumerate(historico):
+        key = (
+            (r.get('edificio') or '').lower(),
+            (r.get('usuario')  or '').lower(),
+            _text_key(r.get('texto') or ''),
+        )
+        hist_index[key] = i
+
+    fechas_actualizadas = 0
+    nuevas_agregadas    = 0
+    hoy = datetime.now().strftime('%Y-%m-%d')
+
+    for r in nuevas_rows:
+        # nuevas_rows viene del DataFrame → keys en minúscula
+        ed     = (r.get('edificio') or '').lower()
+        user   = (r.get('usuario')  or '').lower()
+        texto  = r.get('texto') or ''
+        fecha  = r.get('fecha')           # string YYYY-MM-DD
+
+        if not fecha or fecha > hoy:
+            continue
+
+        key = (ed, user, _text_key(texto))
+
+        if key in hist_index:
+            hist_r    = historico[hist_index[key]]
+            old_fecha = hist_r.get('fecha') or ''
+            # Actualizar si la fecha cambió (más precisa o corregida)
+            if fecha != old_fecha:
+                hist_r['fecha'] = fecha
+                fechas_actualizadas += 1
+        else:
+            # Reseña nueva que no existía en el histórico
+            historico.append(r)
+            nuevas_agregadas += 1
+
+    # Backfill comuna/operador
+    for r in historico:
+        meta = EDIFICIO_META.get((r.get('edificio') or '').lower(), {})
+        if not r.get('comuna'):
+            r['comuna']   = meta.get('comuna',   '')
+        if not r.get('operador'):
+            r['operador'] = meta.get('operador', '')
+
+    historico.sort(key=lambda r: (r.get('edificio', ''), r.get('fecha') or ''))
+
+    print(f"[REFINE] Fechas actualizadas: {fechas_actualizadas} | Nuevas agregadas: {nuevas_agregadas} | Total: {len(historico)}")
+
+    with open(OUTPUT_REVIEWS, 'w', encoding='utf-8') as f:
+        json.dump(historico, f, ensure_ascii=False, indent=2, default=_json_serializer)
+    print(f"reviews.json actualizado: {OUTPUT_REVIEWS}")
+
+
 def _sync_visor():
     if os.path.isdir(VISOR_DATA_DIR):
         import shutil
@@ -473,17 +621,18 @@ def _sync_visor():
 # Punto de entrada
 # ---------------------------------------------------------------------------
 
-async def main(buildings: list = None, filter_month: bool = False):
+async def main(buildings: list = None, filter_month: bool = False, refine: bool = False):
     """
     Scrapea edificios, enriquece y exporta Excel + JSON.
 
-    buildings: lista de edificios a scrapear (None = todos)
-    filter_month=False captura el histórico completo.
-    filter_month=True  captura solo el último mes.
+    buildings:    lista de edificios a scrapear (None = todos)
+    filter_month: False = histórico completo, True = solo último mes
+    refine:       True  = actualiza fechas del histórico con los timestamps
+                          exactos recién scrapeados (en lugar del merge normal)
     """
     targets = buildings or BUILDINGS
     print(f"[{datetime.now():%Y-%m-%d %H:%M}] Iniciando scrape de {len(targets)} edificios...")
-    rows = await fetch_all_buildings(buildings=targets, filter_month=filter_month)
+    rows, counts = await fetch_all_buildings(buildings=targets, filter_month=filter_month)
 
     if not rows:
         print("No se obtuvieron reseñas. Verifica la conexión.")
@@ -497,9 +646,17 @@ async def main(buildings: list = None, filter_month: bool = False):
     # Normalizar timezone: todo el pipeline trabaja con fechas naive (UTC implícito)
     df["Fecha"] = df["Fecha"].dt.tz_localize(None)
 
-    # Primero exportar JSON: merge histórico de reviews
+    # Exportar JSON
     print("Exportando JSON...")
-    export_json(df)
+    if refine:
+        # Modo refine: actualizar fechas del histórico con timestamps exactos
+        df_exp = df.copy()
+        df_exp.columns = [c.lower().replace("ñ", "n") for c in df_exp.columns]
+        df_exp = df_exp.rename(columns={"primernombre": "primer_nombre", "amenidades": "amenidades"})
+        df_exp["fecha"] = df_exp["fecha"].apply(lambda d: d.strftime("%Y-%m-%d") if pd.notna(d) else None)
+        refine_historical_dates(df_exp.to_dict(orient="records"))
+    else:
+        export_json(df)
 
     # Leer el histórico completo para métricas y Excel
     df_historico = pd.read_json(OUTPUT_REVIEWS, encoding="utf-8")
@@ -516,6 +673,25 @@ async def main(buildings: list = None, filter_month: bool = False):
     print("Exportando Excel...")
     export_excel(df_historico, df_metrics_hist)
 
+    print("\n" + "="*55)
+    print("RESUMEN DEL SCRAPE")
+    print("="*55)
+    sin_resenas = []
+    con_error   = []
+    for b, n in counts.items():
+        if n == -1:
+            con_error.append(b)
+        elif n == 0:
+            sin_resenas.append(b)
+        else:
+            print(f"  [OK]    {b}: {n} reseña(s)")
+    for b in sin_resenas:
+        print(f"  [VACÍO] {b}: 0 reseñas — verifica el nombre en Google Maps")
+    for b in con_error:
+        print(f"  [ERROR] {b}: falló el scrape — revisa la conexión o el nombre")
+    if sin_resenas or con_error:
+        print(f"\n{len(sin_resenas)} edificio(s) sin reseñas, {len(con_error)} con error.")
+    print("="*55)
     print("Listo.")
 
 
