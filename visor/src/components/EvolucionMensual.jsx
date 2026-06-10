@@ -44,9 +44,15 @@ export default function EvolucionMensual({ reviews }) {
     return map
   }, [reviews])
 
-  const meses = useMemo(() =>
-    [...new Set(reviews.map(r => r.fecha?.slice(0, 7)).filter(Boolean))].sort()
-  , [reviews])
+  const meses = useMemo(() => {
+    const eds = [primary, compare].filter(Boolean)
+    const set = new Set(
+      reviews
+        .filter(r => eds.includes(r.edificio) && r.fecha)
+        .map(r => r.fecha.slice(0, 7))
+    )
+    return [...set].sort()
+  }, [reviews, primary, compare])
 
   const años = useMemo(() =>
     [...new Set(meses.map(m => m.slice(0, 4)))].sort()
