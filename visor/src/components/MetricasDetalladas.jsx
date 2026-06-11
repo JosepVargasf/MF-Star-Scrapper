@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
+import ExportPanel from './ExportPanel'
 
 const COLS = [
   { key: 'edificio',     label: 'Edificio',        align: 'left',   fmt: v => v },
@@ -25,7 +26,7 @@ function VariacionCell({ val }) {
 function RatingBar({ val, max = 5 }) {
   if (val == null) return null
   const pct = (val / max) * 100
-  const color = val >= 4.5 ? '#10b981' : val >= 3.5 ? '#f59e0b' : '#ef4444'
+  const color = val >= 4.5 ? '#96323C' : val >= 3.5 ? '#A26579' : '#5B6670'
   return (
     <div className="md-bar-wrap">
       <div className="md-bar" style={{ width: `${pct}%`, background: color }} />
@@ -36,7 +37,8 @@ function RatingBar({ val, max = 5 }) {
 
 export default function MetricasDetalladas({ metrics }) {
   const [sortKey, setSortKey]  = useState('calif_actual')
-  const [sortDir, setSortDir]  = useState(-1) // -1 desc, 1 asc
+  const [sortDir, setSortDir]  = useState(-1)
+  const chartRef = useRef(null)
 
   // Deduplicar por edificio
   const deduped = useMemo(() => Object.values(
@@ -67,7 +69,7 @@ export default function MetricasDetalladas({ metrics }) {
   }
 
   return (
-    <div className="card card-full">
+    <div className="card card-full" ref={chartRef}>
       <div className="card-header">
         <div>
           <h2>Métricas detalladas por edificio</h2>
@@ -112,6 +114,7 @@ export default function MetricasDetalladas({ metrics }) {
           </tbody>
         </table>
       </div>
+      <ExportPanel chartRef={chartRef} chartName="metricas-detalladas" />
     </div>
   )
 }

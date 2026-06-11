@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
+import ExportPanel from './ExportPanel'
 
 const TOP_N = 10
 
@@ -36,28 +37,26 @@ function buildMatrix(reviews, sentimiento, field) {
   return { edificios, temas: topItems, matrix, maxVal }
 }
 
+// Interpola entre blanco (#f8fafc) y el color destino según intensidad
+function lerpHex(from, to, t) {
+  const f = (h) => [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)]
+  const [r1,g1,b1] = f(from); const [r2,g2,b2] = f(to)
+  return `rgb(${Math.round(r1+(r2-r1)*t)},${Math.round(g1+(g2-g1)*t)},${Math.round(b1+(b2-b1)*t)})`
+}
+
 function cellColor(val, max, sentimiento, field) {
   if (!val) return '#f8fafc'
   const intensity = val / max
-  if (field === 'amenidades') {
-    const b = Math.round(180 + intensity * 75)
-    const rg = Math.round(240 - intensity * 120)
-    return `rgb(${rg}, ${rg}, ${b})`
-  }
-  if (sentimiento === 'Positiva') {
-    const g = Math.round(180 + intensity * 75)
-    const rb = Math.round(240 - intensity * 120)
-    return `rgb(${rb}, ${g}, ${rb})`
-  } else {
-    const r = Math.round(220 + intensity * 35)
-    const gb = Math.round(230 - intensity * 130)
-    return `rgb(${r}, ${gb}, ${gb})`
-  }
+  if (field === 'amenidades') return lerpHex('#f8fafc', '#5B6670', intensity)
+  return sentimiento === 'Positiva'
+    ? lerpHex('#f8fafc', '#96323C', intensity)
+    : lerpHex('#f8fafc', '#2D3334', intensity)
 }
 
 export default function HeatmapTemas({ reviews }) {
-  const [field, setField]   = useState('temas')       // 'temas' | 'amenidades'
-  const [mode,  setMode]    = useState('Positiva')    // 'Positiva' | 'Negativa'
+  const [field, setField]   = useState('temas')
+  const [mode,  setMode]    = useState('Positiva')
+  const chartRef = useRef(null)
 
   const { edificios, temas, matrix, maxVal } = useMemo(
     () => buildMatrix(reviews, mode, field),
@@ -65,13 +64,13 @@ export default function HeatmapTemas({ reviews }) {
   )
 
   const legendColor = field === 'amenidades'
-    ? 'linear-gradient(to right, #f8fafc, #2563eb)'
+    ? 'linear-gradient(to right, #f8fafc, #5B6670)'
     : mode === 'Positiva'
-      ? 'linear-gradient(to right, #f8fafc, #16a34a)'
-      : 'linear-gradient(to right, #f8fafc, #dc2626)'
+      ? 'linear-gradient(to right, #f8fafc, #96323C)'
+      : 'linear-gradient(to right, #f8fafc, #2D3334)'
 
   return (
-    <div className="card card-full">
+    <div className="card card-full" ref={chartRef}>
       <div className="card-header">
         <div>
           <h2>Heatmap por edificio</h2>
@@ -133,6 +132,7 @@ export default function HeatmapTemas({ reviews }) {
         <div className="hm-leg-gradient" style={{ background: legendColor }} />
         <span className="hm-leg-label">Más menciones</span>
       </div>
+      <ExportPanel chartRef={chartRef} chartName="heatmap-temas" />
     </div>
   )
 }

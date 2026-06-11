@@ -1,14 +1,15 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer,
 } from 'recharts'
 import MonthRangePicker from './MonthRangePicker'
+import ExportPanel from './ExportPanel'
 
 const PALETTE = [
-  '#6366f1','#10b981','#f59e0b','#0ea5e9','#a855f7',
-  '#ec4899','#14b8a6','#f97316','#84cc16','#06b6d4',
-  '#8b5cf6','#22c55e','#e11d48','#0284c7','#d97706',
+  '#96323C','#5B6670','#A26579','#2D3334','#D7A1A7',
+  '#51313C','#800000','#70262D','#444C54','#7A4C5B',
+  '#C0848A','#BDC2C6','#DAC1C9','#3D252D','#9DA3A9',
 ]
 
 function hexOpacity(hex, alpha) {
@@ -31,10 +32,7 @@ function CustomTooltip({ active, payload, label }) {
       <p className="tt-title">{label}</p>
       {Object.entries(byEd).filter(([,v]) => v.pos + v.neg > 0).map(([ed, v]) => (
         <div key={ed} className="tt-ed-block">
-          <div className="tt-ed-name">
-            <span className="tt-dot" style={{ background: v.color }} />
-            {ed}
-          </div>
+          <div className="tt-ed-name"><span className="tt-dot" style={{ background: v.color }} />{ed}</div>
           <div className="tt-ed-vals">
             <span className="tt-pos-val">👍 {v.pos}</span>
             <span className="tt-neg-val">👎 {v.neg}</span>
@@ -63,7 +61,7 @@ function DrillTooltip({ active, payload, label }) {
   )
 }
 
-function DrillDown({ mes, edificio, color, reviews, onBack }) {
+function DrillDown({ mes, edificio, color, reviews, onBack, fontSize }) {
   const data = useMemo(() => {
     const filtered = reviews.filter(r =>
       r.fecha?.slice(0, 7) === mes &&
@@ -73,17 +71,14 @@ function DrillDown({ mes, edificio, color, reviews, onBack }) {
     for (const r of filtered) {
       const day = r.fecha?.slice(8, 10)
       if (!day) continue
-      if (!byDay[day]) byDay[day] = { dia: day, pos: 0, neg: 0, neu: 0 }
+      if (!byDay[day]) byDay[day] = { dia: day, pos: 0, neg: 0 }
       if (r.sentimiento === 'Positiva') byDay[day].pos++
       else if (r.sentimiento === 'Negativa') byDay[day].neg++
-      else byDay[day].neu++
     }
     return Object.values(byDay).sort((a, b) => a.dia.localeCompare(b.dia))
   }, [mes, edificio, reviews])
 
-  const titulo = edificio === '__todos__'
-    ? `Todos los edificios — ${mes}`
-    : `${edificio} — ${mes}`
+  const titulo = edificio === '__todos__' ? `Todos los edificios — ${mes}` : `${edificio} — ${mes}`
 
   return (
     <div className="card card-full">
@@ -100,8 +95,8 @@ function DrillDown({ mes, edificio, color, reviews, onBack }) {
         <ResponsiveContainer width="100%" height={320}>
           <BarChart data={data} margin={{ left: 0, right: 16, top: 8, bottom: 4 }} barCategoryGap="25%">
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
-            <XAxis dataKey="dia" tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
-            <YAxis tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} allowDecimals={false} width={28} />
+            <XAxis dataKey="dia" tick={{ fontSize, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
+            <YAxis tick={{ fontSize, fill: '#94a3b8' }} axisLine={false} tickLine={false} allowDecimals={false} width={28} />
             <Tooltip content={<DrillTooltip />} cursor={{ fill: '#f8fafc' }} />
             <Bar dataKey="pos" stackId="a" fill={color} maxBarSize={32} />
             <Bar dataKey="neg" stackId="a" fill={hexOpacity(color, 0.35)} radius={[3,3,0,0]} maxBarSize={32} />
@@ -115,7 +110,9 @@ function DrillDown({ mes, edificio, color, reviews, onBack }) {
 export default function VolumenReseñas({ reviews }) {
   const allEdificios = [...new Set(reviews.map(r => r.edificio))].sort()
   const [selectedEds, setSelectedEds] = useState(new Set(allEdificios.slice(0, 5)))
-  const [drill, setDrill] = useState(null)   // { mes, edificio, color }
+  const [drill, setDrill]   = useState(null)
+  const [fontSize, setFontSize] = useState(11)
+  const chartRef = useRef(null)
 
   const availableMonths = useMemo(() => {
     const set = new Set(reviews.filter(r => r.fecha).map(r => r.fecha.slice(0, 7)))
@@ -142,9 +139,7 @@ export default function VolumenReseñas({ reviews }) {
     return months.map(mes => {
       const row = { mes }
       for (const ed of activeEds) {
-        const edMes = reviews.filter(r =>
-          r.edificio === ed && r.fecha?.slice(0, 7) === mes
-        )
+        const edMes = reviews.filter(r => r.edificio === ed && r.fecha?.slice(0, 7) === mes)
         row[`${ed}||pos`] = edMes.filter(r => r.sentimiento === 'Positiva').length
         row[`${ed}||neg`] = edMes.filter(r => r.sentimiento === 'Negativa').length
       }
@@ -155,85 +150,77 @@ export default function VolumenReseñas({ reviews }) {
   if (drill) {
     return (
       <DrillDown
-        mes={drill.mes}
-        edificio={drill.edificio}
-        color={drill.color}
-        reviews={reviews}
-        onBack={() => setDrill(null)}
+        mes={drill.mes} edificio={drill.edificio} color={drill.color}
+        reviews={reviews} onBack={() => setDrill(null)} fontSize={fontSize}
       />
     )
   }
 
   return (
     <div className="card card-full">
-      <div className="card-header">
-        <div>
-          <h2>Volumen de Reseñas por Mes</h2>
-          <p className="card-sub">Reseñas positivas y negativas por edificio · agrupadas por mes · doble clic para ver detalle diario</p>
+      <div ref={chartRef}>
+        <div className="card-header">
+          <div>
+            <h2>Volumen de Reseñas por Mes</h2>
+            <p className="card-sub">Reseñas positivas y negativas por edificio · doble clic para ver detalle diario</p>
+          </div>
+          <MonthRangePicker value={range} onChange={setRange} availableMonths={availableMonths} />
         </div>
-        <MonthRangePicker value={range} onChange={setRange} availableMonths={availableMonths} />
-      </div>
 
-      <div className="vr-filter">
-        <button
-          className={`kpi-chip${selectedEds.size === allEdificios.length ? ' active' : ''}`}
-          onClick={() => setSelectedEds(
-            selectedEds.size === allEdificios.length ? new Set() : new Set(allEdificios)
-          )}
-        >
-          Todos
-        </button>
-        {allEdificios.map((ed, i) => (
+        <div className="vr-filter">
           <button
-            key={ed}
-            className={`kpi-chip${selectedEds.has(ed) ? ' active' : ''}`}
-            style={selectedEds.has(ed) ? { background: PALETTE[i % PALETTE.length], borderColor: 'transparent' } : {}}
-            onClick={() => toggleEdificio(ed)}
+            className={`kpi-chip${selectedEds.size === allEdificios.length ? ' active' : ''}`}
+            onClick={() => setSelectedEds(selectedEds.size === allEdificios.length ? new Set() : new Set(allEdificios))}
           >
-            {ed}
+            Todos
           </button>
-        ))}
-      </div>
+          {allEdificios.map((ed, i) => (
+            <button
+              key={ed}
+              className={`kpi-chip${selectedEds.has(ed) ? ' active' : ''}`}
+              style={selectedEds.has(ed) ? { background: PALETTE[i % PALETTE.length], borderColor: 'transparent' } : {}}
+              onClick={() => toggleEdificio(ed)}
+            >
+              {ed}
+            </button>
+          ))}
+        </div>
 
-      <div className="vr-legend">
-        <span className="vr-leg-item"><span className="vr-swatch vr-pos" />Positivas (color lleno)</span>
-        <span className="vr-leg-item"><span className="vr-swatch vr-neg" />Negativas (color suave)</span>
-      </div>
+        <div className="vr-legend">
+          <span className="vr-leg-item"><span className="vr-swatch vr-pos" />Positivas (color lleno)</span>
+          <span className="vr-leg-item"><span className="vr-swatch vr-neg" />Negativas (color suave)</span>
+        </div>
 
-      {data.length === 0 || activeEds.length === 0 ? (
-        <p className="empty">Selecciona al menos un edificio.</p>
-      ) : (
-        <ResponsiveContainer width="100%" height={Math.max(320, activeEds.length * 28)}>
-          <BarChart data={data} margin={{ left: 0, right: 16, top: 8, bottom: 4 }} barCategoryGap="20%" barGap={2}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
-            <XAxis dataKey="mes" tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
-            <YAxis tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} allowDecimals={false} width={28} />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f8fafc' }} />
-            {activeEds.map((ed) => {
-              const color = PALETTE[allEdificios.indexOf(ed) % PALETTE.length]
-              const colorIdx = allEdificios.indexOf(ed)
-              return [
-                <Bar key={`${ed}-pos`} dataKey={`${ed}||pos`} stackId={ed}
-                  fill={color} maxBarSize={24}
-                  onDoubleClick={(rowData) => {
-                    if (!rowData?.mes) return
-                    setDrill({ mes: rowData.mes, edificio: ed, color: PALETTE[colorIdx % PALETTE.length] })
-                  }}
-                  style={{ cursor: 'pointer' }}
-                />,
-                <Bar key={`${ed}-neg`} dataKey={`${ed}||neg`} stackId={ed}
-                  fill={hexOpacity(color, 0.35)} radius={[3,3,0,0]} maxBarSize={24}
-                  onDoubleClick={(rowData) => {
-                    if (!rowData?.mes) return
-                    setDrill({ mes: rowData.mes, edificio: ed, color: PALETTE[colorIdx % PALETTE.length] })
-                  }}
-                  style={{ cursor: 'pointer' }}
-                />,
-              ]
-            })}
-          </BarChart>
-        </ResponsiveContainer>
-      )}
+        {data.length === 0 || activeEds.length === 0 ? (
+          <p className="empty">Selecciona al menos un edificio.</p>
+        ) : (
+          <ResponsiveContainer width="100%" height={Math.max(320, activeEds.length * 28)}>
+            <BarChart data={data} margin={{ left: 0, right: 16, top: 8, bottom: 4 }} barCategoryGap="20%" barGap={2}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+              <XAxis dataKey="mes" tick={{ fontSize, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
+              <YAxis tick={{ fontSize, fill: '#94a3b8' }} axisLine={false} tickLine={false} allowDecimals={false} width={28} />
+              <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f8fafc' }} />
+              {activeEds.map((ed) => {
+                const color = PALETTE[allEdificios.indexOf(ed) % PALETTE.length]
+                const colorIdx = allEdificios.indexOf(ed)
+                return [
+                  <Bar key={`${ed}-pos`} dataKey={`${ed}||pos`} stackId={ed}
+                    fill={color} maxBarSize={24}
+                    onDoubleClick={(rowData) => { if (rowData?.mes) setDrill({ mes: rowData.mes, edificio: ed, color: PALETTE[colorIdx % PALETTE.length] }) }}
+                    style={{ cursor: 'pointer' }}
+                  />,
+                  <Bar key={`${ed}-neg`} dataKey={`${ed}||neg`} stackId={ed}
+                    fill={hexOpacity(color, 0.35)} radius={[3,3,0,0]} maxBarSize={24}
+                    onDoubleClick={(rowData) => { if (rowData?.mes) setDrill({ mes: rowData.mes, edificio: ed, color: PALETTE[colorIdx % PALETTE.length] }) }}
+                    style={{ cursor: 'pointer' }}
+                  />,
+                ]
+              })}
+            </BarChart>
+          </ResponsiveContainer>
+        )}
+      </div>
+      <ExportPanel chartRef={chartRef} chartName="volumen-resenias" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }
