@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import ReviewModal from './ReviewModal'
+import ExportPanel from './ExportPanel'
 
-const TEMA_COLORS = ['#6366f1','#10b981','#f59e0b','#0ea5e9','#a855f7','#ec4899','#14b8a6','#f97316','#84cc16','#ef4444']
+const TEMA_COLORS = ['#96323C','#5B6670','#A26579','#2D3334','#51313C','#800000','#70262D','#444C54','#7A4C5B','#C0848A']
 
 export default function KeywordsCategorias({ reviews }) {
   const edificios = [...new Set(reviews.map(r => r.edificio))].sort()
   const [edificio, setEdificio] = useState('todos')
   const [view, setView] = useState('temas')
   const [modal, setModal] = useState(null)
+  const chartRef = useRef(null)
 
   const filtered = edificio === 'todos' ? reviews : reviews.filter(r => r.edificio === edificio)
 
@@ -32,7 +34,7 @@ export default function KeywordsCategorias({ reviews }) {
   const maxTotal = items[0]?.total ?? 1
 
   return (
-    <div className="card">
+    <div className="card" ref={chartRef}>
       <div className="card-header">
         <div>
           <h2>Temas más relevantes</h2>
@@ -54,8 +56,8 @@ export default function KeywordsCategorias({ reviews }) {
       ) : (
         <>
           <div className="kt-legend-row">
-            <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#10b981'}}/>Positivas</span>
-            <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#ef4444'}}/>Negativas</span>
+            <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#96323C'}}/>Positivas</span>
+            <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#5B6670'}}/>Negativas</span>
             <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#e2e8f0'}}/>Neutras</span>
           </div>
           <div className="kt-list">
@@ -98,6 +100,7 @@ export default function KeywordsCategorias({ reviews }) {
           onClose={() => setModal(null)}
         />
       )}
+      <ExportPanel chartRef={chartRef} chartName="temas-relevantes" />
     </div>
   )
 }

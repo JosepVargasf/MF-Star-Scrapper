@@ -1,6 +1,7 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
 import ReviewModal from './ReviewModal'
 import MonthRangePicker from './MonthRangePicker'
+import ExportPanel from './ExportPanel'
 
 function BarList({ items, color, empty, onDoubleClick }) {
   if (!items.length) return <p className="empty">{empty}</p>
@@ -88,6 +89,7 @@ export default function SentimientoTemas({ reviews }) {
   const negPct   = Math.round((totalNeg / total) * 100)
 
   const [modal, setModal] = useState(null)
+  const chartRef = useRef(null)
 
   const rangeLabel = range.from === range.to
     ? range.from
@@ -95,6 +97,7 @@ export default function SentimientoTemas({ reviews }) {
 
   return (
     <div className="card card-full">
+      <div ref={chartRef}>
       <div className="card-header">
         <div>
           <h2>¿Por qué los clientes califican así?</h2>
@@ -138,7 +141,7 @@ export default function SentimientoTemas({ reviews }) {
               <p>Temas frecuentes en reseñas positivas</p>
             </div>
           </div>
-          <BarList items={positivos} color="#10b981" empty="Sin temas positivos en el período." onDoubleClick={tema => setModal({ tema, sentimiento: 'Positiva' })} />
+          <BarList items={positivos} color="#96323C" empty="Sin temas positivos en el período." onDoubleClick={tema => setModal({ tema, sentimiento: 'Positiva' })} />
         </div>
 
         <div className="sentemas-divider" />
@@ -151,10 +154,12 @@ export default function SentimientoTemas({ reviews }) {
               <p>Temas frecuentes en reseñas negativas</p>
             </div>
           </div>
-          <BarList items={negativos} color="#ef4444" empty="Sin temas negativos en el período." onDoubleClick={tema => setModal({ tema, sentimiento: 'Negativa' })} />
+          <BarList items={negativos} color="#5B6670" empty="Sin temas negativos en el período." onDoubleClick={tema => setModal({ tema, sentimiento: 'Negativa' })} />
         </div>
       </div>
 
+      </div>
+      <ExportPanel chartRef={chartRef} chartName="sentimiento-temas" />
       {modal && (
         <ReviewModal
           reviews={filtered}

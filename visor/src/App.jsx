@@ -12,6 +12,11 @@ import VolumenReseñas from './components/VolumenReseñas'
 import TemasGenero from './components/TemasGenero'
 import HeatmapTemas from './components/HeatmapTemas'
 import MetricasDetalladas from './components/MetricasDetalladas'
+import ClasificacionValoracion from './components/ClasificacionValoracion'
+import EvolucionEstrellas from './components/EvolucionEstrellas'
+import TiposReseñas from './components/TiposReseñas'
+import CategoriasPorEdificio from './components/CategoriasPorEdificio'
+import ResumenComunas from './components/ResumenComunas'
 import './App.css'
 
 export default function App() {
@@ -78,12 +83,17 @@ function Dashboard({ user, onLogout }) {
         </div>
         <nav className="nav">
           <a href="#kpis"         className="nav-item"><span className="nav-icon" />Resumen</a>
+          <a href="#resumen-comunas" className="nav-item"><span className="nav-icon" />Comunas</a>
           <a href="#ranking"      className="nav-item"><span className="nav-icon" />Ranking</a>
           <a href="#metricas"     className="nav-item"><span className="nav-icon" />Métricas</a>
           <a href="#volumen"      className="nav-item"><span className="nav-icon" />Volumen</a>
           <a href="#evolucion"    className="nav-item"><span className="nav-icon" />Evolución</a>
+          <a href="#tipos"        className="nav-item"><span className="nav-icon" />Tipos</a>
+          <a href="#categorias"   className="nav-item"><span className="nav-icon" />Categorías</a>
           <a href="#causas"       className="nav-item"><span className="nav-icon" />Causas</a>
           <a href="#temasgenero"  className="nav-item"><span className="nav-icon" />Género</a>
+          <a href="#clasifval"    className="nav-item"><span className="nav-icon" />Valoración</a>
+          <a href="#evolestrellas" className="nav-item"><span className="nav-icon" />Estrellas</a>
           <a href="#heatmap"      className="nav-item"><span className="nav-icon" />Heatmap</a>
           <a href="#distribucion" className="nav-item"><span className="nav-icon" />Distribución</a>
           <a href="#temas"        className="nav-item"><span className="nav-icon" />Temas</a>
@@ -139,6 +149,9 @@ function Dashboard({ user, onLogout }) {
           <div id="kpis">
             <KpiCards metrics={metricsFiltradas} reviews={reviewsFiltradas} selected={selectedProjects} onToggle={handleToggle} />
           </div>
+          <div id="resumen-comunas">
+            <ResumenComunas metrics={metricsFiltradas} reviews={reviewsFiltradas} />
+          </div>
           <div id="ranking">
             <RankingEdificios metrics={metricsFiltradas} reviews={reviewsFiltradas} />
           </div>
@@ -150,6 +163,18 @@ function Dashboard({ user, onLogout }) {
           </div>
           <div id="evolucion">
             <EvolucionMensual reviews={reviewsFiltradas} />
+          </div>
+          <div id="clasifval">
+            <ClasificacionValoracion reviews={reviewsFiltradas} />
+          </div>
+          <div id="evolestrellas">
+            <EvolucionEstrellas reviews={reviewsFiltradas} />
+          </div>
+          <div id="tipos">
+            <TiposReseñas reviews={reviewsFiltradas} />
+          </div>
+          <div id="categorias">
+            <CategoriasPorEdificio reviews={reviewsFiltradas} />
           </div>
           <div id="causas">
             <SentimientoTemas reviews={reviewsFiltradas} />
