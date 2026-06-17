@@ -6,6 +6,7 @@ import {
 import ExportPanel from './ExportPanel'
 
 const STAR_COLORS = { 1: '#5B6670', 2: '#A26579', 3: '#D7A1A7', 4: '#C0848A', 5: '#96323C' }
+const ROW_HEIGHT = 40 // alto fijo por fila/barra: nunca cambia con el tamaño de letra
 
 function ratingColor(r) {
   if (r >= 4.5) return '#96323C'
@@ -77,7 +78,9 @@ export default function RankingEdificios({ metrics, reviews }) {
   }, [reviews, star])
 
   const data        = mode === 'rating' ? sortedRating : sortedEstrellas
-  const chartHeight = Math.max(280, data.length * 44)
+  const maxNameLen  = data.reduce((m, d) => Math.max(m, (d.edificio ?? '').length), 0)
+  const yAxisWidth  = Math.max(120, Math.round(maxNameLen * fontSize * 0.62) + 16)
+  const chartHeight = data.length * ROW_HEIGHT + 24 // alto total = filas fijas + margen, nunca achica las barras
   const starColor   = STAR_COLORS[star]
 
   return (
@@ -124,7 +127,7 @@ export default function RankingEdificios({ metrics, reviews }) {
               unit={mode === 'estrellas' ? '%' : ''}
               tick={{ fontSize, fill: '#94a3b8' }} axisLine={false} tickLine={false}
             />
-            <YAxis type="category" dataKey="edificio" width={160} tick={{ fontSize, fill: '#475569' }} axisLine={false} tickLine={false} />
+            <YAxis type="category" dataKey="edificio" width={yAxisWidth} tick={{ fontSize, fill: '#475569' }} axisLine={false} tickLine={false} />
             {mode === 'rating'
               ? <Tooltip content={<TooltipRating />} cursor={{ fill: '#f8fafc' }} />
               : <Tooltip content={<TooltipEstrellas star={star} />} cursor={{ fill: '#f8fafc' }} />}

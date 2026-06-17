@@ -115,7 +115,7 @@ export default function ExportPanel({ chartRef, chartName = 'grafico', fontSize,
         {fontSize !== undefined && onFontSizeChange && (
           <div className="ep-group">
             <span className="ep-label">Texto</span>
-            <input type="range" min={7} max={20} value={fontSize}
+            <input type="range" min={7} max={50} value={fontSize}
               onChange={e => onFontSizeChange(+e.target.value)} className="ep-slider" />
             <span className="ep-slider-val">{fontSize}px</span>
           </div>

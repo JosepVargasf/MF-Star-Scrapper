@@ -1,4 +1,4 @@
-import { useMemo, useRef } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import ExportPanel from './ExportPanel'
 
 const COMUNAS_ORDEN = ['Las Condes', 'Providencia', 'Ñuñoa', 'Santiago']
@@ -19,6 +19,7 @@ function sentColor(v) {
 }
 
 export default function ResumenComunas({ metrics, reviews }) {
+  const [fontSize, setFontSize] = useState(14)
   const chartRef = useRef(null)
 
   // Mapa edificio → comuna desde reviews
@@ -76,7 +77,7 @@ export default function ResumenComunas({ metrics, reviews }) {
       </div>
 
       <div className="rc-table-wrap">
-        <table className="rc-table">
+        <table className="rc-table" style={{ fontSize }}>
           <thead>
             <tr>
               <th className="rc-th rc-th-left">Comuna</th>
@@ -131,7 +132,7 @@ export default function ResumenComunas({ metrics, reviews }) {
         </table>
       </div>
 
-      <ExportPanel chartRef={chartRef} chartName="resumen-comunas" />
+      <ExportPanel chartRef={chartRef} chartName="resumen-comunas" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

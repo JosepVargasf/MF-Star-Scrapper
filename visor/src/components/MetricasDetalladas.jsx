@@ -38,6 +38,7 @@ function RatingBar({ val, max = 5 }) {
 export default function MetricasDetalladas({ metrics }) {
   const [sortKey, setSortKey]  = useState('calif_actual')
   const [sortDir, setSortDir]  = useState(-1)
+  const [fontSize, setFontSize] = useState(13)
   const chartRef = useRef(null)
 
   // Deduplicar por edificio
@@ -78,7 +79,7 @@ export default function MetricasDetalladas({ metrics }) {
       </div>
 
       <div className="md-wrap">
-        <table className="md-table">
+        <table className="md-table" style={{ fontSize }}>
           <thead>
             <tr>
               {COLS.map(c => (
@@ -114,7 +115,7 @@ export default function MetricasDetalladas({ metrics }) {
           </tbody>
         </table>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="metricas-detalladas" />
+      <ExportPanel chartRef={chartRef} chartName="metricas-detalladas" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }
