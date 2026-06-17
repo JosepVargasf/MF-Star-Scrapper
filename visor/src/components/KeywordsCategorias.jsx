@@ -9,6 +9,7 @@ export default function KeywordsCategorias({ reviews }) {
   const [edificio, setEdificio] = useState('todos')
   const [view, setView] = useState('temas')
   const [modal, setModal] = useState(null)
+  const [fontSize, setFontSize] = useState(12)
   const chartRef = useRef(null)
 
   const filtered = edificio === 'todos' ? reviews : reviews.filter(r => r.edificio === edificio)
@@ -60,7 +61,7 @@ export default function KeywordsCategorias({ reviews }) {
             <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#5B6670'}}/>Negativas</span>
             <span className="kt-leg"><span className="kt-leg-dot" style={{background:'#e2e8f0'}}/>Neutras</span>
           </div>
-          <div className="kt-list">
+          <div className="kt-list" style={{ fontSize }}>
             <div className="kt-header-row">
               <span className="kt-h-tema">Tema</span>
               <span className="kt-h-bar" />
@@ -100,7 +101,7 @@ export default function KeywordsCategorias({ reviews }) {
           onClose={() => setModal(null)}
         />
       )}
-      <ExportPanel chartRef={chartRef} chartName="temas-relevantes" />
+      <ExportPanel chartRef={chartRef} chartName="temas-relevantes" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }
