@@ -3404,6 +3404,28 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "edificio brooklyn la florida",
+    "fecha": "2026-06-20",
+    "score": 5.0,
+    "texto": "El edificio es muy bonito su estructura y tiene lugares muy agradables tiene piscina,lugar para trabajar lugar para cumpleaños parque para niños zona gaming,gym y todo lo que tiene es muy moderno vivo aca hace 6 meses y no se ha presentado ningún problema excelente servicio también",
+    "usuario": "Luis felipe Puerres",
+    "primer_nombre": "Luis",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "piscina"
+    ],
+    "comuna": "La Florida",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "imu san cristobal ines matte urrejola",
     "fecha": "2025-03-22",
     "score": 1.0,
@@ -4357,6 +4379,45 @@
       "Atención del personal",
       "Amenities",
       "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristobal ines matte urrejola",
+    "fecha": "2026-06-16",
+    "score": 5.0,
+    "texto": "IMU. Es un modelo de calidad y comodidad. Sus servicios y sus empleados tienen un nivel de eficiencia y trato amable que hace que la permanencia en el lugar sea agradable. Existe un protocolo en términos de respeto a nivel de condominio que genera comodidad en el habitar. Sus administradores son personas con un trato cordial, el cual genera confianza y seriedad en sus atribuciones. Un lugar ideal para vivir. Gimnasio, estacionamiento, salones y terrazas con quincho lo que da muchas opciones para compartir.\nUn lugar cercano a todo.",
+    "usuario": "Raul Aliaga",
+    "primer_nombre": "Raul",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "gimnasio",
+      "terraza",
+      "quincho"
+    ],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristobal ines matte urrejola",
+    "fecha": "2026-06-18",
+    "score": 5.0,
+    "texto": "Quiero agradecer al joven conserje Jesús, que aunque siempre sigue las reglas de su trabajo, tiene una forma tan gentil de ayudar a los inquilinos, siempre dispuesto a  guiar a los residentes para que entendamos los reglamentos y la serenidad que tiene en todo momento para resolver problemas. Gracias. 😊😊",
+    "usuario": "Lorena Flores",
+    "primer_nombre": "Lorena",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -5332,6 +5393,45 @@
       "Atención del personal",
       "Amenities",
       "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-06-16",
+    "score": 5.0,
+    "texto": "IMU. Es un modelo de calidad y comodidad. Sus servicios y sus empleados tienen un nivel de eficiencia y trato amable que hace que la permanencia en el lugar sea agradable. Existe un protocolo en términos de respeto a nivel de condominio que genera comodidad en el habitar. Sus administradores son personas con un trato cordial, el cual genera confianza y seriedad en sus atribuciones. Un lugar ideal para vivir. Gimnasio, estacionamiento, salones y terrazas con quincho lo que da muchas opciones para compartir.\nUn lugar cercano a todo.",
+    "usuario": "Raul Aliaga",
+    "primer_nombre": "Raul",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "gimnasio",
+      "terraza",
+      "quincho"
+    ],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-06-18",
+    "score": 5.0,
+    "texto": "Quiero agradecer al joven conserje Jesús, que aunque siempre sigue las reglas de su trabajo, tiene una forma tan gentil de ayudar a los inquilinos, siempre dispuesto a  guiar a los residentes para que entendamos los reglamentos y la serenidad que tiene en todo momento para resolver problemas. Gracias. 😊😊",
+    "usuario": "Lorena Flores",
+    "primer_nombre": "Lorena",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -7245,6 +7345,22 @@
     "usuario": "Javiera Sepulveda",
     "primer_nombre": "Javiera",
     "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "InSitu"
+  },
+  {
+    "edificio": "insitu irarrázaval",
+    "fecha": "2026-06-16",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "sebastian Gallardo",
+    "primer_nombre": "sebastian",
+    "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
@@ -12706,6 +12822,24 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "park santiago",
+    "fecha": "2026-06-15",
+    "score": 5.0,
+    "texto": "Creo que es uno de los mejores lugares para vivir, muchas prestaciones, el personal es muy cálido y preocupado.  La atención post venta es de excelente nivel.",
+    "usuario": "Patricio Toloza",
+    "primer_nombre": "Patricio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "ronda santo domingo",
     "fecha": "2025-02-03 20:57:43",
     "score": 5.0,
@@ -14949,6 +15083,38 @@
     "operador": "Greystar"
   },
   {
+    "edificio": "ronda santo domingo",
+    "fecha": "2026-06-11",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "4riel 777",
+    "primer_nombre": "4riel",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "ronda santo domingo",
+    "fecha": "2026-06-20",
+    "score": 1.0,
+    "texto": "Si buscas tranquilidad y comodidad, no alquiles aquí. El ruido es insoportable. Su publicidad es engañosa; te arrepentirás en cuanto te mudes.",
+    "usuario": "juan ye",
+    "primer_nombre": "juan",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Ruidos"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Greystar"
+  },
+  {
     "edificio": "soho barrio italia",
     "fecha": "2017-01-16 12:00:39",
     "score": 5.0,
@@ -17144,6 +17310,22 @@
       "Diseño/calidad interior",
       "Ubicación",
       "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Renovate Inmobiliaria"
+  },
+  {
+    "edificio": "soho barrio italia",
+    "fecha": "2026-06-13",
+    "score": 5.0,
+    "texto": "Alguien sabe cómo puedo incorporarme al grupo de WhatsApp ?",
+    "usuario": "Diego Paolo Alejandro Ravani b.",
+    "primer_nombre": "Diego",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
     ],
     "amenidades": [],
     "comuna": "Ñuñoa",
@@ -21276,6 +21458,28 @@
     ],
     "amenidades": [
       "terraza"
+    ],
+    "comuna": "Providencia",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma inés de suárez",
+    "fecha": "2026-06-17",
+    "score": 5.0,
+    "texto": "Yanis nos atendió a mí y a mi señora de manera excelente. En todo momento se dedicó a responder nuestras dudas con mucha disposición y claridad. Además, demostró una muy buena forma de presentar los espacios comunes del departamento, con cercanía, amabilidad y profesionalismo hacia los clientes.\n\nRecomiendo totalmente su atención.",
+    "usuario": "Alejandro Oyarce",
+    "primer_nombre": "Alejandro",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
     ],
     "comuna": "Providencia",
     "operador": "Greystar"
@@ -27028,6 +27232,22 @@
     "sentimiento": "Negativa",
     "temas": [
       "Garantía"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma plaza ñuñoa",
+    "fecha": "2026-06-11",
+    "score": 1.0,
+    "texto": "No estuvieron para la restitución del departamento, incumpliendo lo que dice el contrato. Para después llegar y cobrar sin pruebas, boletas, facturas ni fotos.\nDenuncia a Sernac en proceso.",
+    "usuario": "Rodrigo Iturrieta (S3GUR1L4)",
+    "primer_nombre": "Rodrigo",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Otros"
     ],
     "amenidades": [],
     "comuna": "Ñuñoa",
