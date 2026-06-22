@@ -41,33 +41,33 @@
   },
   {
     "edificio":"edificio brooklyn la florida",
-    "calif_actual":3.77,
+    "calif_actual":3.78,
     "calif_previo":4.04,
-    "variacion":-0.27,
-    "resenastot":110,
-    "nuevas_mes":12,
-    "pos_pct":69.1,
-    "neg_pct":30.0
+    "variacion":-0.26,
+    "resenastot":111,
+    "nuevas_mes":13,
+    "pos_pct":69.4,
+    "neg_pct":29.7
   },
   {
     "edificio":"imu san cristobal ines matte urrejola",
-    "calif_actual":4.32,
+    "calif_actual":4.34,
     "calif_previo":4.29,
-    "variacion":0.03,
-    "resenastot":56,
-    "nuevas_mes":8,
-    "pos_pct":83.9,
-    "neg_pct":16.1
+    "variacion":0.05,
+    "resenastot":58,
+    "nuevas_mes":10,
+    "pos_pct":84.5,
+    "neg_pct":15.5
   },
   {
     "edificio":"imu san cristóbal",
-    "calif_actual":4.33,
+    "calif_actual":4.36,
     "calif_previo":4.23,
-    "variacion":0.1,
-    "resenastot":57,
-    "nuevas_mes":9,
-    "pos_pct":84.2,
-    "neg_pct":15.8
+    "variacion":0.12,
+    "resenastot":59,
+    "nuevas_mes":11,
+    "pos_pct":84.7,
+    "neg_pct":15.3
   },
   {
     "edificio":"insitu echaurren",
@@ -83,11 +83,11 @@
     "edificio":"insitu irarrázaval",
     "calif_actual":4.67,
     "calif_previo":4.62,
-    "variacion":0.04,
-    "resenastot":69,
-    "nuevas_mes":13,
-    "pos_pct":91.3,
-    "neg_pct":5.8
+    "variacion":0.05,
+    "resenastot":70,
+    "nuevas_mes":14,
+    "pos_pct":91.4,
+    "neg_pct":5.7
   },
   {
     "edificio":"nativo riesco",
@@ -124,30 +124,30 @@
     "calif_actual":4.71,
     "calif_previo":4.86,
     "variacion":-0.15,
-    "resenastot":146,
-    "nuevas_mes":2,
+    "resenastot":147,
+    "nuevas_mes":3,
     "pos_pct":95.2,
     "neg_pct":4.8
   },
   {
     "edificio":"ronda santo domingo",
-    "calif_actual":4.68,
+    "calif_actual":4.66,
     "calif_previo":4.72,
-    "variacion":-0.03,
-    "resenastot":133,
-    "nuevas_mes":1,
-    "pos_pct":91.7,
-    "neg_pct":7.5
+    "variacion":-0.06,
+    "resenastot":135,
+    "nuevas_mes":3,
+    "pos_pct":91.1,
+    "neg_pct":8.1
   },
   {
     "edificio":"soho barrio italia",
     "calif_actual":4.44,
     "calif_previo":4.4,
     "variacion":0.04,
-    "resenastot":134,
-    "nuevas_mes":0,
-    "pos_pct":84.3,
-    "neg_pct":7.5
+    "resenastot":135,
+    "nuevas_mes":1,
+    "pos_pct":84.4,
+    "neg_pct":7.4
   },
   {
     "edificio":"somma asturias",
@@ -163,11 +163,11 @@
     "edificio":"somma inés de suárez",
     "calif_actual":3.41,
     "calif_previo":3.52,
-    "variacion":-0.12,
-    "resenastot":180,
-    "nuevas_mes":4,
-    "pos_pct":59.4,
-    "neg_pct":39.4
+    "variacion":-0.11,
+    "resenastot":181,
+    "nuevas_mes":5,
+    "pos_pct":59.7,
+    "neg_pct":39.2
   },
   {
     "edificio":"somma las clarisas",
@@ -191,13 +191,13 @@
   },
   {
     "edificio":"somma plaza ñuñoa",
-    "calif_actual":3.59,
+    "calif_actual":3.58,
     "calif_previo":3.6,
-    "variacion":-0.01,
-    "resenastot":217,
-    "nuevas_mes":2,
-    "pos_pct":64.1,
-    "neg_pct":34.6
+    "variacion":-0.02,
+    "resenastot":218,
+    "nuevas_mes":3,
+    "pos_pct":63.8,
+    "neg_pct":34.9
   },
   {
     "edificio":"somma vista calán",
