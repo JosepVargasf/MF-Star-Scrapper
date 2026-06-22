@@ -47,6 +47,27 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Notify on success
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "[MF Star Scrapper] Pipeline mensual ejecutado con éxito"
+          to: jose.vargas@situ.cl
+          from: ${{ secrets.MAIL_USERNAME }}
+          body: |
+            El pipeline mensual de MF Star Scrapper se ejecutó correctamente.
+
+            Revisa los datos actualizados en el visor:
+              https://josepvargasf.github.io/MF-Star-Scrapper/
+
+            Repositorio: ${{ github.repository }}
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
       - name: Notify on failure
         if: failure()
         uses: dawidd6/action-send-mail@v3
