@@ -984,6 +984,536 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-08-16",
+    "score": 5.0,
+    "texto": "Vivir en Collective Santiago ha sido una gran experiencia. Desde el primer día, el equipo me ha recibido con una atención tan genuina que este lugar no es solo un edificio: es un verdadero hogar. Las personas que trabajan aquí hacen que cada día sea más agradable, transmiten tranquilidad, buena atención y te hacen sentir cuidado, como si vivieras en un hotel de primer nivel, siempre atentos a cada detalle.\n\nQuiero destacar especialmente a la señora Noemí, que hace que cada vez que entro al edificio me sienta bienvenido con su cálida sonrisa y cariño; siempre me recibe con calor humano y buena energía, y eso marca la diferencia. También la señora Lore, que tiene un carácter admirable y un compromiso enorme con hacer las cosas bien, siempre con la seriedad y el profesionalismo que dan confianza. Y Jorge, que en las noches está siempre con buena disposición, con una palabra amable y resolviendo cualquier necesidad.\n\nEl edificio en sí es moderno y cómodo, con una distribución pensada para disfrutar cada espacio. Las áreas comunes, la terraza y cada rincón invitan a compartir, relajarse y sentirse parte de una comunidad. Estar aquí no es solo tener un departamento bonito, es vivir una experiencia que se siente todos los días. Cuando tienes un equipo humano así, te sientes feliz de estar donde estás, y no hay forma de arrepentirse.",
+    "usuario": "José Alfonso Valero Canelón",
+    "primer_nombre": "José",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "terraza",
+      "spa"
+    ],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-08-18",
+    "score": 5.0,
+    "texto": "Desde las instalaciones hasta el personal, extremadamente amable y preocupado por tu bienestar, tengo mascota, y de verdad que no es nada pequeño, en todos los aspectos han sido súper amorosos y súper atentos para cubrir tanto  sus necesidades como las de nosotros, 1000/10",
+    "usuario": "Sthephany Prieto",
+    "primer_nombre": "Sthephany",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Amenities"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-08-20",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Ricardo Ramírez Rodríguez",
+    "primer_nombre": "Ricardo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-08-27",
+    "score": 5.0,
+    "texto": "Saludos cariñosos para Pedro ,excelente atención, dedicación y profesionalismo !\nMuy buena nuestra experiencia muy recomendable.",
+    "usuario": "Gabriela Rodríguez",
+    "primer_nombre": "Gabriela",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-09-23",
+    "score": 5.0,
+    "texto": "Muy buena atención del corredor Pedro Vivas, y el edificio funciona muy bien",
+    "usuario": "Felipe Gatta",
+    "primer_nombre": "Felipe",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-10-07",
+    "score": 5.0,
+    "texto": "Agradecer la contención y recepción de todo el equipo y sobre todo de Pedro Vivas el cual por un difícil momento a cambiarme de lugar donde vivía, ellos me han recibido como una verdadera familia, agradezco enormemente toda la atención. Los departamento son muy cómodos y los espacios comunes maravillosos solamente palabras de agradecimiento para un nuevo comienzo",
+    "usuario": "Cristian Rojas",
+    "primer_nombre": "Cristian",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-10-25",
+    "score": 5.0,
+    "texto": "Hermoso. Parece un hotel. Tiene muchas cosas que ojalá tuvieran todos los edificios. El personal es muy amable y tambien los vecinos. Todo moderno y bien",
+    "usuario": "Vlwzxt",
+    "primer_nombre": "Vlwzxt",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-11-18",
+    "score": 5.0,
+    "texto": "Linda experiencia y es lo máximo Brenda linda y atenta…",
+    "usuario": "Andry Urrutia",
+    "primer_nombre": "Andry",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-11-26",
+    "score": 5.0,
+    "texto": "Excelente lugar donde vivir. Lindo y Tranquilo, pero lo mejor es el ambiente y los trabajadores del edificio, hacen que nos sintamos como familia y detalles que se valoran 💚💚💚",
+    "usuario": "Pabla Santiago",
+    "primer_nombre": "Pabla",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Precio/Costo",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-12-12",
+    "score": 5.0,
+    "texto": "Además de la ubicación tan estratégica, lo moderno y bonito del edificio, la buena ética y capacitación del staff, las áreas comunes son muy buenas",
+    "usuario": "Sergio Curiel",
+    "primer_nombre": "Sergio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-12-14",
+    "score": 5.0,
+    "texto": "Excelente!!",
+    "usuario": "Macarena Videla Bañados",
+    "primer_nombre": "Macarena",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-12-14",
+    "score": 5.0,
+    "texto": "Maravillosa iniciativa! Solo superada por la atención y simpatía de Noemí…",
+    "usuario": "EMIRO ANDRADE “Emirolocutor”",
+    "primer_nombre": "EMIRO",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-12-14",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Gustavo Rojas",
+    "primer_nombre": "Gustavo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2025-12-31",
+    "score": 5.0,
+    "texto": "Desde el primer contacto con el equipo de Collective, Andrés, María Fernanda y Brenda, fue un placer por su excelente atención, amables, oportuna, asertiva y sobre todo con el sentido de urgencia que requería. Agradezco el apoyo al momento de la mudanza, acoplando se a mis horarios.\nSus espacios son acogedores, hermosos y elegantes. Elegir Collective Santiago es toda una experiencia. Muy satisfecha por mi elección.",
+    "usuario": "Jennifer García",
+    "primer_nombre": "Jennifer",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-01-22",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Belphegor :v",
+    "primer_nombre": "Belphegor",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-01-22",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "cristobal gonzalez",
+    "primer_nombre": "cristobal",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-02-23",
+    "score": 1.0,
+    "texto": "Pésimo servicio, se demoran en responder, agendan reuniones virtuales a las que después no llega nadie, me vuelvo a comunicar y me vuelven a dejar esperando. Cero seriedad jugando con el tiempo y la ilusión de las personas",
+    "usuario": "jorge sanhueza flandez",
+    "primer_nombre": "jorge",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Atención cliente",
+      "Crítica"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-20",
+    "score": 5.0,
+    "texto": "Todo genial. Ya llevo tres meses aquí y la preocupación, así como atención a los detalles ha sido permanente. Desde la primera visita Fernanda fue súper clara con cada aspecto, luego una entrevista con Brenda a modo de bienvenida y afinar todo detalle para mi llegada. El día a día es muy ameno, todo el personal del edificio siempre ameno y con una sonrisa lista para apoyar en lo que se necesite. Una excelente experiencia. El edificio en sí tienen todo lo necesario e incluso un verdadero oasis como el sector de paseos para perros, un lujo para quienes vivimos con ellos",
+    "usuario": "Cristián Villar Ríos",
+    "primer_nombre": "Cristián",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Limpieza/mantenimiento",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Maravilloso!! De verdad ningún problema!! Max Echegaray, es quien me ayudó a realizar todo y gestionar con mucha premura y con una excelente atención!! De verdad  agradezco la gestión! Edificio es reconfortante tranquilo, moderno y seguro, no me arrepiento de vivir acá! Sigan así y gracias! Recomendados obviamente!! Los especias comunes son muy buenos!! Y siempre todo está súper limpio!!",
+    "usuario": "julio cesar garces garcia",
+    "primer_nombre": "julio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Limpieza/mantenimiento",
+      "Seguridad",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Hasta ahora y desde el principio, ha sido una gran experiencia! Un trato cordial y de mucho respeto de parte del personal de Collective Santiago. El edificio y el departamento en si, cumplen con mis expectativas! Un lugar muy agradable para vivir!",
+    "usuario": "Richard Perez",
+    "primer_nombre": "Richard",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Excelente edificio me gusta mucho, Max me hizo todos los pasos muy ameno para poder arrendar, los espacios comunes ufff son geniales. Max me ayudó mucho con mis papeles y fue muuuy amable al guiarme paso a paso para poder arrendar siendo independiente",
+    "usuario": "Patricio Carrasco",
+    "primer_nombre": "Patricio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Un lugar muy agradable y tranquilo\nLa atención de Max Etchegaray como ejecutivo muy buena ! Todo muy profesional\nExcelente seguridad",
+    "usuario": "Debora torrejon portuguez",
+    "primer_nombre": "Debora",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación",
+      "Seguridad",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Muy buen edificios , excelentes instalaciones, muy buena la atención de toda la gente que trabaja aquí",
+    "usuario": "Constanza Torres",
+    "primer_nombre": "Constanza",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Excelentes profesionales.\nLos vendedores son lo máximo.\nTodo el personal son muy amables y se dan el tiempo de responder todas tus dudas e inquietudes.",
+    "usuario": "Rodolfo Badias",
+    "primer_nombre": "Rodolfo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Benjamín Andrés Ponce Balbontín",
+    "primer_nombre": "Benjamín",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "Muy bello el vendedor y muy buena experiencia, el personal súper atento y su ubicación y áreas comunes son lo mejor.",
+    "usuario": "Israel Salgado Gálvez",
+    "primer_nombre": "Israel",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-21",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Paula Rivas Ortiz",
+    "primer_nombre": "Paula",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-04-22",
+    "score": 5.0,
+    "texto": "Max nos recibió y realizó la visita al departamento en el que hoy vivimos; muy amable y cordial, siempre atendió nuestras consultas oportunamente y estuvo atento a nuestras necesidades. Un 10/10 💪🏼",
+    "usuario": "Pablo Ferrada",
+    "primer_nombre": "Pablo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-05-12",
+    "score": 5.0,
+    "texto": "Me encanto el evento deportivo del 11/05/26… muy entretenido y a la vez profesional 🤩🙌🏼",
+    "usuario": "Barbara Lackington",
+    "primer_nombre": "Barbara",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-05-12",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "felipe cabrera reyes",
+    "primer_nombre": "felipe",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
     "edificio": "edificio brooklyn la florida",
     "fecha": "2025-03-07",
     "score": 5.0,
@@ -29677,6 +30207,1249 @@
     "amenidades": [],
     "comuna": "Las Condes",
     "operador": "LarGroup"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-05-25",
+    "score": 5.0,
+    "texto": "Excelente lugar para vivir, seguro cómodo y bien ubicado. Las personas que trabajan super amables y dispuestas a ayudar.",
+    "usuario": "Guido Rossi",
+    "primer_nombre": "Guido",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Seguridad",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-06-21",
+    "score": 4.0,
+    "texto": "Siempre rico jugar pickleball en el -1.... Eso sí, los estacionamientos son muy caros",
+    "usuario": "Teresa de Mussy",
+    "primer_nombre": "Teresa",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Precio/Costo"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-07-07",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Mauricio Lizana",
+    "primer_nombre": "Mauricio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-07-14",
+    "score": 5.0,
+    "texto": "Muy feliz en mi dpto nuevo. Gracias a leticia, que muy amablemente nos mostró el edificio y todas sus amenidades.\nMi parte favorita, el RoofTop!\nFeliz en Switch 🙌🏼",
+    "usuario": "Patricio Ignacio Duguett Astorga",
+    "primer_nombre": "Patricio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Amenities"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-02",
+    "score": 1.0,
+    "texto": "El edificio está bien ubicado y parece cómodo. Sin embargo, la corredora de propiedades es sumamente poco profesional. El proceso de arriendo es poco transparente y la comunicación es nula. No respetan los precios acordados (ni siquiera los publicados en la pagina *despues de pagar una reserva*) y hacen perder tu tiempo por semanas diciendo que van a mandar el contrato de arriendo “ese mismo dia”, y nunca llega. Definitivamente no recomiendo este lugar por la poca seriedad de la administración/corredora.",
+    "usuario": "magdalena bennett",
+    "primer_nombre": "magdalena",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Atención cliente"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Una gran familia,  excelente lugar para vivir y disfrutar",
+    "usuario": "J.P. Bottinelli",
+    "primer_nombre": "J.P.",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Increíble el lugar!!",
+    "usuario": "Fernando Salas",
+    "primer_nombre": "Fernando",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "El mejor lugar para vivir!!",
+    "usuario": "FRANCISCO CEA",
+    "primer_nombre": "FRANCISCO",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Hace un año vivo en el edificio y la calidad de los servicios es excelente, ojalá pueda quedarme mucho tiempo más.",
+    "usuario": "Daniel Bertoya",
+    "primer_nombre": "Daniel",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Este es un lugar único que combina el habitar, deporte, recreación y espacios increíbles para trabajar con una vista 360' de Santiago. Y me encantan los eventos que organizan para conocer a los vecinos.",
+    "usuario": "CAROLINA PAZ BRIONES",
+    "primer_nombre": "CAROLINA",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Tremendo evento, excelente para conocer a los vecinos, muy entretenido",
+    "usuario": "Emilio Cuneo",
+    "primer_nombre": "Emilio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "El edificio cuenta con unos espacios comunes maravillosos. La vista 360 es súper brutal y enamora 😍 dispone de mesas de Pool 🎱 para pasar un rato agradable con familiares y amigos 7/7",
+    "usuario": "Andrés Enrique Rivas Ascanio",
+    "primer_nombre": "Andrés",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Encantando con las instalaciones, la ubicación, la corredora muy preocupada en entregarme todo los detalles. Todo siempre está muy limpio y ordenado. Recomendé a mi cuñada y también está viviendo acá.",
+    "usuario": "Cesar Sepulveda catalan",
+    "primer_nombre": "Cesar",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Limpieza/mantenimiento",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-08-10",
+    "score": 5.0,
+    "texto": "Feliz en Switch, maravilloso todo, la atención de Leticia y su equipo no puede ser mejor. Lo recomiendo!!!",
+    "usuario": "Gerardo Aponte",
+    "primer_nombre": "Gerardo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2023-09-25",
+    "score": 1.0,
+    "texto": "",
+    "usuario": "L A",
+    "primer_nombre": "L",
+    "sexo": "unknown",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-05-07",
+    "score": 5.0,
+    "texto": "Instalaciones de primer nivel, especialmente los espacios comunes del piso 19. Muy buena experiencia para vivir solo, la comunidad switch se mantiene organizando eventos, y fomentando la vida social dentro del edificio.",
+    "usuario": "Andres Rodriguez",
+    "primer_nombre": "Andres",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-05-08",
+    "score": 5.0,
+    "texto": "Excelente experiencia y muy bien atendido, sobre todo por Leticia Spencer",
+    "usuario": "Rafael Mayorga",
+    "primer_nombre": "Rafael",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-05-14",
+    "score": 1.0,
+    "texto": "El edificio es rico, buenos espacios comunes, pero la administración PESIMA. Culpan por todo a los residentes, mientras viví ahí muchos residentes tuvieron problemas por que cuando algo fallaba en su depto se lavaban las manos y era muy dificil lograr que te repusieran (ej, se rompía el vidrio del baño, culpaban al residente por el cambio de temperatura de la calefacción…entre otras cosas insólitas).\nLa cláusula de término del contrato es una locura, el trato para salir pésimo, me cobraron carísimo por paredes que no ensucie y tarjetas supuestamente “perdidas” que SÍ FUERON DEVUELTAS.\nSumado a esto me retuvieron la garantía, en total todo salió 3,5 MM.",
+    "usuario": "CM V",
+    "primer_nombre": "CM",
+    "sexo": "unknown",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Mantenciones",
+      "Calefacción",
+      "Atención cliente",
+      "Garantía",
+      "Crítica"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-05-15",
+    "score": 5.0,
+    "texto": "Totalmente recomendable vivir acá, mi experiencia ha sido fantástica desde la vista privilegiada hasta vivir en comunidad con vecinos generosos y simpáticos!",
+    "usuario": "Bárbara Goreta",
+    "primer_nombre": "Bárbara",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-05-29",
+    "score": 5.0,
+    "texto": "LETICIA!!!!!!!GRACIAS GRACIAS Y GRACIAS !!!!!? DIOS TÉ BENDIGA SIEMPRE, TU BUENA ONDA PREDISPOSICIÓN SONRISA Y GANAS DE AYUDAR A UN EXTRANJERO, NO SE PUEDEN PAGAR CON NADA. ESPERO LA VIDA TE DE UN POCO DE LO QUE DAS CONO PERSONA. GRACIAS !!!!!!!!!",
+    "usuario": "oscar fernando mateo",
+    "primer_nombre": "oscar",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-07-22",
+    "score": 5.0,
+    "texto": "Se pasó este lugar!! Ha sido de las mejores decisiones que he tomando en mi vida! Hacen comunidad, es ultra flexible!!",
+    "usuario": "Gabriela Valle",
+    "primer_nombre": "Gabriela",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-07-26",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Jaime Auger Esterio",
+    "primer_nombre": "Jaime",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-08-06",
+    "score": 5.0,
+    "texto": "Excelente lugar para vivir con infraestructura completa, departamentos y espacios comunes muy modernos y equipados. Atención de las personas es excepcional y la vista del lugar es espectacular. Lugar seguro y muy bien localizado",
+    "usuario": "Márcio Medeiros",
+    "primer_nombre": "Márcio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Seguridad",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-08-06",
+    "score": 5.0,
+    "texto": "Fue una experiencia muy increíble y positiva vivir en este edificio, puedo decir que la estructura ofrece mucha comodidad y acogida, siempre están preocupados por mejorar los servicios ofrecidos. Pero lo más importante para mí es la gente que trabaja allí y siempre está dispuesta a apoyarnos y ayudarnos. ¡Muchas gracias a todos!",
+    "usuario": "Everton Camargo Barbosa",
+    "primer_nombre": "Everton",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-08-13",
+    "score": 5.0,
+    "texto": "Excelente",
+    "usuario": "Alicars spa",
+    "primer_nombre": "Alicars",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-08-22",
+    "score": 4.0,
+    "texto": "Viví  más de 1 año en Switch y, en general, fue una buena experiencia.\n\nLa infraestructura espectacular: amplios departamentos, bellas terminaciones, buen equipamiento, y, muy en especial, el sistema de calefacción en los pisos, tanto en los dptos. como en las áreas comunes. Un agrado en invierno. Sin embargo, para el verano no hay sistema de enfriamiento y, dada la ubicación del edificio, no es opción abrir los ventanales por el ruido de Avda. Vespucio, que, en ocasiones, es muy fuerte y molesto.\n\nEl funcionamiento interno del condominio es muy tecnológico y seguro, pero, al mismo tiempo, es rígido y engorroso, lo que genera problemas recurrentes para residentes y visitantes. Por ej., las puertas y ascensores solo se activan con tarjeta y/o aplicación, que suelen desconfigurarse y el equipo de administración no siempre tiene la mejor actitud para resolver situaciones diarias que escapan a lo establecido en los reglamentos. Lejos lo más complicado.",
+    "usuario": "Huimicley Marchena",
+    "primer_nombre": "Huimicley",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Seguridad",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-09-16",
+    "score": 5.0,
+    "texto": "Un lugar muy seguro, excelentes espacios, departamentos amplios y cómodos. Muy ordenados para la administración del edificio. Agradecida con Dennys Altuve, facility manager, que me apoyó mientras duró el contrato: excelente atención, eficiente , diligente y comprensiva. Agradecida 100% Gracias a Leticia y Vanesa por su buen trato y apoyo también. Un 7 !!!",
+    "usuario": "Ana Maria Silva",
+    "primer_nombre": "Ana",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Limpieza/mantenimiento",
+      "Seguridad",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-09-21",
+    "score": 5.0,
+    "texto": "Estuvimos un año con switch y todo impecable! El equipo de Denis, Vanessa y Leticia siempre atentos. Nos vamos pero muy apenados de Switch :(",
+    "usuario": "Gustavo Carrasco",
+    "primer_nombre": "Gustavo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-10-29",
+    "score": 5.0,
+    "texto": "Me encanta este lugar, es súper cómodo, lindo y la administración nos realiza muchas experiencias entretenidas en el año!!! 100% recomendado",
+    "usuario": "Andrea Dulcien",
+    "primer_nombre": "Andrea",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-10-29",
+    "score": 5.0,
+    "texto": "El mejor lugar en el que he vivido en mi vida, tiene una comunidad única de gente que se ha tornado cómo mi familia. Una experiencia desde los espacios comunes hasta las personas que viven en el ❤️",
+    "usuario": "Roberto Meza",
+    "primer_nombre": "Roberto",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-10-31",
+    "score": 5.0,
+    "texto": "Gran lugar para vivir, tiene una ubicación inmejorable, excelentes zonas comunes.",
+    "usuario": "Luis Macias",
+    "primer_nombre": "Luis",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2024-12-12",
+    "score": 5.0,
+    "texto": "El edificio está en un lugar super central de todo, la comunidad es muy respetuosa y de excelente trato; las instalaciones del roof son relindas y el depto es super cómodo y, en mi caso por la orientacion, de exquisita temperatura y vista. La disposición de la administración es destacable; me han ayudado en cada problema, siempre con un trato amable y dando lo que más pueden para brindarme su apoyo. Pensé irme al primer año y obvio q renové!",
+    "usuario": "Rosita Serrano",
+    "primer_nombre": "Rosita",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-01-12",
+    "score": 1.0,
+    "texto": "Dice estacionamiento gratis de 8 a 20 hrs los fines de semana y es mentira.\nMe estacioné ahí y consumí en locales del switch y me cobraron igual",
+    "usuario": "Maria Luisa Claro",
+    "primer_nombre": "Maria",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Estacionamiento"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-01-30",
+    "score": 5.0,
+    "texto": "Me gusta este concepto de multifamily; es ondero, tiene estilo, organizado, acogedor …. Tiene todo lo que se necesita para vivir y vivir bien. Además, muy central, a dos pasos del metro, farmacia, supermercado…. Es lo mejor que se ha inventado",
+    "usuario": "F TE",
+    "primer_nombre": "F",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-02-28",
+    "score": 1.0,
+    "texto": "The management for this building is horribly disorganized and lacks any sense of professionalism. After a month of back-and-forth communication with unbearably slow response times, I was finally \"approved\" for my apartment.  I then reached out to management a few hours later to finalize the details and sign the contract, only to be told then that my application was somehow rejected, after already haven been approved a day prior, with no further details, despite having sent a plethora of documents and easily clearing the prerequisites for renting there. I have never in my life experienced such disorganization especially from a building that is supposed to cater to professionals. If you are looking for somewhere to live in Santiago, do not waste your time with Vespuccio Switch or Assetplan, there are far better alternatives.",
+    "usuario": "Ricardo Tremblay",
+    "primer_nombre": "Ricardo",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-03-28",
+    "score": 1.0,
+    "texto": "Edificio constantemente con ruidos molestos, hacen eventos con parlantes, animadores, etc en la terraza y se escucha más allá que la cuadra en que está",
+    "usuario": "Trinidad T",
+    "primer_nombre": "Trinidad",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Ruidos"
+    ],
+    "amenidades": [
+      "terraza"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-05-16",
+    "score": 5.0,
+    "texto": "Excelente experiencia durante mi estadía de 6 meses viviendo en esta comunidad Switch! un lugar y con una ubicación privilegiada y unas vistas a todo Santiago de alto impacto! Gracias totales a Leti y Vanessa que estaban siempre a máxima dispocision de cualquier situación que se requiriera. Mantengan los eventos entre la comunidad y sacar provecho a los espacios comunes maravillosos que tienen.",
+    "usuario": "Ignacio Saez",
+    "primer_nombre": "Ignacio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-06-04",
+    "score": 5.0,
+    "texto": "Me cambie hace poco más de 1 mes y realmente increíble el lugar, espacios comunes con mesa de pool - cowork - ping pong, quinchos con vista increíble.\nDepartamentos amplios y con todo los gastos básicos incluidos 🤩",
+    "usuario": "Jean Carlo Aho Vekovski",
+    "primer_nombre": "Jean",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "quincho",
+      "cowork",
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-06-30",
+    "score": 5.0,
+    "texto": "Un lujo este edificio, departamentos amplios, grandes espacios comunes, y con vistas increíbles. Lo recomiendo para jóvenes que buscan ser participe de una comunidad activa tanto en lo social como deportivo, la administración se preocupa de realizar constantemente actividades para disfrutar y conocer a los distintos vecinos.",
+    "usuario": "Franco Sciaraffia Cruz",
+    "primer_nombre": "Franco",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-07-01",
+    "score": 5.0,
+    "texto": "Increíble el edificio sus departamentos, áreas comunes, personal de excelencia y además la comunidad. Muy feliz viviendo actualmente acá",
+    "usuario": "Juan Pablo Ruiz Bianchini",
+    "primer_nombre": "Juan",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-08-27",
+    "score": 5.0,
+    "texto": "Estuve viviendo el el edificio \"Switch\" durante 3 años. Mi experiencia fue tremendamente grata en todos los planos. Al ser una persona que tiene una paraplejia y que uso una silla de ruedas para movilizarme, encontré un edificio totalmente accesible que me permitía llegar y utilizar todas las dependencias. Pero más importante que eso, es el excelente trato, apoyo y respaldo del equipo de administración encabezado por Denis Altuve y Vanessa Rincón, quienes siempre estuvieron  más que dispuestas a ayudar y colaborar en la resolución de cualquier problema y/o necesidad por compleja que ésta fuera. Solo tengo agardecimientos para ellas y el resto de las personas que conforman el team de \"Switch\" y que permite que uno no se sienta solo sino que acompañado todo el tiempo. Vayas mis saludos y mejores deseos para todos ellos.",
+    "usuario": "David Albala",
+    "primer_nombre": "David",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-08-31",
+    "score": 5.0,
+    "texto": "Excelente mi experiencia en Switch. El depto precioso y espacioso, los espacios comunes maravillosos, y sentí que todo me quedaba cerca. Lo mejor es que se nota que hay una administración que se encarga en todo del edificio, todo siempre está limpio, rico aroma, ordenado, están haciendo mantenciones, piscina limpia, las mesas de pool las mantuvieron y dejaron como nuevas, sentí que viví en un hotel. La gente que administra y mantiene el edificio siempre tiene buena disposición, los ves alegres con buena actitud, de verdad es primera vez que me pasa el tener una experiencia como esta, las administraciones de otros edificios no eran tan accesibles y agradables, en Switch no se ve eso, sino al revés, gente que resuelve. Literal te sientes como viviendo en un hotel. Muchas muchas gracias a Vanessa, Denis, Diego, Javier, Jaime, y otros que son parte del equipo.",
+    "usuario": "Sebastián Andrés Rosende Hornig",
+    "primer_nombre": "Sebastián",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Limpieza/mantenimiento",
+      "Precio/Costo",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "piscina",
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-10-24",
+    "score": 5.0,
+    "texto": "Denise muy buena persona.",
+    "usuario": "luigi bastone",
+    "primer_nombre": "luigi",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-11-26",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Valentina Cristovao “Maentina”",
+    "primer_nombre": "Valentina",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-02",
+    "score": 5.0,
+    "texto": "Tremenda experiencia, muy céntrico, edificio con todas las comodidades que uno puede esperar y más!",
+    "usuario": "Camila Iriarte O.",
+    "primer_nombre": "Camila",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-19",
+    "score": 5.0,
+    "texto": "Llevo un año viviendo en switch y es espectacular. Calidad de vida y buen ambiente social. Leticia es la mejor anfitriona de este lugar. 100% recomendado",
+    "usuario": "Francisca Constanza Pérez Lara",
+    "primer_nombre": "Francisca",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "buen ambiente",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-19",
+    "score": 5.0,
+    "texto": "Lo mejor para vivir en Santiago!",
+    "usuario": "Adriana Viana",
+    "primer_nombre": "Adriana",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-19",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Ricardo Ramos",
+    "primer_nombre": "Ricardo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-19",
+    "score": 5.0,
+    "texto": "Gran edificio, muy rico lugar!",
+    "usuario": "Sebastian Porflit",
+    "primer_nombre": "Sebastian",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-19",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Ripun Sarma",
+    "primer_nombre": "Ripun",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2025-12-19",
+    "score": 5.0,
+    "texto": "El mejor lugar para vivir! Mucho networking y buena onda",
+    "usuario": "Alfredo G",
+    "primer_nombre": "Alfredo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-01-13",
+    "score": 5.0,
+    "texto": "Resaltar la cercanía, excelente atención y el\ngran compromiso mostrado durante todo este tiempo por el equipo Switch liderado por su Facility Manager Denis Altuve. La alta orientación al cliente junto a unas instalaciones de primer nivel hacen de Switch un gran lugar.",
+    "usuario": "manuel barraza woo",
+    "primer_nombre": "manuel",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-01-23",
+    "score": 5.0,
+    "texto": "Me voy de este lugar con el corazón lleno. Siempre recibí un trato respetuoso, cercano y amable por parte del equipo de administración, mantención, seguridad. Cada vez que necesité algo, estuvieron ahí con buena disposición y una sonrisa. Sin duda, personas que marcan la diferencia y hacen que vivir aquí sea una linda experiencia! ✨✨✨✨✨",
+    "usuario": "Keila Chácon",
+    "primer_nombre": "Keila",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación",
+      "Seguridad"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-01-23",
+    "score": 5.0,
+    "texto": "Viví un año en Switch y la experiencia fue tremenda, tanto por parte de la comunidad y la administración un siete.",
+    "usuario": "Luis Andres Urra",
+    "primer_nombre": "Luis",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-01-28",
+    "score": 5.0,
+    "texto": "Muy buen lugar para vivir! El equipo de administración se encarga que todo funcione perfecto, especialmente Denise Altuve que siempre tuvo muy buena disposición.",
+    "usuario": "Carolina Briones",
+    "primer_nombre": "Carolina",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-02-16",
+    "score": 5.0,
+    "texto": "Estuve más de un año y fue una experiencia increíble. La administración es excelente y siempre dispuestos a ayudarme (y adoraban a mi perrito). Todo el equipo fue realmente increible. Las instalaciones superaron 1000% las expectativas. Recomendadísimo!",
+    "usuario": "Cindy Velasquez",
+    "primer_nombre": "Cindy",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-02-20",
+    "score": 5.0,
+    "texto": "Un concepto espectacular",
+    "usuario": "Francisco Salinas",
+    "primer_nombre": "Francisco",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-03-18",
+    "score": 5.0,
+    "texto": "Retornamos a nuestro país y de las cosas que más vamos a extrañar de Santiago, es la gran comunidad de Switchers como el increíble equipo humano que tienen.\n\nGracias Vane por estar presente siempre y Denis por ser la líder quien nos apoyaba para resolver muchos temas con la mejor actitud posible, independientemente del día, la hora, estabas atenta. Clave en la organización de eventos y en especial por hacer nuestro check-out de la manera más planificada y ordenada.\n\nNos vamos agradecidos y ya con muchos deseos de poder volver pronto a visitarlos!  5 estrellas para Switch!",
+    "usuario": "Andres Antelo",
+    "primer_nombre": "Andres",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Limpieza/mantenimiento"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-03-19",
+    "score": 5.0,
+    "texto": "vivi por anio y medio en el edificio\n5 puntos para la administracion, en especial Vanessa quien siempre estuvo atenta a ayudarnos en todo.\n\nvolveria a vivir ahi sin duda",
+    "usuario": "diego alejandro Ospina",
+    "primer_nombre": "diego",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-03-19",
+    "score": 5.0,
+    "texto": "Vanessa Rincon, Diego Tovar y Denis Altuve, lo mejor de esa administracion por ellos estas 5 estrellas, mas nada que decir",
+    "usuario": "Antonio Valero",
+    "primer_nombre": "Antonio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-03-26",
+    "score": 5.0,
+    "texto": "Muy lindo edificio y con excelentes servicios!!",
+    "usuario": "Juan Francisco Martinez Gili",
+    "primer_nombre": "Juan",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-03-26",
+    "score": 5.0,
+    "texto": "Me encantó vivir en el edificio es todo muy organizado, cómodo, bonito, y todo bien pensado. Felicitaciones especialmente a Leticia, Vanessa, Diego son excelentes y muy confiables",
+    "usuario": "Macarena Larraguibel arroyo",
+    "primer_nombre": "Macarena",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-03-31",
+    "score": 5.0,
+    "texto": "Un edificio de primer nivel! La comodidad es incomparable, tienes de todo a tus pies: lavandería, cafetería, parque de niños, estacionamiento, supermercado Ruky en el mismo edificio y más. Los departamentos tienen terminaciones de muy alta calidad, son impecables y espaciosos. Y la atención al arrendatario es excelente, nos vamos muy agradecidos de Vanessa, Denis, Diego, Leticia y todo el equipo de Switch que siempre nos atendió con cercanía y buen trato! :)",
+    "usuario": "Carla Reategui",
+    "primer_nombre": "Carla",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-04-02",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Israel Gonzalez",
+    "primer_nombre": "Israel",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-04-06",
+    "score": 5.0,
+    "texto": "Muy buen servicio y atención de parte de la administración! Recomiendo 10/10",
+    "usuario": "PRIETO URZUA BENJAMIN",
+    "primer_nombre": "PRIETO",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "buen servicio",
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-04-10",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Diego Pozo",
+    "primer_nombre": "Diego",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-04-16",
+    "score": 4.0,
+    "texto": "Bien el lugar mucha seguridad excelente vista, mucha gente",
+    "usuario": "Rodrigo Cozar",
+    "primer_nombre": "Rodrigo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Seguridad",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-04-29",
+    "score": 5.0,
+    "texto": "Excelente infraestructura y preocupación por el cuidado de los residentes",
+    "usuario": "Ernesto Eglinton",
+    "primer_nombre": "Ernesto",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-05-14",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Rena",
+    "primer_nombre": "Rena",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-06-02",
+    "score": 5.0,
+    "texto": "Quiero agradecer infinitamente el trato, la atención y la actitud de servicio maravilloso de este edificio, lo recomiendo 1000%, todos fueron increíbles en el año y medio que estuve viviendo allí, las personas de mantenimiento siempre atentos y colaboradores, sobre todo quiero hacer un reconocimiento especial a Denis Altuve y Vanessa en la administración que son además de excelentes profesionales e impecables en su trabajo, son maravillosos seres humanos.\nMil gracias por todo\nCon mucho cariño\nMaría Luisa Canoura\nDepto 1507",
+    "usuario": "Maria Luisa Canoura",
+    "primer_nombre": "Maria",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Limpieza/mantenimiento",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
   },
   {
     "edificio": "the place",

@@ -36,6 +36,8 @@ BUILDINGS = [
     'Spot Residence Manquehue, Las Condes, Santiago, Chile',
     'Blend Apoquindo, Las Condes, Santiago, Chile',
     'Collective Bustamante, Ñuñoa, Santiago, Chile',
+    'Collective Santiago San Francisco, Santiago, Chile',
+    'Switch Vespucio, Las Condes, Santiago, Chile',
     'Edificio Brooklyn La Florida, La Florida, Santiago, Chile',
     'Somma Vista Calán, Las Condes, Santiago, Chile',
     'Boldo Club de Campo, Vitacura, Santiago, Chile',
