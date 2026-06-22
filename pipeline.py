@@ -44,6 +44,8 @@ EDIFICIO_META = {
     'spot residence manquehue':         {'comuna': 'Las Condes',   'operador': 'LarGroup'},
     'blend apoquindo':                  {'comuna': 'Las Condes',   'operador': 'LarGroup'},
     'collective bustamante':            {'comuna': 'Ñuñoa',        'operador': 'LarGroup'},
+    'collective santiago san francisco': {'comuna': 'Santiago',    'operador': 'Puntablanca'},
+    'switch vespucio':                   {'comuna': 'Las Condes',  'operador': 'Assetplan'},
     'edificio brooklyn la florida':     {'comuna': 'La Florida',   'operador': 'LarGroup'},
     'somma vista calán':                {'comuna': 'Las Condes',   'operador': 'Greystar'},
     'boldo club de campo':              {'comuna': 'Vitacura',     'operador': 'LarGroup'},
