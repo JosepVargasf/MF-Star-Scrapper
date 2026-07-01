@@ -1514,6 +1514,23 @@
     "operador": "Puntablanca"
   },
   {
+    "edificio": "collective santiago san francisco",
+    "fecha": "2026-06-24",
+    "score": 5.0,
+    "texto": "Max Etchegaray es un 7, super atento, aclaró todas mis dudas y su atención super personalizada. El edificio muy atractivo",
+    "usuario": "Maryam Carreno",
+    "primer_nombre": "Maryam",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Puntablanca"
+  },
+  {
     "edificio": "edificio brooklyn la florida",
     "fecha": "2025-03-07",
     "score": 5.0,
@@ -4424,6 +4441,78 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "imu san cristobal ines matte urrejola",
+    "fecha": "2026-06-24",
+    "score": 5.0,
+    "texto": "Llevo 8 meses viviendo en IMU San Cristóbal y estoy muy conforme. El edificio es moderno, tranquilo y seguro, los espacios comunes están bien mantenidos y la administración funciona bien. El departamento es cómodo, bonito y tiene una linda vista al cerro. En general, ha sido una muy buena experiencia vivir aquí.",
+    "usuario": "Antonia Alarcón Moya",
+    "primer_nombre": "Antonia",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Seguridad",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristobal ines matte urrejola",
+    "fecha": "2026-06-25",
+    "score": 5.0,
+    "texto": "Quiero destacar el excelente estado de las instalaciones, las cuales se encuentran impecablemente limpias y muy bien mantenidas, reflejando el compromiso con la calidad y el cuidado de cada detalle.\n\nAsimismo, deseo expresar mi más sincero agradecimiento a Roxana Watson por la excelente gestión realizada durante todo el proceso. Su profesionalismo, amabilidad, empatía, disposición permanente y capacidad para brindar soluciones hicieron que toda la experiencia fuera fluida y muy satisfactoria. Sin duda, su compromiso y dedicación marcan una diferencia y son un gran aporte para entregar un servicio de excelencia.",
+    "usuario": "Cristobal Dinamarca",
+    "primer_nombre": "Cristobal",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristobal ines matte urrejola",
+    "fecha": "2026-06-29",
+    "score": 5.0,
+    "texto": "Es 100%recomendable buena atención y eficiencia",
+    "usuario": "Ingrid Arancibia",
+    "primer_nombre": "Ingrid",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristobal ines matte urrejola",
+    "fecha": "2026-06-30",
+    "score": 2.0,
+    "texto": "Se escucha TODO\nescucho a mi vecino de arriba caminando de noche y cuando va al baño\nte cobran por todo y cn cuea te dejan invitar gente",
+    "usuario": "Francisca Pino",
+    "primer_nombre": "Francisca",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Cobros"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "imu san cristóbal",
     "fecha": "2025-03-21 18:17:10",
     "score": 5.0,
@@ -5432,6 +5521,78 @@
     "sentimiento": "Positiva",
     "temas": [
       "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-06-24",
+    "score": 5.0,
+    "texto": "Llevo 8 meses viviendo en IMU San Cristóbal y estoy muy conforme. El edificio es moderno, tranquilo y seguro, los espacios comunes están bien mantenidos y la administración funciona bien. El departamento es cómodo, bonito y tiene una linda vista al cerro. En general, ha sido una muy buena experiencia vivir aquí.",
+    "usuario": "Antonia Alarcón Moya",
+    "primer_nombre": "Antonia",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Seguridad",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-06-25",
+    "score": 5.0,
+    "texto": "Quiero destacar el excelente estado de las instalaciones, las cuales se encuentran impecablemente limpias y muy bien mantenidas, reflejando el compromiso con la calidad y el cuidado de cada detalle.\n\nAsimismo, deseo expresar mi más sincero agradecimiento a Roxana Watson por la excelente gestión realizada durante todo el proceso. Su profesionalismo, amabilidad, empatía, disposición permanente y capacidad para brindar soluciones hicieron que toda la experiencia fuera fluida y muy satisfactoria. Sin duda, su compromiso y dedicación marcan una diferencia y son un gran aporte para entregar un servicio de excelencia.",
+    "usuario": "Cristobal Dinamarca",
+    "primer_nombre": "Cristobal",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-06-29",
+    "score": 5.0,
+    "texto": "Es 100%recomendable buena atención y eficiencia",
+    "usuario": "Ingrid Arancibia",
+    "primer_nombre": "Ingrid",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-06-30",
+    "score": 2.0,
+    "texto": "Se escucha TODO\nescucho a mi vecino de arriba caminando de noche y cuando va al baño\nte cobran por todo y cn cuea te dejan invitar gente",
+    "usuario": "Francisca Pino",
+    "primer_nombre": "Francisca",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Cobros"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -12840,6 +13001,232 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "park santiago",
+    "fecha": "2026-06-23",
+    "score": 5.0,
+    "texto": "Excelente personas mejor atención  conzuelo y jhoselin",
+    "usuario": "hassan el fakih",
+    "primer_nombre": "hassan",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Llevo viviendo varios años en Park y siempre he recibido una excelente atención por parte de todo el equipo. En esta oportunidad quiero destacar especialmente a Yorlan por su amabilidad, disposición y excelente atención. De todas formas, todo el equipo de Park Santiago es de primer nivel. ¡Nada que decir, solo felicitarlos y agradecerles por el gran trabajo que realizan!",
+    "usuario": "Claudio Gatica Gatica",
+    "primer_nombre": "Claudio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Muy agradable el administrador team",
+    "usuario": "Wilfredo Saavedra",
+    "primer_nombre": "Wilfredo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Muy agradable el equipo de administración",
+    "usuario": "Angelo Allende",
+    "primer_nombre": "Angelo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Me encantó el show, súper divertido",
+    "usuario": "Jason Gz. BZA.",
+    "primer_nombre": "Jason",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "buenosimo muy divertido, sobretodo la humorista",
+    "usuario": "Terroriste New",
+    "primer_nombre": "Terroriste",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Muy buena iniciativa, nos quedamos con ganas de más !!",
+    "usuario": "Michel Miranda",
+    "primer_nombre": "Michel",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Grata experiencia vivir en este edificio",
+    "usuario": "Felipe Gutierrez",
+    "primer_nombre": "Felipe",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Todo excelente, que se repitan más seguido!",
+    "usuario": "Jesús Silva",
+    "primer_nombre": "Jesús",
+    "sexo": "mostly_male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Joaquin Soto Gutierrez",
+    "primer_nombre": "Joaquin",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Darinka Valverde",
+    "primer_nombre": "Darinka",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Muy bueno el show de la drag 👏🏻👏🏻",
+    "usuario": "Matías Carrascosa",
+    "primer_nombre": "Matías",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "Muy buen show",
+    "usuario": "pedro haase",
+    "primer_nombre": "pedro",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "park santiago",
+    "fecha": "2026-06-27",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Anaise Yañez",
+    "primer_nombre": "Anaise",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "ronda santo domingo",
     "fecha": "2025-02-03 20:57:43",
     "score": 5.0,
@@ -15108,6 +15495,39 @@
     "sexo": "male",
     "sentimiento": "Negativa",
     "temas": [
+      "Ruidos"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "ronda santo domingo",
+    "fecha": "2026-06-22",
+    "score": 1.0,
+    "texto": "Cobros desproporcionados cuestionablemente abusivos por \"daños\" me siento sumamente decepcionada de ronda santo domingo no lo recomiendo...",
+    "usuario": "Pamela Ríos",
+    "primer_nombre": "Pamela",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Cobros"
+    ],
+    "amenidades": [],
+    "comuna": "Santiago",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "ronda santo domingo",
+    "fecha": "2026-06-28",
+    "score": 1.0,
+    "texto": "Pésima experiencia. Es constante el ruido de fiestas y gritos hasta las 4:00 a.m. Me veo obligado/a a cerrar puertas y ventanas para intentar mitigar el ruido, pero es insoportable. He reportado la situación muchas veces, incluso en una misma noche hice cuatro llamadas a la administración, y nunca hacen nada. No respetan el descanso de nadie y la administración es incapaz de solucionar este problema recurrente.",
+    "usuario": "Viviana Ramírez",
+    "primer_nombre": "Viviana",
+    "sexo": "female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Atención cliente",
       "Ruidos"
     ],
     "amenidades": [],
@@ -18310,6 +18730,23 @@
     "operador": "Greystar"
   },
   {
+    "edificio": "somma asturias",
+    "fecha": "2026-06-25",
+    "score": 5.0,
+    "texto": "Me encanta el ambiente de somma, llevo 1 año viviendo acá y no he tenido problemas!! La gente súper cordial y siempre te resuelven todo! Sobre todo Lorena, siempre con la mejor disposición a ayudar",
+    "usuario": "Catalina Vergara",
+    "primer_nombre": "Catalina",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Greystar"
+  },
+  {
     "edificio": "somma inés de suárez",
     "fecha": "2024-03-26 16:17:15",
     "score": 1.0,
@@ -21485,6 +21922,22 @@
     "operador": "Greystar"
   },
   {
+    "edificio": "somma inés de suárez",
+    "fecha": "2026-06-30",
+    "score": 1.0,
+    "texto": "Podrian ahorrar energia y dejar de contaminar luminicamente, si apagaran las luces del ultimo piso",
+    "usuario": "María Ignacia Morales Campos",
+    "primer_nombre": "María",
+    "sexo": "mostly_female",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "Greystar"
+  },
+  {
     "edificio": "somma las clarisas",
     "fecha": "2026-04-22",
     "score": 5.0,
@@ -21546,6 +21999,22 @@
       "Garantía",
       "Seguridad",
       "Crítica"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma las clarisas",
+    "fecha": "2026-06-24",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Pablo Sánchez",
+    "primer_nombre": "Pablo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
     ],
     "amenidades": [],
     "comuna": "Las Condes",
@@ -23288,6 +23757,24 @@
     "temas": [
       "Mantenciones",
       "Atención cliente"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma plaza bustamante",
+    "fecha": "2026-06-30",
+    "score": 1.0,
+    "texto": "Pésimo, no se vengan a vivir acá. Los administradores les pintan maravillas del edificio, y cobran hasta por si acaso. Conserjes pésima disposición, atienden mal. Te levantan la voz, súper faltas de respeto.",
+    "usuario": "Franco Gómez Rojas",
+    "primer_nombre": "Franco",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Atención cliente",
+      "Cobros",
+      "Crítica"
     ],
     "amenidades": [],
     "comuna": "Ñuñoa",
@@ -27248,6 +27735,79 @@
     "sentimiento": "Negativa",
     "temas": [
       "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma plaza ñuñoa",
+    "fecha": "2026-06-24",
+    "score": 5.0,
+    "texto": "Llevo 3 años como residente de Somma Ñuñoa.\nHay excelentes espacios comunes, muy amplios y llenos de detalles, lo que permite una sana convivencia entre los residentes.\nAtención personalizada con una persona a cargo presencial en el edificio en caso de dificultades.\nY súper  importante tenemos café gratis para  los que trabajamos en el Cowork (teletrabajo), lindas y cómodas dependencias en esta área.\nAgradecida …",
+    "usuario": "Marina Baeza",
+    "primer_nombre": "Marina",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "cowork",
+      "spa"
+    ],
+    "comuna": "Ñuñoa",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma plaza ñuñoa",
+    "fecha": "2026-06-25",
+    "score": 1.0,
+    "texto": "Totalmente decepcionado. Viví menos de un año ahí y salí el 15 de diciembre 2025, y recién a fines de junio 2026 me devuelven mes de garantía (7 meses después), luego de escribirles cada semana durante 7 meses poniendo presión solo por eso me la devolvieron (y no contestaron casi ningún mensaje, incluso fui presencial y nada). Ademas yo di 530 mil de garantía y solo me devolvieron 80!! Según ellos pintura y aseo vale 450 mil!! … siendo que quedó impecable el departamento (estuvimos 11 meses). Sinceramente es una estafa esto, a todos les roban el mes de garantía y lucran con eso. Agua caliente carísima (nunca estabamos en el depto solo éramos dos y cobraban 80 mil o 100 mil a veces). Administradores nunca responden… no vale la pena ademas por un departamento tan pequeño pasar tantos malos ratos, huyan de ahí y no se dejen engañar por lo “bonito”\nPd: además compran las reseñas positivas que ven aquí. Siempre hacen sorteos donde te descuentan 150 mil en tu arriendo si les pones 5 estrellas en Google maps. Claramente estafa por donde se le vea",
+    "usuario": "Cristóbal Riquelme",
+    "primer_nombre": "Cristóbal",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Higiene ambiental",
+      "Atención cliente",
+      "Garantía",
+      "Seguridad"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma plaza ñuñoa",
+    "fecha": "2026-06-25",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Ester Lopes",
+    "primer_nombre": "Ester",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma plaza ñuñoa",
+    "fecha": "2026-06-30",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Pablo Chacón",
+    "primer_nombre": "Pablo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
     ],
     "amenidades": [],
     "comuna": "Ñuñoa",
