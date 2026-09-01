@@ -70,7 +70,7 @@ export default function MetricasDetalladas({ metrics }) {
   }
 
   return (
-    <div className="card card-full" ref={chartRef}>
+    <div className="card card-full">
       <div className="card-header">
         <div>
           <h2>Métricas detalladas por edificio</h2>
@@ -78,6 +78,7 @@ export default function MetricasDetalladas({ metrics }) {
         </div>
       </div>
 
+    <div ref={chartRef} id="content-metricas-detalladas">
       <div className="md-wrap">
         <table className="md-table" style={{ fontSize }}>
           <thead>
@@ -115,7 +116,8 @@ export default function MetricasDetalladas({ metrics }) {
           </tbody>
         </table>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="metricas-detalladas" fontSize={fontSize} onFontSizeChange={setFontSize} />
+    </div>
+      <ExportPanel chartRef={chartRef} chartName="metricas-detalladas" title="Métricas Detalladas por Edificio" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

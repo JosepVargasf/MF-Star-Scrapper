@@ -40,7 +40,6 @@ EDIFICIO_META = {
     'park santiago':        {'comuna': 'Santiago',     'operador': 'LarGroup'},
     'the place':                        {'comuna': 'Ñuñoa',        'operador': 'Grupo Coloso'},
     'somma las clarisas':               {'comuna': 'Las Condes',   'operador': 'Greystar'},
-    'imu san cristobal ines matte urrejola': {'comuna': 'Providencia', 'operador': 'LarGroup'},
     'spot residence manquehue':         {'comuna': 'Las Condes',   'operador': 'LarGroup'},
     'blend apoquindo':                  {'comuna': 'Las Condes',   'operador': 'LarGroup'},
     'collective bustamante':            {'comuna': 'Ñuñoa',        'operador': 'LarGroup'},

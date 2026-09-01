@@ -211,7 +211,6 @@ export default function TiposReseñas({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Tipo de Reseñas Realizadas</h2>
@@ -219,6 +218,7 @@ export default function TiposReseñas({ reviews }) {
           </div>
         </div>
 
+      <div ref={chartRef} id="content-tipos-resenas">
         <div className="tr-grid">
           {temasPos.length > 0 && (
             <DonutChart
@@ -252,7 +252,7 @@ export default function TiposReseñas({ reviews }) {
 
         <p className="tr-source">Fuente: Google Reviews</p>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="tipos-reseñas" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="tipos-reseñas" title="Tipo de Reseñas Realizadas" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

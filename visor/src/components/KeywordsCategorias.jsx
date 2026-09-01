@@ -35,7 +35,7 @@ export default function KeywordsCategorias({ reviews }) {
   const maxTotal = items[0]?.total ?? 1
 
   return (
-    <div className="card" ref={chartRef}>
+    <div className="card">
       <div className="card-header">
         <div>
           <h2>Temas más relevantes</h2>
@@ -52,6 +52,7 @@ export default function KeywordsCategorias({ reviews }) {
         {edificios.map(ed => <option key={ed} value={ed}>{ed}</option>)}
       </select>
 
+    <div ref={chartRef} id="content-temas-relevantes">
       {items.length === 0 ? (
         <p className="empty">Sin datos.</p>
       ) : (
@@ -91,6 +92,7 @@ export default function KeywordsCategorias({ reviews }) {
           </div>
         </>
       )}
+    </div>
 
       {modal && (
         <ReviewModal
@@ -101,7 +103,7 @@ export default function KeywordsCategorias({ reviews }) {
           onClose={() => setModal(null)}
         />
       )}
-      <ExportPanel chartRef={chartRef} chartName="temas-relevantes" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="temas-relevantes" title="Temas Más Relevantes" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

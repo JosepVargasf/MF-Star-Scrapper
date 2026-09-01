@@ -158,7 +158,6 @@ export default function VolumenReseñas({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Volumen de Reseñas por Mes</h2>
@@ -167,6 +166,8 @@ export default function VolumenReseñas({ reviews }) {
           <MonthRangePicker value={range} onChange={setRange} availableMonths={availableMonths} />
         </div>
 
+      <div ref={chartRef} id="content-volumen-resenas">
+        <p className="chart-context">{range.from} — {range.to}</p>
         <div className="vr-filter">
           <button
             className={`kpi-chip${selectedEds.size === allEdificios.length ? ' active' : ''}`}
@@ -220,7 +221,7 @@ export default function VolumenReseñas({ reviews }) {
           </ResponsiveContainer>
         )}
       </div>
-      <ExportPanel chartRef={chartRef} chartName="volumen-resenias" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="volumen-resenias" title="Volumen de Reseñas por Mes" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

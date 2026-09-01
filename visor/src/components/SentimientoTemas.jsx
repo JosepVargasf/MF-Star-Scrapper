@@ -97,7 +97,6 @@ export default function SentimientoTemas({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
       <div className="card-header">
         <div>
           <h2>¿Por qué los clientes califican así?</h2>
@@ -116,8 +115,9 @@ export default function SentimientoTemas({ reviews }) {
         />
       </div>
 
+      <div ref={chartRef} id="content-sentimiento-temas">
       <div className="sentemas-summary">
-        <span className="summary-range">📅 {rangeLabel}</span>
+        <span className="summary-range">🏢 {edificio} · 📅 {rangeLabel}</span>
         <span className="summary-count">{filtered.length} reseñas</span>
       </div>
 
@@ -159,7 +159,7 @@ export default function SentimientoTemas({ reviews }) {
       </div>
 
       </div>
-      <ExportPanel chartRef={chartRef} chartName="sentimiento-temas" />
+      <ExportPanel chartRef={chartRef} chartName="sentimiento-temas" title="¿Por qué los Clientes Califican Así?" />
       {modal && (
         <ReviewModal
           reviews={filtered}

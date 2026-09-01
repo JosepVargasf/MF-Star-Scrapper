@@ -32,7 +32,6 @@ BUILDINGS = [
     'Park Santiago Santo Domingo, Santiago, Chile',
     'Edificio The Place - Grupo Coloso',
     'Somma Las Clarisas, Las Condes, Santiago, Chile',
-    'IMU San Cristobal Ines Matte Urrejola, Providencia, Santiago, Chile',
     'Spot Residence Manquehue, Las Condes, Santiago, Chile',
     'Blend Apoquindo, Las Condes, Santiago, Chile',
     'Collective Bustamante, Ñuñoa, Santiago, Chile',

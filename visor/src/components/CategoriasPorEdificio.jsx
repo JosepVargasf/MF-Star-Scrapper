@@ -94,7 +94,6 @@ export default function CategoriasPorEdificio({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Categorías según Comentarios por Edificio</h2>
@@ -112,6 +111,8 @@ export default function CategoriasPorEdificio({ reviews }) {
           </div>
         </div>
 
+      <div ref={chartRef} id="content-categorias-edificio">
+        <p className="chart-context">{sentimiento === 'Positiva' ? '👍 Reseñas positivas' : '👎 Reseñas negativas'}</p>
         {data.length === 0 ? (
           <p className="empty">Sin datos.</p>
         ) : (
@@ -168,6 +169,7 @@ export default function CategoriasPorEdificio({ reviews }) {
       <ExportPanel
         chartRef={chartRef}
         chartName={`categorias-${sentimiento.toLowerCase()}`}
+        title="Categorías según Comentarios por Edificio"
         fontSize={fontSize}
         onFontSizeChange={setFontSize}
       />

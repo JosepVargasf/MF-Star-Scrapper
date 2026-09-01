@@ -102,13 +102,14 @@ export default function EvolucionEstrellas({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Evolución Estrellas Edificios</h2>
             <p className="card-sub">Rating promedio acumulado por edificio y comuna</p>
           </div>
         </div>
+
+      <div ref={chartRef} id="content-evolucion-estrellas">
         <div className="evol-est-grid">
           {panels.map(({ comuna, edificios, data }) => (
             <ComunaPanel
@@ -118,7 +119,7 @@ export default function EvolucionEstrellas({ reviews }) {
           ))}
         </div>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="evolucion-estrellas" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="evolucion-estrellas" title="Evolución Estrellas Edificios" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

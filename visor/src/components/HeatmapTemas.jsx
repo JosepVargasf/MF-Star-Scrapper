@@ -70,7 +70,7 @@ export default function HeatmapTemas({ reviews }) {
       : 'linear-gradient(to right, #f8fafc, #2D3334)'
 
   return (
-    <div className="card card-full" ref={chartRef}>
+    <div className="card card-full">
       <div className="card-header">
         <div>
           <h2>Heatmap por edificio</h2>
@@ -92,6 +92,7 @@ export default function HeatmapTemas({ reviews }) {
         </div>
       </div>
 
+    <div ref={chartRef} id="content-heatmap-temas">
       <div className="hm-wrap">
         <table className="hm-table">
           <thead>
@@ -132,7 +133,8 @@ export default function HeatmapTemas({ reviews }) {
         <div className="hm-leg-gradient" style={{ background: legendColor }} />
         <span className="hm-leg-label">Más menciones</span>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="heatmap-temas" />
+    </div>
+      <ExportPanel chartRef={chartRef} chartName="heatmap-temas" title="Heatmap por Edificio" />
     </div>
   )
 }

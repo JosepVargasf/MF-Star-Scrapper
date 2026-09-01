@@ -88,7 +88,6 @@ export default function TemasGenero({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Temas por género</h2>
@@ -99,6 +98,9 @@ export default function TemasGenero({ reviews }) {
             {edificios.map(ed => <option key={ed} value={ed}>{ed}</option>)}
           </select>
         </div>
+
+      <div ref={chartRef} id="content-temas-genero">
+        <p className="chart-context">{edificio === 'todos' ? 'Todos los edificios' : edificio}</p>
         <div className="tg-legend">
           <span><span className="tg-dot" style={{ background: FEMALE_COLOR }} />Mujer</span>
           <span><span className="tg-dot" style={{ background: MALE_COLOR }} />Hombre</span>
@@ -110,7 +112,7 @@ export default function TemasGenero({ reviews }) {
           <GenderChart data={negativos} title="👎 Temas en reseñas negativas" accent="#5B6670" fontSize={fontSize} />
         </div>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="temas-genero" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="temas-genero" title="Temas por Género" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

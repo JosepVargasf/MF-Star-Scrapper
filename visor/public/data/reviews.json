@@ -256,40 +256,6 @@
   },
   {
     "edificio": "blend apoquindo",
-    "fecha": "2026-04-24",
-    "score": 1.0,
-    "texto": "Sin conserje y sin espacio para estacionar, tampoco cuenta con acceso desde la calle",
-    "usuario": "Victor Mario Gonzalez Mardones",
-    "primer_nombre": "Victor",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "blend apoquindo",
-    "fecha": "2026-05-07",
-    "score": 4.0,
-    "texto": "",
-    "usuario": "Jean Wild",
-    "primer_nombre": "Jean",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "blend apoquindo",
     "fecha": "2026-05-08",
     "score": 4.0,
     "texto": "",
@@ -872,41 +838,6 @@
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Ñuñoa",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "collective bustamante",
-    "fecha": "2026-05-13",
-    "score": 2.0,
-    "texto": "El lugar es espléndido pero hay una alta rotación de recepcionista y administradores lo cual dificulta la toma de solicitudes y seguridad del edificio (han rotado un recepcionista por mes y al administrador uno por cada 3 meses).",
-    "usuario": "Tiare Vidal",
-    "primer_nombre": "Tiare",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Ñuñoa",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "collective bustamante",
-    "fecha": "2026-05-13",
-    "score": 2.0,
-    "texto": "Muy bonito el lugar para vivir pero la administradora Priscila de todos los edificios collective es desagradable, contesta mal a las solicitudes, no es educada. Le enviamos una solicitud sobre una problemática de seguridad e higiene (el edificio tiene una brecha donde caben personas del exterior, por lo que no cumple con las normas de seguridad) hace 6 meses y aun no tenemos respuesta, por ahí mismo entran gatos los cuales defecan y orinan en todos los departamentos del primer y segundo piso. hemos colocado reclamos en sernac en la cual se comprometieron a colocar una malla y hasta la fecha no la colocan.",
-    "usuario": "Jesus Rodriguez",
-    "primer_nombre": "Jesus",
-    "sexo": "mostly_male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente",
-      "Seguridad",
-      "Crítica"
     ],
     "amenidades": [],
     "comuna": "Ñuñoa",
@@ -3260,23 +3191,6 @@
   },
   {
     "edificio": "edificio brooklyn la florida",
-    "fecha": "2026-05-11",
-    "score": 5.0,
-    "texto": "Daiana mi asesora un 7, se portó excelente en todo el proceso y Cristina de administración también 7, muy resolutiva y excelente servicio",
-    "usuario": "Rodrigo Caceres",
-    "primer_nombre": "Rodrigo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "La Florida",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "edificio brooklyn la florida",
     "fecha": "2026-05-13",
     "score": 5.0,
     "texto": "Un lugar hermoso para vivir !",
@@ -3996,7 +3910,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-03-22",
     "score": 1.0,
     "texto": "Pésima administración, no responden a los mail de problemas con los inmuebles, se demoran meses en cambiar cosas que estén malas del depto, no siguen los puntos del contrato. Pésima experiencia",
@@ -4012,7 +3926,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-04-25",
     "score": 5.0,
     "texto": "IMU San Cristobal cuenta con el mejor servicio de Peluquería canina y tienda de Mascotas en Barrio Bellavista Providencia. Petshop Zeus, esta ubicada en los locales comerciales que cuenta el edificio y tienen un horario muy amplio lo que permite que mi mascota siempre tenga todo lo que necesita a la mano. 100% recomendado, la mejor tienda de mascotas cerca de mí.",
@@ -4030,7 +3944,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-06-08",
     "score": 4.0,
     "texto": "Cuánto es el valor de los depas? Se ven preciosos",
@@ -4046,7 +3960,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-06-08",
     "score": 5.0,
     "texto": "",
@@ -4062,7 +3976,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-06-08",
     "score": 5.0,
     "texto": "Excelente idea de juntar a los residentes\nEl edificio 12/10",
@@ -4079,7 +3993,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-06-08",
     "score": 5.0,
     "texto": "Excelente edificio, muy bien equipado y con departamentos modernos y hermosos. Ideal para quienes buscan comodidad y buen diseño en un solo lugar.",
@@ -4097,7 +4011,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-06-08",
     "score": 5.0,
     "texto": "El lugar es tranquilo y seguro .El deparramento comodo y birn distribuido los lugares.",
@@ -4115,7 +4029,7 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-07-17",
     "score": 5.0,
     "texto": "Tremenda instancia para compartir y conocernos en IMU san Cristóbal 🤩🤩 gracias por ser tan hoteleros…",
@@ -4131,1182 +4045,13 @@
     "operador": "LarGroup"
   },
   {
-    "edificio": "imu san cristobal ines matte urrejola",
+    "edificio": "imu san cristóbal",
     "fecha": "2025-07-18",
     "score": 5.0,
     "texto": "",
     "usuario": "Valentina Díaz",
     "primer_nombre": "Valentina",
     "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "Muy amena la cata de vinos con María José. Excelente comunidad de vecinos y muy buen ambiente. Gracias IMU por la experiencia.",
-    "usuario": "Benjamin Onofre",
-    "primer_nombre": "Benjamin",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen ambiente",
-      "Diseño/calidad interior",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Diego Siguelnitzky",
-    "primer_nombre": "Diego",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "Mi familia y yo estamos súper felices en comunidad IMU!!\nMuy accesibles y atienden a nuestras consultas y necesidades al igual que ha sido muy agradable participar de las actividades que han hecho. La cata de vino estuvo rica! 👍🏻…",
-    "usuario": "Romina Küsel",
-    "primer_nombre": "Romina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "Muy rica la cata de vino y el edificio en general bien bueno.\nPd: no usen la calefacción integrada o quedaran en la ruina",
-    "usuario": "ignacio alonso",
-    "primer_nombre": "ignacio",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "El evento sunset estuvo increíble, súper bien organizado y con una energía muy linda entre vecinos.\nLa terraza, la vista y el DJ en vivo hicieron que fuera un panorama distinto sin salir de casa.\nMe encanta vivir en un lugar donde se generan estos espacios para compartir y conectar en comunidad.",
-    "usuario": "paula bolatti",
-    "primer_nombre": "paula",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "terraza",
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-08-29",
-    "score": 5.0,
-    "texto": "Buena recepción y atención, excelente ejecutiva Joanna Jimenez",
-    "usuario": "Christopher Arbulu",
-    "primer_nombre": "Christopher",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-07",
-    "score": 5.0,
-    "texto": "Una bonita experiencia, edificación completamente nueva, la atención de Andrea es impecable, 100% recomendable!!",
-    "usuario": "Rodrigo Yañez",
-    "primer_nombre": "Rodrigo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-07",
-    "score": 5.0,
-    "texto": "Vine a visita con Andrea y fue la mejor experiencia en mi visita a departamentos. Desde la atención hasta el edificio!",
-    "usuario": "Valentina Pilar Peralta Torres",
-    "primer_nombre": "Valentina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-08",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Martina Paz",
-    "primer_nombre": "Martina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-08",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Claudio Suárez S",
-    "primer_nombre": "Claudio",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-10",
-    "score": 1.0,
-    "texto": "Si bien está prohibido usar colgadores de ropa, para multarte violan tu privacidad  #pagamosenuf #nosmultanportodo",
-    "usuario": "Rodrigo Saavedra",
-    "primer_nombre": "Rodrigo",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Cobros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-10",
-    "score": 1.0,
-    "texto": "#pagamosenuf por mala insonorización de los departamentos, se escucha todo. #nosmultanportodo",
-    "usuario": "2ydos",
-    "primer_nombre": "2ydos",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Cobros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-11",
-    "score": 1.0,
-    "texto": "#pagamosenuf y antes de cumplir un año te mandan aviso que te van a subir el arriendo. Mi contrato, no señala que al cumplir un año, va sufrir un aumento en el valor del arriendo (no debería ser, si ya la UF se ajusta por si sola). Actualmente pago 21,74 UF ($861.861) y me lo subieron a 29,28 UF ($1.160.776). Es decir, $298.915 pesos mas por mes, al año $3.586.983,84, esto ello es lo que llaman \"nuevo ciclo\" del contrato. Me pregunto, quien se va a quedar con estos valores?",
-    "usuario": "Josefina Muñoz Rodriguez",
-    "primer_nombre": "Josefina",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Conectividad",
-      "Cobros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-11",
-    "score": 5.0,
-    "texto": "Fui a conocer los departamentos en IMU san Cristóbal y la experiencia fue perfecta. Muy buena recepción de Andrea, preocupada de detalles cómo ofrecer un café , agua o comida lo cual se agradece y la muestra de los departamentos muy completa y amigable. El lugar una maravilla para vivir",
-    "usuario": "Paula Bocaz",
-    "primer_nombre": "Paula",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Ubicación",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 1.0,
-    "texto": "Nos pidieron firmar actualizacion de contrato, donde señalan devolucion de garantia cuando esto no es real.  A cambio y en modo de desesperación, te ofrecen usar el quincho gratis para que se los firmen #pagamosenuf #nosmultanportodo",
-    "usuario": "pipe tolosa",
-    "primer_nombre": "pipe",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Conectividad",
-      "Garantía",
-      "Cobros"
-    ],
-    "amenidades": [
-      "quincho"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "PAULATRINIDAD SERRANO WEINSTEIN",
-    "primer_nombre": "PAULATRINIDAD",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Daniela Jensen Recupero",
-    "primer_nombre": "Daniela",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "Súper buena la experiencia de asado con Isidora Diaz",
-    "usuario": "Gustavo Retamal",
-    "primer_nombre": "Gustavo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "Muy bueno",
-    "usuario": "Epi Bearriver",
-    "primer_nombre": "Epi",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "Muy buena experiencia, actividades y locación",
-    "usuario": "Bearrivers",
-    "primer_nombre": "Bearrivers",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Dario Leppes",
-    "primer_nombre": "Dario",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-11-15",
-    "score": 5.0,
-    "texto": "Muy amable Valentina y Andrea nos mostraron todas las instalaciones fueron excelentes anfitrionas el lugar muy bueno seguro vamos arrendar",
-    "usuario": "Deibys Paul Pecho Meneses",
-    "primer_nombre": "Deibys",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación",
-      "Seguridad",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-12-04",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Cristian Galvez",
-    "primer_nombre": "Cristian",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2025-12-04",
-    "score": 5.0,
-    "texto": "Excelente el evento de los aperitivos parrilleros",
-    "usuario": "Sebastián Adasme T.",
-    "primer_nombre": "Sebastián",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-01-21",
-    "score": 1.0,
-    "texto": "Mi experiencia viviendo aquí ha sido nefasta , partiendo por que se me había permitido usar biombos para la privacidad ya que mi unidad está en el primer piso, luego nos pidieron quitarlas y fue dinero que perdí. Llegamos a pagar 130.000 de luz hasta los primeros 5 meses porque el termo tenía una burbuja de aire , vinieron a sacar la burbuja y seguía el problema, luego cambiaron el termo pero nadie respondió por los gastos excesivos de la mala instalación hasta el día de hoy. Mi unidad es humedad, tuve que botar ropa porque le salió moho y tenía el mismo problema de moho en la ducha porque esta jamás fue TERMINADA y quedaba humedad constantemente. El olor de cigarro todo el bendito día de mi vecina de arriba que me impide ventilar mi departamento y aún que cierre las ventanas entra por la ventilación que según administración deberían irse los olores hacia arriba. Y está demás hablar de los ruidos todos los días , perros gritones que tengo que escuchar siempre saliendo y entrando del edificio lamentablemente vivo en la entrada y escucho a todo el mundo entrar y salir todo el día, pero hay que sumarle que el personal de limpieza gritan para comunicarse, ponen música en el celular y cierran a portazos toda la mañana. Mi pareja tiene turnos de noche y es imposible un descanso digno después de las 9am. Se escucha todo de todos lados. Las instalaciones no tienen ningún eléctrico de bajo consumo , considerando que el arriendo es súper caro no lo vale. Y si bien le agregan cosas para que la comunidad sea \"cool\" es un robo de dignidad y plata estar aquí para mi. Yo ya había dejado una reseña porque me pidieron escanear el código Qr el día de la cata de vinos pero pensé que era para hablar de ese día no de mi experiencia completa . Administración tiene constancia de todo lo que escribo aquí y que jamás respondieron, nos dejaron una vez plantados para una reunión y para reagendar reu jamás respondieron. Espero que les sirva la reseña para que lo evalúen",
-    "usuario": "Renata Martinez",
-    "primer_nombre": "Renata",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Higiene ambiental",
-      "Atención cliente",
-      "Cobros",
-      "Ruidos",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-01-22",
-    "score": 1.0,
-    "texto": "Los departamentos que aparecen disponibles en su sitio web no están disponibles. Agendé visita para ver uno pequeño de $455.000 aprox. el arriendo y al llegar me dicen que solo tienen de $650.000 para arriba! Perdí el tiempo.",
-    "usuario": "Francisca Ruiz",
-    "primer_nombre": "Francisca",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-02-02",
-    "score": 5.0,
-    "texto": "Mi experiencia en IMU San Cristóbal ha sido fantástica. Comenzando por el increíble apoyo para toda la gestión comercial y la elección del departamento más idóneo para mis necesidades por parte de Andrea Escanilla. Ella me ayudó a escoger bien y luego ágilmente gestionó mi ingreso al edificio.\nPor otra parte la experiencia de vivir en IMU es muy cómoda tanto por los espacios comunes como por el departamento en sí.",
-    "usuario": "Pablo",
-    "primer_nombre": "Pablo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-02-18",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Lisset Silva",
-    "primer_nombre": "Lisset",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-02-25",
-    "score": 4.0,
-    "texto": "",
-    "usuario": "Luis Bravo",
-    "primer_nombre": "Luis",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-02-27",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Felipe Abarzúa Araya",
-    "primer_nombre": "Felipe",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-03-06",
-    "score": 5.0,
-    "texto": "Cumpliré un año en abril, y no he tenido malas experiencias, si hay cosas que tal vez se podrían mejorar en un tiempo, como equipar mejor el gym con mas barras y discos, y tal vez supervisar mejor el aseo de los pasillos por niveles, pero el personal de recepción siempre han sido amables, los dos administradores que he visto en este año han sido un siete siempre, y el único problema que he tenido con los rieles de las luces lo gestionaron de inmediato. y tal vez tengo buenos vecinos porque no he escuchado ruidos molestos ni portazos. saludos",
-    "usuario": "Cristian Pino Arroyo",
-    "primer_nombre": "Cristian",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Limpieza/mantenimiento",
-      "Amenities"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-03-25",
-    "score": 1.0,
-    "texto": "",
-    "usuario": "john for ever",
-    "primer_nombre": "john",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-04-17",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Willis Reimi",
-    "primer_nombre": "Willis",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-04-19",
-    "score": 5.0,
-    "texto": "Los apartamentos son muy cómodos y la ubicación del complejo es muy buena, además el lugar es silencioso y tranquilo en casi todo momento por lo que se disfruta mucho la experiencia en este lugar",
-    "usuario": "Samuel Gonzalez",
-    "primer_nombre": "Samuel",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-04-20",
-    "score": 5.0,
-    "texto": "Proyecto interesante",
-    "usuario": "sdr.arqto_cl",
-    "primer_nombre": "sdr.arqto_cl",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-05-17",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Анхела Сабирова",
-    "primer_nombre": "Анхела",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-05-20",
-    "score": 5.0,
-    "texto": "Me impresionó la gran disponibilidad y variedad de los servicios y la calidad de las instalaciones. Espacios muy modernos, amplios y acogedores, ademas de una excelente disposición del personal de servicio, particularmente su administración, muy cercana, comprensiva y dispuesta a responder mis consultas. Un 7 al proyecto y totalmente recomendable.",
-    "usuario": "Misac Cuevas",
-    "primer_nombre": "Misac",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-05-20",
-    "score": 5.0,
-    "texto": "Excelente lugar para vivir muy buenos vecinos y el lugar con excelente jardinería 🌳…",
-    "usuario": "paolo barra",
-    "primer_nombre": "paolo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-05-22",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Laura Navarro",
-    "primer_nombre": "Laura",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-05-24",
-    "score": 5.0,
-    "texto": "Arquitectura interesante y muy limpio. Fácil acceso",
-    "usuario": "Priscilla Ulloa Cisternas",
-    "primer_nombre": "Priscilla",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación",
-      "Limpieza/mantenimiento"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-04",
-    "score": 1.0,
-    "texto": "LAR GROUP: MI EXPERIENCIA REAL COMO ARRENDATARIO\n\nEste es el segundo departamento que arriendo con LAR GROUP. Después de dos experiencias distintas, ya no creo que mis problemas hayan sido casos aislados.\n\nAntes de firmar todo es rapidez, amabilidad y promesas. Después de firmar, la realidad cambia completamente.\n\nLa garantía de mi departamento anterior debía devolverse en 30 días según contrato. En mi caso tardaron casi 3 meses. Fueron semanas enviando correos, insistiendo y esperando respuestas.\n\nCuando el arrendatario se atrasa, las multas aparecen de inmediato. Cuando ellos se atrasan con dinero que pertenece al arrendatario, no existe compensación alguna.\n\nMi arriendo era de aproximadamente $1.080.000. Después de más de 30 de haber decidido no pagar hasta que me devuelvan lo que me deben, el monto aumentó a $1.694.000. Más de $600.000 adicionales en recargos.\nTambién me descontaron $127.000 por limpieza desde la garantía, pese a que había contratado una limpieza profesional por $80.000 y contaba con fotografías y videos del estado en que entregué el departamento.\nMe cobraron paredes que dejé en perfectas condiciones revisa mi reseña de Spot Nueva Kennedy. Allí muestro fotos de como dejé el depa perfect\n\nNO TE DEVUELVEN NADA DE LA GARANTIA del APARTAMENTO AUNQUE LES DEJES TODO EN PERFECTA CONDICION.\n\nEl siguiente departamento me fue entregado en condiciones de limpieza muy deficientes.\n\nCuando ellos quieren cobrarte algo, la velocidad es impresionante. Cuando tú necesitas una solución, las respuestas son inexistentes.\n\nDespués de múltiples reclamos decidí dejar de pagar hasta que resolvieran los problemas existentes.\n\nLa situación escaló rápidamente.\n\nMe cortaron la luz desde hace 3 meses, me cortaron el agua potable que es Ilegal en Chile (se llenaron los baños de heces y tengo mascota y todo terrible), me bloquearon accesos, me dejaron sin calefacción y sin comunicacion y sin servicios básicos. La situación llegó a tal nivel que intervino Carabineros para reconectar el agua. Posteriormente volvió a ser cortada por desición de Roxana Watson. Lamentablemente ella tiene muchos problemas con muchos residentes y cuando reclamas te manda una carta de termino de contrato su modo operandi es: haces lo que ella dice y si reclamas te saca. Tan simple como eso que tienen a varios residentes con carta de termino de contrato por haber reclamado de los mil problemas, y tiene a otros residentes amenazados y otros residentes (muy pocos) la apoyan porque obtienen beneficios preferenciales de parte de ella.\nAl final esto se transforma en un desbalance de derechos e injusticia para la gran mayoria que pagan al dia y estan amarrados con estos tipos de amenazas sin poder reclamar. Es un desastre totalmente! Ella misma me ha descriminado, me ha hechado por tan solo reclamar mis derechos.\n\nActualmente existen acciones legales en curso.\nTengo fotografías, videos, correos electrónicos y antecedentes de muchas cosas que no puedo mencionar aquí.\nEsta situación afectó mi trabajo, mis emprendimientos, mi estabilidad personal y también a mi mascota.\nEn cuanto a la administración, mi experiencia ha sido extremadamente negativa. Las respuestas son escasas, las sanciones aparecen rápido y las soluciones prácticamente nunca llegan.\nTambién observé conflictos permanentes entre administración y residentes, multas aplicadas sin una investigación adecuada y criterios que parecen cambiar según la persona involucrada.\n\nMi recomendación es simple:\nHabla con residentes actuales y antiguos antes de firmar.\nLee todas las reseñas, aunque siempre intentan eliminar los comentarios negativos y amenazan a los residentes que los van a hechar si no borran las reseñas negativas. (Esto pasó con un residente).\nRevisa cada cláusula del contrato.\n\nGuarda evidencia de absolutamente todo.\n\nYo lo hice, y aun así terminé viviendo una de las peores experiencias habitacionales de mi vida.\n\nNo volvería a arrendar con LAR GROUP\n\nTengo mucho que contar. Tengo todas las pruebas. Y estamos esperando ver que dice la corte a todos los problemas que no alcanzo mencionar aquí…",
-    "usuario": "Brainstorming",
-    "primer_nombre": "Brainstorming",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Conectividad",
-      "Calefacción",
-      "Atención cliente",
-      "Garantía",
-      "Cobros",
-      "Crítica"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-04",
-    "score": 5.0,
-    "texto": "Es el lugar perfecto para vivir!!! Cerca de todo, lejos del ruido. El estado impecable de los departamentos, las amenities más increíbles (Hasta sala de ensayo con instrumentos!!!). Son geniales los que crearon esta maravilla urbana. Y, como si esto no fuera suficiente, un personal de lujo y experto (Jesús en Conserjería, Andrea en la parte comercial, por ejemplo).",
-    "usuario": "Oscar Sayavedra",
-    "primer_nombre": "Oscar",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Ubicación",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-04",
-    "score": 5.0,
-    "texto": "Desde mi experiencia, lindo lugar para vivir, destaco la gestión de la administración y el equipo de mantenimiento, todo funcionando correctamente, resuelven las solicitudes de forma oportuna. Además, las instalaciones están bien cuidadas, se mantienen siempre en buen estado, lo que hace que los espacios comunes sean realmente disfrutables :)",
-    "usuario": "Paty Loret",
-    "primer_nombre": "Paty",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Limpieza/mantenimiento",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-05",
-    "score": 5.0,
-    "texto": "Todo maravilloso muy buen lugar y muy buena atención !!! Recomendable 100 %",
-    "usuario": "Jesus Redondo",
-    "primer_nombre": "Jesus",
-    "sexo": "mostly_male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Ubicación"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-07",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Rene Sanchez",
-    "primer_nombre": "Rene",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-08",
-    "score": 5.0,
-    "texto": "Ya llevo viviendo 6 meses en IMU San Cristobal y para nosotros ha sido una grata experiencia. Un lugar seguro y central en base a las necesidades de mi familia en un entorno tranquilo. Todo el personal ha sido cercano y respetuoso tanto la administración como lo/as concerjes. Cada problema que hemos tenido con el inmueble ha sido solucionado en un tiempo razonable, tambien han sido flexibles y abierto a cubrir nuevas/cambios en nuestras necesidades dentro del inmueble y del condominio, tema importante ya que para nosotros es un cambio de ciudad y nuestra primer experiencia en un departamento. Hasta nos hicieron una atención con la bodega, que inicialmente nos necesitabamos, la cual pude elegir libremente. Nos han tocados muy buenos vecinos en el sector que habitamos. En general, todo bien y creo que al nosotros dar un trato respetuoso con la gente en general, hemos recibido lo mismo de vuelta.",
-    "usuario": "Felipe Farias",
-    "primer_nombre": "Felipe",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Ubicación",
-      "Seguridad",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-08",
-    "score": 5.0,
-    "texto": "Estoy acá desde diciembre 2025, Genesis (la muchacha que me recibió y atendió en la parte comercial) muy atenta y simpática. Mi experiencia con los conserjes también excelente! Tuve un tema con una filtración en la ducha que admin resolvió rápido. Las áreas comunes 👌🏻👌🏻👌🏻. Buena vista al cerro. Un punto que veo muy favorable (para el que lo necesite) es que los depas vienen con refri, cama/colchón, lavadora/secadora, mesa de comedor con sillas, a mi me sirvió cuando recién me mudé, luego se los devolví cuando compré los míos.",
-    "usuario": "David León",
-    "primer_nombre": "David",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-16",
-    "score": 5.0,
-    "texto": "IMU. Es un modelo de calidad y comodidad. Sus servicios y sus empleados tienen un nivel de eficiencia y trato amable que hace que la permanencia en el lugar sea agradable. Existe un protocolo en términos de respeto a nivel de condominio que genera comodidad en el habitar. Sus administradores son personas con un trato cordial, el cual genera confianza y seriedad en sus atribuciones. Un lugar ideal para vivir. Gimnasio, estacionamiento, salones y terrazas con quincho lo que da muchas opciones para compartir.\nUn lugar cercano a todo.",
-    "usuario": "Raul Aliaga",
-    "primer_nombre": "Raul",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Amenities"
-    ],
-    "amenidades": [
-      "gimnasio",
-      "terraza",
-      "quincho"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-18",
-    "score": 5.0,
-    "texto": "Quiero agradecer al joven conserje Jesús, que aunque siempre sigue las reglas de su trabajo, tiene una forma tan gentil de ayudar a los inquilinos, siempre dispuesto a  guiar a los residentes para que entendamos los reglamentos y la serenidad que tiene en todo momento para resolver problemas. Gracias. 😊😊",
-    "usuario": "Lorena Flores",
-    "primer_nombre": "Lorena",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-24",
-    "score": 5.0,
-    "texto": "Llevo 8 meses viviendo en IMU San Cristóbal y estoy muy conforme. El edificio es moderno, tranquilo y seguro, los espacios comunes están bien mantenidos y la administración funciona bien. El departamento es cómodo, bonito y tiene una linda vista al cerro. En general, ha sido una muy buena experiencia vivir aquí.",
-    "usuario": "Antonia Alarcón Moya",
-    "primer_nombre": "Antonia",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Seguridad",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-25",
-    "score": 5.0,
-    "texto": "Quiero destacar el excelente estado de las instalaciones, las cuales se encuentran impecablemente limpias y muy bien mantenidas, reflejando el compromiso con la calidad y el cuidado de cada detalle.\n\nAsimismo, deseo expresar mi más sincero agradecimiento a Roxana Watson por la excelente gestión realizada durante todo el proceso. Su profesionalismo, amabilidad, empatía, disposición permanente y capacidad para brindar soluciones hicieron que toda la experiencia fuera fluida y muy satisfactoria. Sin duda, su compromiso y dedicación marcan una diferencia y son un gran aporte para entregar un servicio de excelencia.",
-    "usuario": "Cristobal Dinamarca",
-    "primer_nombre": "Cristobal",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-29",
-    "score": 5.0,
-    "texto": "Es 100%recomendable buena atención y eficiencia",
-    "usuario": "Ingrid Arancibia",
-    "primer_nombre": "Ingrid",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-06-30",
-    "score": 2.0,
-    "texto": "Se escucha TODO\nescucho a mi vecino de arriba caminando de noche y cuando va al baño\nte cobran por todo y cn cuea te dejan invitar gente",
-    "usuario": "Francisca Pino",
-    "primer_nombre": "Francisca",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Cobros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-07-06",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "carolina acuña",
-    "primer_nombre": "carolina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-07-09",
-    "score": 5.0,
-    "texto": "Mi experiencia maravillosa, voy para los dos años y es bello el Depto, muy seguro, los anfitriones tienen un amable trato al igual que la jefatura, están con la mejor predisposición para ayudar y el correo siempre se responde cordial, gracias IMU San Cristóbal por darme tranquilidad y seguridad en mi vivir.",
-    "usuario": "Lily Mendez",
-    "primer_nombre": "Lily",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-07-29",
-    "score": 5.0,
-    "texto": "Todo muy bien, he tenido buen experiencia",
-    "usuario": "Francesca Frioli",
-    "primer_nombre": "Francesca",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristobal ines matte urrejola",
-    "fecha": "2026-07-30",
-    "score": 2.0,
-    "texto": "Usan los estacionamientos de visitas para arrendarlos a eventos privados de canal 13// la limpieza no es buena en los pasillos\n\nLos ascensores se han averiado mas de una vez\n\nMi estacionamiento de moto, se lo otorgan a visitas de otros residentes",
-    "usuario": "dante aravena",
-    "primer_nombre": "dante",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Mantenciones",
-      "Estacionamiento"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-03-21 18:17:10",
-    "score": 5.0,
-    "texto": "El lugar es tranquilo y seguro .El deparramento comodo y birn distribuido los lugares.",
-    "usuario": "francia joanna gonzalez gutierrez",
-    "primer_nombre": "francia",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-03-21 22:20:54",
-    "score": 5.0,
-    "texto": "Excelente edificio, muy bien equipado y con departamentos modernos y hermosos. Ideal para quienes buscan comodidad y buen diseño en un solo lugar.",
-    "usuario": "matias bravo",
-    "primer_nombre": "matias",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-03-22",
-    "score": 1.0,
-    "texto": "Pésima administración, no responden a los mail de problemas con los inmuebles, se demoran meses en cambiar cosas que estén malas del depto, no siguen los puntos del contrato. Pésima experiencia",
-    "usuario": "florencia medurga",
-    "primer_nombre": "florencia",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-03-27 23:31:40",
-    "score": 5.0,
-    "texto": "Excelente idea de juntar a los residentes\nEl edificio 12/10",
-    "usuario": "JORGE SALATA",
-    "primer_nombre": "JORGE",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-03-28 00:46:56",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Felipe Ignacio Fuentes Zúñiga",
-    "primer_nombre": "Felipe",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-04-25",
-    "score": 5.0,
-    "texto": "IMU San Cristobal cuenta con el mejor servicio de Peluquería canina y tienda de Mascotas en Barrio Bellavista Providencia. Petshop Zeus, esta ubicada en los locales comerciales que cuenta el edificio y tienen un horario muy amplio lo que permite que mi mascota siempre tenga todo lo que necesita a la mano. 100% recomendado, la mejor tienda de mascotas cerca de mí.",
-    "usuario": "Alejandro Acuña Villagra",
-    "primer_nombre": "Alejandro",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-05-31 02:09:44",
-    "score": 4.0,
-    "texto": "Cuánto es el valor de los depas? Se ven preciosos",
-    "usuario": "Karina T. Leyton",
-    "primer_nombre": "Karina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Precio/Costo"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-07-17",
-    "score": 5.0,
-    "texto": "Tremenda instancia para compartir y conocernos en IMU san Cristóbal 🤩🤩 gracias por ser tan hoteleros…",
-    "usuario": "Johanna Jiménez Figueroa",
-    "primer_nombre": "Johanna",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "Muy rica la cata de vino y el edificio en general bien bueno.\nPd: no usen la calefacción integrada o quedaran en la ruina",
-    "usuario": "ignacio alonso",
-    "primer_nombre": "ignacio",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "Mi familia y yo estamos súper felices en comunidad IMU!!\nMuy accesibles y atienden a nuestras consultas y necesidades al igual que ha sido muy agradable participar de las actividades que han hecho. La cata de vino estuvo rica! 👍🏻…",
-    "usuario": "Romina Küsel",
-    "primer_nombre": "Romina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-07-18",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Diego Siguelnitzky",
-    "primer_nombre": "Diego",
-    "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
@@ -5338,12 +4083,44 @@
     "fecha": "2025-07-18",
     "score": 5.0,
     "texto": "",
-    "usuario": "Valentina Díaz",
-    "primer_nombre": "Valentina",
-    "sexo": "female",
+    "usuario": "Diego Siguelnitzky",
+    "primer_nombre": "Diego",
+    "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2025-07-18",
+    "score": 5.0,
+    "texto": "Mi familia y yo estamos súper felices en comunidad IMU!!\nMuy accesibles y atienden a nuestras consultas y necesidades al igual que ha sido muy agradable participar de las actividades que han hecho. La cata de vino estuvo rica! 👍🏻…",
+    "usuario": "Romina Küsel",
+    "primer_nombre": "Romina",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2025-07-18",
+    "score": 5.0,
+    "texto": "Muy rica la cata de vino y el edificio en general bien bueno.\nPd: no usen la calefacción integrada o quedaran en la ruina",
+    "usuario": "ignacio alonso",
+    "primer_nombre": "ignacio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -5391,23 +4168,6 @@
     "edificio": "imu san cristóbal",
     "fecha": "2025-11-07",
     "score": 5.0,
-    "texto": "Vine a visita con Andrea y fue la mejor experiencia en mi visita a departamentos. Desde la atención hasta el edificio!",
-    "usuario": "Valentina Pilar Peralta Torres",
-    "primer_nombre": "Valentina",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-11-07",
-    "score": 5.0,
     "texto": "Una bonita experiencia, edificación completamente nueva, la atención de Andrea es impecable, 100% recomendable!!",
     "usuario": "Rodrigo Yañez",
     "primer_nombre": "Rodrigo",
@@ -5422,15 +4182,16 @@
   },
   {
     "edificio": "imu san cristóbal",
-    "fecha": "2025-11-08",
+    "fecha": "2025-11-07",
     "score": 5.0,
-    "texto": "",
-    "usuario": "Claudio Suárez S",
-    "primer_nombre": "Claudio",
-    "sexo": "male",
+    "texto": "Vine a visita con Andrea y fue la mejor experiencia en mi visita a departamentos. Desde la atención hasta el edificio!",
+    "usuario": "Valentina Pilar Peralta Torres",
+    "primer_nombre": "Valentina",
+    "sexo": "female",
     "sentimiento": "Positiva",
     "temas": [
-      "Sin Comentario"
+      "Atención del personal",
+      "Diseño/calidad interior"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -5454,6 +4215,38 @@
   },
   {
     "edificio": "imu san cristóbal",
+    "fecha": "2025-11-08",
+    "score": 5.0,
+    "texto": "",
+    "usuario": "Claudio Suárez S",
+    "primer_nombre": "Claudio",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2025-11-10",
+    "score": 1.0,
+    "texto": "Si bien está prohibido usar colgadores de ropa, para multarte violan tu privacidad  #pagamosenuf #nosmultanportodo",
+    "usuario": "Rodrigo Saavedra",
+    "primer_nombre": "Rodrigo",
+    "sexo": "male",
+    "sentimiento": "Negativa",
+    "temas": [
+      "Cobros"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
     "fecha": "2025-11-10",
     "score": 1.0,
     "texto": "#pagamosenuf por mala insonorización de los departamentos, se escucha todo. #nosmultanportodo",
@@ -5470,14 +4263,15 @@
   },
   {
     "edificio": "imu san cristóbal",
-    "fecha": "2025-11-10",
+    "fecha": "2025-11-11",
     "score": 1.0,
-    "texto": "Si bien está prohibido usar colgadores de ropa, para multarte violan tu privacidad  #pagamosenuf #nosmultanportodo",
-    "usuario": "Rodrigo Saavedra",
-    "primer_nombre": "Rodrigo",
-    "sexo": "male",
+    "texto": "#pagamosenuf y antes de cumplir un año te mandan aviso que te van a subir el arriendo. Mi contrato, no señala que al cumplir un año, va sufrir un aumento en el valor del arriendo (no debería ser, si ya la UF se ajusta por si sola). Actualmente pago 21,74 UF ($861.861) y me lo subieron a 29,28 UF ($1.160.776). Es decir, $298.915 pesos mas por mes, al año $3.586.983,84, esto ello es lo que llaman \"nuevo ciclo\" del contrato. Me pregunto, quien se va a quedar con estos valores?",
+    "usuario": "Josefina Muñoz Rodriguez",
+    "primer_nombre": "Josefina",
+    "sexo": "female",
     "sentimiento": "Negativa",
     "temas": [
+      "Conectividad",
       "Cobros"
     ],
     "amenidades": [],
@@ -5504,18 +4298,21 @@
   },
   {
     "edificio": "imu san cristóbal",
-    "fecha": "2025-11-11",
+    "fecha": "2025-11-14",
     "score": 1.0,
-    "texto": "#pagamosenuf y antes de cumplir un año te mandan aviso que te van a subir el arriendo. Mi contrato, no señala que al cumplir un año, va sufrir un aumento en el valor del arriendo (no debería ser, si ya la UF se ajusta por si sola). Actualmente pago 21,74 UF ($861.861) y me lo subieron a 29,28 UF ($1.160.776). Es decir, $298.915 pesos mas por mes, al año $3.586.983,84, esto ello es lo que llaman \"nuevo ciclo\" del contrato. Me pregunto, quien se va a quedar con estos valores?",
-    "usuario": "Josefina Muñoz Rodriguez",
-    "primer_nombre": "Josefina",
-    "sexo": "female",
+    "texto": "Nos pidieron firmar actualizacion de contrato, donde señalan devolucion de garantia cuando esto no es real.  A cambio y en modo de desesperación, te ofrecen usar el quincho gratis para que se los firmen #pagamosenuf #nosmultanportodo",
+    "usuario": "pipe tolosa",
+    "primer_nombre": "pipe",
+    "sexo": "unknown",
     "sentimiento": "Negativa",
     "temas": [
       "Conectividad",
+      "Garantía",
       "Cobros"
     ],
-    "amenidades": [],
+    "amenidades": [
+      "quincho"
+    ],
     "comuna": "Providencia",
     "operador": "LarGroup"
   },
@@ -5524,9 +4321,9 @@
     "fecha": "2025-11-14",
     "score": 5.0,
     "texto": "",
-    "usuario": "Dario Leppes",
-    "primer_nombre": "Dario",
-    "sexo": "male",
+    "usuario": "PAULATRINIDAD SERRANO WEINSTEIN",
+    "primer_nombre": "PAULATRINIDAD",
+    "sexo": "unknown",
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
@@ -5539,10 +4336,26 @@
     "edificio": "imu san cristóbal",
     "fecha": "2025-11-14",
     "score": 5.0,
-    "texto": "Muy buena experiencia, actividades y locación",
-    "usuario": "Bearrivers",
-    "primer_nombre": "Bearrivers",
-    "sexo": "unknown",
+    "texto": "",
+    "usuario": "Daniela Jensen Recupero",
+    "primer_nombre": "Daniela",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "imu san cristóbal",
+    "fecha": "2025-11-14",
+    "score": 5.0,
+    "texto": "Súper buena la experiencia de asado con Isidora Diaz",
+    "usuario": "Gustavo Retamal",
+    "primer_nombre": "Gustavo",
+    "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
       "Otros"
@@ -5571,10 +4384,10 @@
     "edificio": "imu san cristóbal",
     "fecha": "2025-11-14",
     "score": 5.0,
-    "texto": "Súper buena la experiencia de asado con Isidora Diaz",
-    "usuario": "Gustavo Retamal",
-    "primer_nombre": "Gustavo",
-    "sexo": "male",
+    "texto": "Muy buena experiencia, actividades y locación",
+    "usuario": "Bearrivers",
+    "primer_nombre": "Bearrivers",
+    "sexo": "unknown",
     "sentimiento": "Positiva",
     "temas": [
       "Otros"
@@ -5588,50 +4401,14 @@
     "fecha": "2025-11-14",
     "score": 5.0,
     "texto": "",
-    "usuario": "Daniela Jensen Recupero",
-    "primer_nombre": "Daniela",
-    "sexo": "female",
+    "usuario": "Dario Leppes",
+    "primer_nombre": "Dario",
+    "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
     ],
     "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-11-14",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "PAULATRINIDAD SERRANO WEINSTEIN",
-    "primer_nombre": "PAULATRINIDAD",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2025-11-14",
-    "score": 1.0,
-    "texto": "Nos pidieron firmar actualizacion de contrato, donde señalan devolucion de garantia cuando esto no es real.  A cambio y en modo de desesperación, te ofrecen usar el quincho gratis para que se los firmen #pagamosenuf #nosmultanportodo",
-    "usuario": "pipe tolosa",
-    "primer_nombre": "pipe",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Conectividad",
-      "Garantía",
-      "Cobros"
-    ],
-    "amenidades": [
-      "quincho"
-    ],
     "comuna": "Providencia",
     "operador": "LarGroup"
   },
@@ -5658,13 +4435,13 @@
     "edificio": "imu san cristóbal",
     "fecha": "2025-12-04",
     "score": 5.0,
-    "texto": "Excelente el evento de los aperitivos parrilleros",
-    "usuario": "Sebastián Adasme T.",
-    "primer_nombre": "Sebastián",
+    "texto": "",
+    "usuario": "Cristian Galvez",
+    "primer_nombre": "Cristian",
     "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
-      "Felicitaciones"
+      "Sin Comentario"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -5674,13 +4451,13 @@
     "edificio": "imu san cristóbal",
     "fecha": "2025-12-04",
     "score": 5.0,
-    "texto": "",
-    "usuario": "Cristian Galvez",
-    "primer_nombre": "Cristian",
+    "texto": "Excelente el evento de los aperitivos parrilleros",
+    "usuario": "Sebastián Adasme T.",
+    "primer_nombre": "Sebastián",
     "sexo": "male",
     "sentimiento": "Positiva",
     "temas": [
-      "Sin Comentario"
+      "Felicitaciones"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -5867,22 +4644,6 @@
     "sentimiento": "Positiva",
     "temas": [
       "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "imu san cristóbal",
-    "fecha": "2026-05-17",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Анхела Сабирова",
-    "primer_nombre": "Анхела",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
     ],
     "amenidades": [],
     "comuna": "Providencia",
@@ -6820,22 +5581,6 @@
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Santiago",
-    "operador": "InSitu"
-  },
-  {
-    "edificio": "insitu echaurren",
-    "fecha": "2026-05-26",
-    "score": 5.0,
-    "texto": "Un buen edificio para vivir",
-    "usuario": "Gonzalo Bravo",
-    "primer_nombre": "Gonzalo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior"
     ],
     "amenidades": [],
     "comuna": "Santiago",
@@ -8058,23 +6803,6 @@
   },
   {
     "edificio": "insitu irarrázaval",
-    "fecha": "2026-06-03",
-    "score": 5.0,
-    "texto": "Es un departamento que vale la pena, las personas son muy amables y están 💯 pendientes todo el tiempo ! La seguridad también , la limpieza impecable , si eres una persona que trabaja o estudia ayuda muchísimo por la practicidad.…",
-    "usuario": "Kaori Nakamatsu",
-    "primer_nombre": "Kaori",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Limpieza/mantenimiento",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Ñuñoa",
-    "operador": "InSitu"
-  },
-  {
-    "edificio": "insitu irarrázaval",
     "fecha": "2026-06-04",
     "score": 5.0,
     "texto": "",
@@ -9076,46 +7804,6 @@
       "Cobros"
     ],
     "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "nativo riesco",
-    "fecha": "2026-04-30",
-    "score": 1.0,
-    "texto": "No recomiendo Native / Nativo Riesco para vivir ni para alojarse. Mi amigo y yo vivimos allí y nos fuimos hace dos meses, terminando el arriendo por la mala experiencia.\n\nEl edificio se ve moderno y la ubicación parece conveniente, pero la experiencia real fue muy mala.\n\nEl primer problema fue el ruido. La aislación acústica es muy deficiente: se escuchaba claramente la música de departamentos vecinos y, además, con frecuencia había golpes extraños provenientes del techo. No era un ruido normal de convivencia, sino un sonido bajo, seco y repetitivo, difícil de identificar, que muchas veces seguía incluso después de las 23:00. Afectaba directamente el descanso. Informamos el problema varias veces a la administración, pero no hubo una solución real ni una mejora visible.\n\nEl segundo problema fue el agua caliente. Había fallas frecuentes: a veces no había agua caliente y, cuando sí había, el caudal era muy débil. Ducharse se volvía una molestia diaria. Lo reportamos varias veces, pero la administración negaba o minimizaba el problema en lugar de resolverlo de forma seria.\n\nEl tercer problema fue la atención del personal de recepción y administración. En mi experiencia, la actitud fue poco profesional, poco empática y poco orientada a resolver problemas reales de los residentes.\n\nTambién me llamó la atención que muchas reseñas de cinco estrellas no tienen ningún comentario escrito, solo la calificación. No puedo afirmar quién las escribió, pero como usuario eso me hizo dudar del valor real de la puntuación general. Recomiendo leer con cuidado las reseñas con texto y no confiar solo en el promedio de estrellas.\n\nOtro punto negativo es la cocina. La campana extractora no parece tener una salida efectiva hacia el exterior; funciona más bien recirculando el aire dentro del departamento. Si se cocina carne u otros alimentos con olor fuerte, el olor queda atrapado y no se elimina bien.\n\nEn resumen: buena ubicación y apariencia moderna, pero mala administración, mala aislación acústica, problemas de agua caliente, atención deficiente y mala ventilación en la cocina. Si estás pensando en arrendar o reservar aquí, recomiendo pensarlo muy bien. Mi experiencia fue lo suficientemente mala como para irme y no volver.",
-    "usuario": "Han United",
-    "primer_nombre": "Han",
-    "sexo": "andy",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Higiene ambiental",
-      "Mantenciones",
-      "Atención cliente",
-      "Ruidos",
-      "Crítica"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "nativo riesco",
-    "fecha": "2026-04-30",
-    "score": 1.0,
-    "texto": "No recomiendo vivir ni alojarse en Native Riesco. Mi experiencia fue muy negativa y finalmente decidí terminar mi arriendo y mudarme.\n\nEl principal problema es el ruido. El aislamiento acústico del edificio es muy deficiente: se escuchaba música de departamentos vecinos y, aun viviendo en el piso 17, podía oír claramente los golpes de pesas o equipos del gimnasio ubicado en el piso 20. El ruido de impacto era especialmente molesto y afectaba el descanso. Lo reporté varias veces a la administración, pero no hubo una solución real ni una mejora visible.\n\nOtro problema grave fue el agua caliente. En varias ocasiones hubo cortes o problemas de suministro. Incluso cuando había agua caliente, el caudal era muy bajo, por lo que ducharse tomaba mucho más tiempo de lo normal. Lo más frustrante fue que la administración parecía conocer el problema, pero lo minimizaba o lo negaba, sin entregar una solución efectiva. La atención en recepción tampoco fue buena; en mi experiencia, fue poco empática y poco resolutiva.\n\nAdemás, el sistema de acceso del edificio es innecesariamente complicado. Tener que depender de una app para pasar por torniquetes y salidas hace que entrar y salir sea lento e incómodo en la vida diaria.\n\nLa ubicación puede parecer conveniente y el edificio puede verse moderno en fotos, pero mi experiencia real fue muy distinta. Para mí, Native Riesco tiene problemas serios de administración, ruido, agua caliente y experiencia diaria del residente. Si alguien está considerando arrendar o reservar aquí, recomiendo pensarlo muy bien y revisar estos puntos antes de tomar una decisión.",
-    "usuario": "Va Va",
-    "primer_nombre": "Va",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Conectividad",
-      "Atención cliente",
-      "Ruidos"
-    ],
-    "amenidades": [
-      "gimnasio"
-    ],
     "comuna": "Las Condes",
     "operador": "LarGroup"
   },
@@ -10197,32 +8885,6 @@
   },
   {
     "edificio": "nomad bellet",
-    "fecha": "2026-05-15",
-    "score": 5.0,
-    "texto": "Comentarios para la administración del edificio Nomad Bellet – Antonio Bellet 126, Providencia\n\nEstimado equipo de administración de Nomad Bellet:\n\nSoy inquilino de larga duración junto con mi esposa en uno de sus apartamentos de una habitación desde hace más de 10 meses y quería compartir mi experiencia positiva y ofrecer algunas sugerencias para mejorar. La ubicación es excepcional: a pocos pasos de las estaciones de metro Pedro de Valdivia y Manuel Montt, con fácil acceso a supermercados como Jumbo y Lider, además del metro para ir a trabajar a las oficinas en las afueras. La cercanía al Parque de las Esculturas y a restaurantes locales facilita un equilibrio entre el trabajo y la vida personal.\n\nEl apartamento ofrece comodidad moderna en aproximadamente 45 m², con una cocina totalmente equipada (placa de inducción, refrigerador grande, lavavajillas), una cama queen, Smart TV con servicios de streaming e internet de fibra óptica de alta velocidad confiable que supera los 200 Mbps, ideal para videollamadas profesionales. Lavadora y secadora en el apartamento, aire acondicionado y un balcón con vista a la ciudad hacen que la estadía sea aún más placentera. Las comodidades compartidas son impresionantes: seguridad 24/7, gimnasio, terraza en la azotea con barbacoa y aparcamiento para bicicletas.\n\nSu rápida respuesta por WhatsApp es excepcional; una pequeña reparación reciente en el baño se solucionó el mismo día. Con un precio mensual de entre 950.000 y 1.000.000 CLP (servicios incluidos), la relación calidad-precio supera a la de los hoteles en cuanto a espacio y autonomía. Gracias por ofrecer una opción fiable para profesionales como yo.\n\nMejoras recomendadas\nPara mejorar aún más la propiedad:\n\nProporcionar instrucciones en inglés para los electrodomésticos e implementar aplicaciones del edificio para ayudar a los inquilinos internacionales.\n\nAmpliar el equipamiento del gimnasio para ofrecer mayor variedad, especialmente en temporada de lluvias.\n\nExtender el acceso a la piscina durante todo el año con horarios más amplios (por ejemplo, hasta después de las 21:00) para mayor flexibilidad.\n\nSaludos cordiales,\nMark Perczuk\n\nInquilino de larga duración de un dormitorio",
-    "usuario": "Mark Perczuk",
-    "primer_nombre": "Mark",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Precio/Costo",
-      "Amenities"
-    ],
-    "amenidades": [
-      "gimnasio",
-      "piscina",
-      "terraza",
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "nomad bellet",
     "fecha": "2026-06-02",
     "score": 5.0,
     "texto": "Comentarios para la administración del edificio Nomad Bellet – Antonio Bellet 126, Providencia\n\nEstimado equipo de administración de Nomad Bellet:\n\nSoy inquilino de larga duración junto con mi esposa en uno de sus apartamentos de una habitación desde hace más de 10 meses y quería compartir mi experiencia positiva y ofrecer algunas sugerencias para mejorar. La ubicación es excepcional: a pocos pasos de las estaciones de metro Pedro de Valdivia y Manuel Montt, con fácil acceso a supermercados como Jumbo y Lider, además del metro para ir a trabajar a las oficinas en las afueras. La cercanía al Parque de las Esculturas y a restaurantes locales facilita un equilibrio entre el trabajo y la vida personal.\n\nEl apartamento ofrece comodidad moderna en aproximadamente 45 m², con una cocina totalmente equipada (placa de inducción, refrigerador grande, lavavajillas), una cama queen, Smart TV con servicios de streaming e internet de fibra óptica de alta velocidad confiable que supera los 200 Mbps, ideal para videollamadas profesionales. Lavadora y secadora en el apartamento, aire acondicionado y un balcón con vista a la ciudad hacen que la estadía sea aún más placentera. Las comodidades compartidas son impresionantes: seguridad 24/7, gimnasio, terraza en la azotea con barbacoa y aparcamiento para bicicletas.\n\nSu rápida respuesta por WhatsApp es excepcional; una pequeña reparación reciente en el baño se solucionó el mismo día. Con un precio mensual de entre 950.000 y 1.000.000 CLP (servicios incluidos), la relación calidad-precio supera a la de los hoteles en cuanto a espacio y autonomía. Gracias por ofrecer una opción fiable para profesionales como yo.\n\nMejoras recomendadas\nPara mejorar aún más la propiedad:\n\nProporcionar instrucciones en inglés para los electrodomésticos e implementar aplicaciones del edificio para ayudar a los inquilinos internacionales.\n\nAmpliar el equipamiento del gimnasio para ofrecer mayor variedad, especialmente en temporada de lluvias.\n\nExtender el acceso a la piscina durante todo el año con horarios más amplios (por ejemplo, hasta después de las 21:00) para mayor flexibilidad.\n\nSaludos cordiales,\nMark Perczuk\n\nInquilino de larga duración de un dormitorio",
@@ -11077,57 +9739,6 @@
   },
   {
     "edificio": "nomad holley",
-    "fecha": "2026-05-16",
-    "score": 5.0,
-    "texto": "Muy entretenido, una buena oportunidad de conocer y compartir con vecinos. La Cami muy simpática, buena clase. Buen ambiente.",
-    "usuario": "isabella araneda pezoa",
-    "primer_nombre": "isabella",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen ambiente",
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "nomad holley",
-    "fecha": "2026-05-16",
-    "score": 5.0,
-    "texto": "Excelente actividad de yoga.",
-    "usuario": "Gicela Andrade",
-    "primer_nombre": "Gicela",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "nomad holley",
-    "fecha": "2026-05-16",
-    "score": 5.0,
-    "texto": "súper experiencia, la clase fue divertida, pero además, es un buen espacio para compartir! que buena iniciativa",
-    "usuario": "Diana Paz",
-    "primer_nombre": "Diana",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Providencia",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "nomad holley",
     "fecha": "2026-06-02",
     "score": 5.0,
     "texto": "Muy entretenido, una buena oportunidad de conocer y compartir con vecinos. La Cami muy simpática, buena clase. Buen ambiente.",
@@ -11516,22 +10127,6 @@
     "sentimiento": "Positiva",
     "temas": [
       "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Santiago",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "park santiago",
-    "fecha": "2023-06-03",
-    "score": 1.0,
-    "texto": "",
-    "usuario": "Enrique Gatica",
-    "primer_nombre": "Enrique",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Sin Comentario"
     ],
     "amenidades": [],
     "comuna": "Santiago",
@@ -13092,29 +11687,6 @@
       "Atención del personal"
     ],
     "amenidades": [],
-    "comuna": "Santiago",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "park santiago",
-    "fecha": "2025-11-17",
-    "score": 4.0,
-    "texto": "Un lugar amplio en todo aspecto. El edificio cumple con mis expectativas. El personal muy amable,  la atención  del Ejecutivo Juan Andres, muy buena, muy preocupado por todo.\nJhoselyn y Consuelo, dispuestas a responder mis dudas y consultas.\nLa mudanza fue tranquila y con todas las facilidades.\nAmablemente me cambiaron el estacionamiento,  ya que mi camioneta quedaba con la puerta del conductor, pegada a una reja y no podía subir o bajar de ella.\nLo único que señalaria, para mejorar, es el aseo de.los ascensoresny áreas públicas, como el piso 30, esta descuidado, con mucha tierra, los sillones de la terraza están llenos de polvo, el sector piscina, hay gente comiendo y dejan todo sucio, esa zona, no es para comer y debe estar siempre limpia, para eso se pagan gastos comunes.\nGracias por la buena voluntad y buena onda.",
-    "usuario": "puyehue city",
-    "primer_nombre": "puyehue",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Limpieza/mantenimiento",
-      "Amenities"
-    ],
-    "amenidades": [
-      "piscina",
-      "terraza"
-    ],
     "comuna": "Santiago",
     "operador": "LarGroup"
   },
@@ -16052,23 +14624,6 @@
   },
   {
     "edificio": "ronda santo domingo",
-    "fecha": "2026-01-12",
-    "score": 1.0,
-    "texto": "no arrienden en este lugar! si es hermoso todo lo que tiene pero la administración es horrible!",
-    "usuario": "Victoria Rubio Peñaloza",
-    "primer_nombre": "Victoria",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente",
-      "Crítica"
-    ],
-    "amenidades": [],
-    "comuna": "Santiago",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "ronda santo domingo",
     "fecha": "2026-01-18",
     "score": 1.0,
     "texto": "He tenido reiterados problemas con ruidos molestos provenientes de un piso superior. Música fuerte, golpes y ruido a horas completamente inapropiadas. No es algo aislado, es una situación que se repite y que hace imposible descansar como corresponde.\n\nVivir acá se vuelve desgastante cuando desde arriba no respetan a nadie y no hay un control real que evite que esto siga pasando. La falta de fiscalización y de medidas concretas termina afectando directamente la calidad de vida. Si buscan un lugar tranquilo para vivir, honestamente, no lo recomiendo.",
@@ -16165,23 +14720,6 @@
     "sentimiento": "Negativa",
     "temas": [
       "Atención cliente"
-    ],
-    "amenidades": [],
-    "comuna": "Santiago",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "ronda santo domingo",
-    "fecha": "2026-05-11 21:44:59",
-    "score": 1.0,
-    "texto": "no arrienden en este lugar! si es hermoso todo lo que tiene pero la administración es horrible!",
-    "usuario": "Victoria Rubio Peñaloza",
-    "primer_nombre": "Victoria",
-    "sexo": "female",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente",
-      "Crítica"
     ],
     "amenidades": [],
     "comuna": "Santiago",
@@ -18458,42 +16996,6 @@
     "sentimiento": "Positiva",
     "temas": [
       "excelente ubicación",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Ñuñoa",
-    "operador": "Renovate Inmobiliaria"
-  },
-  {
-    "edificio": "soho barrio italia",
-    "fecha": "2026-05-05",
-    "score": 5.0,
-    "texto": "El día viernes fui a la Expo Jackets, realizada en la azotea del edifico Soho de Barrio Italia.\nUna organización espectacular de un evento que consistió en una exposición de chaquetas de jeans intervenidas y con diseños exclusivos únicos y pintados a mano.\nUna muy buena instancia para compartir, pero que también sirvió para poder dar a conocer el emprendimiento mencionado.",
-    "usuario": "Enrique Hormazábal Castro",
-    "primer_nombre": "Enrique",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Ñuñoa",
-    "operador": "Renovate Inmobiliaria"
-  },
-  {
-    "edificio": "soho barrio italia",
-    "fecha": "2026-05-05 14:46:41",
-    "score": 5.0,
-    "texto": "El día viernes fui a la Expo Jackets, realizada en la azotea del edifico Soho de Barrio Italia.\nUna organización espectacular de un evento que consistió en una exposición de chaquetas de jeans intervenidas y con diseños exclusivos únicos y pintados a mano.\nUna muy buena instancia para compartir, pero que también sirvió para poder dar a conocer el emprendimiento mencionado.",
-    "usuario": "Enrique Hormazábal Castro",
-    "primer_nombre": "Enrique",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
       "Diseño/calidad interior",
       "Ubicación",
       "Felicitaciones"
@@ -22541,94 +21043,6 @@
     "amenidades": [
       "spa"
     ],
-    "comuna": "Providencia",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma inés de suárez",
-    "fecha": "2026-05-12",
-    "score": 1.0,
-    "texto": "Son excelentes instalaciones construidas, con la peor administración posible. No se lo recomiendo a nadie a menos que tenga mucho tiempo para lidiar con la administración.",
-    "usuario": "Ernesto De Blasis",
-    "primer_nombre": "Ernesto",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente",
-      "Crítica"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma inés de suárez",
-    "fecha": "2026-05-12",
-    "score": 1.0,
-    "texto": "Espero que la muni fiscalice este edificio… arriendan por dia o la terraza y somos los vecinos que vivimos aquí y pagamos contribuciones los que debemos aguantar el desagradable ruido. Por favor. Basta.",
-    "usuario": "Caro R",
-    "primer_nombre": "Caro",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Ruidos",
-      "Crítica"
-    ],
-    "amenidades": [
-      "terraza"
-    ],
-    "comuna": "Providencia",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma inés de suárez",
-    "fecha": "2026-05-12 03:34:41",
-    "score": 1.0,
-    "texto": "Espero que la muni fiscalice este edificio… arriendan por dia o la terraza y somos los vecinos que vivimos aquí y pagamos contribuciones los que debemos aguantar el desagradable ruido. Por favor. Basta.",
-    "usuario": "Caro R",
-    "primer_nombre": "Caro",
-    "sexo": "unknown",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Ruidos",
-      "Crítica"
-    ],
-    "amenidades": [
-      "terraza"
-    ],
-    "comuna": "Providencia",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma inés de suárez",
-    "fecha": "2026-05-12 22:57:29",
-    "score": 1.0,
-    "texto": "Son excelentes instalaciones construidas, con la peor administración posible. No se lo recomiendo a nadie a menos que tenga mucho tiempo para lidiar con la administración.",
-    "usuario": "Ernesto De Blasis",
-    "primer_nombre": "Ernesto",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Atención cliente",
-      "Crítica"
-    ],
-    "amenidades": [],
-    "comuna": "Providencia",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma inés de suárez",
-    "fecha": "2026-05-30",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "Luis Romero",
-    "primer_nombre": "Luis",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
     "comuna": "Providencia",
     "operador": "Greystar"
   },
@@ -29057,39 +27471,6 @@
   },
   {
     "edificio": "somma vista calán",
-    "fecha": "2026-04-13",
-    "score": 5.0,
-    "texto": "Muy bonito",
-    "usuario": "leidi paii",
-    "primer_nombre": "leidi",
-    "sexo": "unknown",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma vista calán",
-    "fecha": "2026-04-29",
-    "score": 1.0,
-    "texto": "Un robo que no devuelvan el mes de garantía. Gastan 500 mil pesos en pintar una mancha?",
-    "usuario": "Eugenio Machuca",
-    "primer_nombre": "Eugenio",
-    "sexo": "male",
-    "sentimiento": "Negativa",
-    "temas": [
-      "Garantía",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "Greystar"
-  },
-  {
-    "edificio": "somma vista calán",
     "fecha": "2026-05-08",
     "score": 1.0,
     "texto": "Un robo que no devuelvan el mes de garantía. Gastan 500 mil pesos en pintar una mancha?",
@@ -30844,395 +29225,6 @@
   },
   {
     "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Llevo un tiempo viviendo en Spot Nueva Kennedy y sinceramente ha sido una muy buena experiencia. Desde que llegué me llamó la atención lo ordenado que se mantiene todo y lo cómodos que son los espacios comunes.\n\nAdemás, se nota bastante la preocupación por la seguridad y por entregar un buen servicio a los residentes, algo que hoy se valora muchísimo. El ambiente es tranquilo y el edificio tiene una onda moderna que hace agradable vivir acá.\n\nSi alguien está buscando departamento, recomendaría totalmente conocer Spot Nueva Kennedy. En mi caso, ha sido mucho mejor de lo que esperaba.",
-    "usuario": "Lucas Fernandez Cortes",
-    "primer_nombre": "Lucas",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen servicio",
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Limpieza/mantenimiento",
-      "Seguridad",
-      "Precio/Costo",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Mi experiencia viviendo en Spot Nueva Kennedy ha sido realmente positiva. Desde el primer día se nota que hay una preocupación por entregar un buen servicio y por mantener los espacios comunes impecables.\n\nEl edificio es moderno, cómodo y tiene todo lo necesario para disfrutar el día a día con tranquilidad. Además, la sensación de seguridad es algo que se agradece mucho.\n\nPara quienes estén evaluando opciones para vivir, creo que Spot Nueva Kennedy es una excelente alternativa. En mi caso, ha cumplido e incluso superado mis expectativas.",
-    "usuario": "Pedro Manasevich",
-    "primer_nombre": "Pedro",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen servicio",
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Seguridad",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Vivir en Spot Nueva Kennedy ha sido una muy buena experiencia. Me ha sorprendido positivamente la calidad de los espacios, la comodidad del edificio y la preocupación constante por mantener todo en excelente estado.\n\nComo residente, valoro mucho la tranquilidad, la seguridad y el buen ambiente que se siente día a día. Es un lugar moderno, bien ubicado y pensado para vivir cómodo.\n\nSin duda, recomendaría Spot Nueva Kennedy a quienes estén buscando un lugar práctico, seguro y agradable para vivir.",
-    "usuario": "Pedro",
-    "primer_nombre": "Pedro",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen ambiente",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Precio/Costo",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Vivir en Spot Nueva Kennedy ha sido una muy buena experiencia. El lugar es cómodo, seguro y siempre se nota la preocupación por mantener todo en buen estado.\n\nSin duda lo recomendaría a quienes estén buscando un lugar moderno y tranquilo para vivir.",
-    "usuario": "carlos rodriguez torres",
-    "primer_nombre": "carlos",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación",
-      "Seguridad"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "He visitado el lugar y es increíble, me encantaría vivir en un lugar como ese, tienen excelente seguridad, muy buenos espacios y las oficinas de cowork son lo mejor.",
-    "usuario": "Bárbara Lorena MuñozUbilla",
-    "primer_nombre": "Bárbara",
-    "sexo": "female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Ubicación",
-      "Seguridad",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "cowork",
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Recomiendo totalmente este lugar,\nSe nota la dedicación al cuidado del lugar,\nMe gusta la modernidad de las instalaciones y que siempre se ve bien mantenido todo.\nEs un ambiente muy tranquilo\nY seguro, muy contento con el lugar.",
-    "usuario": "David Schaffer",
-    "primer_nombre": "David",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Amenities"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Mi experiencia viviendo en Spot Nueva Kennedy ha sido realmente muy buena. Desde que llegué, he notado un ambiente agradable, ordenado y muy seguro, algo que hoy se valora muchísimo.\n\nLas instalaciones siempre se mantienen en excelentes condiciones y el nivel de atención y preocupación por los residentes se nota constantemente. Además, es un lugar cómodo, moderno y bien pensado para vivir tranquilo en el día a día.\n\nSin duda, recomendaría Spot Nueva Kennedy a cualquier persona que esté buscando un lugar con buena calidad de vida y un entorno bien cuidado. Personalmente, ha cumplido e incluso superado lo que esperaba.",
-    "usuario": "Sebastian Mundet",
-    "primer_nombre": "Sebastian",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Limpieza/mantenimiento",
-      "Seguridad",
-      "Precio/Costo",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Vivir en este edificio ha sido una experiencia súper buena para mí. Desde que llegué, se nota mucho la preocupación por mantener todo impecable, el buen ambiente y lo cómodo que es vivir acá en el día a día.\n\nDestaco especialmente la seguridad, la tranquilidad y lo bien mantenidos que están los espacios comunes. Además, el equipo siempre ha tenido muy buena disposición cuando se necesita algo, lo que hace que la experiencia sea aún mejor.\n\nDe verdad lo recomendaría a cualquier persona que esté buscando un lugar moderno, cómodo y bien administrado para vivir. Ha cumplido totalmente mis expectativas.",
-    "usuario": "Félix Ureta",
-    "primer_nombre": "Félix",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen ambiente",
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Fui a dejar un pedido y todo fue muy rápido, encontré donde estacionar al tiro, me atendieron de una y pude dejar el pedido sin ninguna problema, que suerte de los residentes poder contar con un sistema así de eficiente",
-    "usuario": "Pedro Jose Alonso Lorca",
-    "primer_nombre": "Pedro",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Mi experiencia viviendo en Spot Nueva Kennedy ha sido muy buena. Destaco la calidad del servicio, lo ordenados que se mantienen los espacios y la sensación de seguridad que se vive constantemente.\n\nEs un lugar cómodo, moderno y muy bien administrado. Sin duda, lo recomendaría a quienes estén buscando un lugar tranquilo y agradable para vivir.",
-    "usuario": "Alejandro Arroyo",
-    "primer_nombre": "Alejandro",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Limpieza/mantenimiento",
-      "Seguridad",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Vivir en Spot Nueva Kennedy ha sido una muy buena experiencia. Destaco el excelente servicio, los espacios comunes siempre bien cuidados y la tranquilidad y seguridad que se vive día a día.\n\nEs un lugar moderno, cómodo y realmente preocupado de mantener todo funcionando bien. Sin duda, lo recomendaría a quienes busquen un buen lugar para vivir. Superó totalmente mis expectativas.\n\nVM",
-    "usuario": "victor montenegro",
-    "primer_nombre": "victor",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Spot Nueva Kennedy ha sido una muy buena experiencia. Destaco la seguridad, la limpieza de los espacios comunes y lo bien mantenido que está todo el lugar.\n\nEs un espacio moderno, cómodo y donde realmente se nota la preocupación por el bienestar de los residentes. Sin duda, lo recomendaría a quienes estén buscando un buen lugar para vivir, porque superó completamente mis expectativas.",
-    "usuario": "Guillermo Manriquez",
-    "primer_nombre": "Guillermo",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Limpieza/mantenimiento",
-      "Seguridad",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Es un Edificio y un complejo que además de estar bien ubicado cuenta con un equipo realmente profesional que vela por el buen funcionamiento durante todo el año.\nImportante es entender que el edificio es muy tecnológico con salones, salas, piscinas, gimnasios, en general, es un complejo, el cual te ayuda a no tener que salir a buscar otras cosas fuera de casa.",
-    "usuario": "Mario Antonio Forteza Schneider",
-    "primer_nombre": "Mario",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Amenities"
-    ],
-    "amenidades": [
-      "gimnasio",
-      "piscina"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Vivir en Spot Nueva Kennedy ha sido una experiencia muy positiva. Destaco especialmente la seguridad, tranquilidad y el excelente estado de los espacios comunes. Se nota la preocupación por mantener todo funcionando bien y ofrecer un ambiente cómodo y moderno. Sin duda, lo recomendaría a quienes estén buscando un buen lugar para vivir, porque superó totalmente mis expectativas.",
-    "usuario": "Nicolas Sabaj",
-    "primer_nombre": "Nicolas",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-19",
-    "score": 5.0,
-    "texto": "Vivir en Spot Nueva Kennedy ha sido una experiencia realmente muy buena. Como residente, destaco especialmente la calidad del servicio, el excelente estado de los espacios comunes y la sensación de tranquilidad y seguridad que se vive todos los días.\n\nEs un lugar moderno, cómodo y donde se nota el compromiso por mantener todo en óptimas condiciones. Sin duda, se valora muchísimo poder vivir en un ambiente así.\n\nA cualquier persona que esté buscando un nuevo lugar para vivir, le recomendaría conocer Spot Nueva Kennedy. En mi caso, superó completamente mis expectativas.",
-    "usuario": "Matias Aranis",
-    "primer_nombre": "Matias",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Precio/Costo",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-20",
-    "score": 5.0,
-    "texto": "Desde el primer día se nota la preocupación por cada detalle! Hay que destacar que los espacios comunes son muy acogedores, transmiten calma y paz, sensaciones importantes después de un día largo de trabajo y es algo que de verdad no tiene precio. Aparte todo es muy moderno y seguro. También quiero destacar el excelente nivel de servicio y la dedicación que hay detrás para que todo funcione bien. Es algo que me lo dicen mis visitas al llegar, de verdad se siente que hay una preocupación real por quienes vivimos aquí y eso marca una enorme diferencia.\n\nHoy puedo decir sinceramente que Spot Nueva Kennedy superó completamente mis expectativas. Si alguien está buscando un lugar para vivir donde realmente se sienta bien, seguro y cómodo, de corazón les recomendaría darse la oportunidad de conocerlo.",
-    "usuario": "María Paz Mercado Carrasco",
-    "primer_nombre": "María",
-    "sexo": "mostly_female",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Precio/Costo",
-      "Amenities",
-      "Felicitaciones"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-05-20",
-    "score": 5.0,
-    "texto": "Vivir en Spot Nueva Kennedy ha sido una muy buena experiencia. Desde que llegué, me ha sorprendido lo bien mantenidos que están los espacios, la comodidad del lugar y el ambiente tranquilo que se vive día a día.\n\nTambién destaco mucho la seguridad y la preocupación constante por entregar un buen servicio a los residentes. Se nota que hay una gestión preocupada de que todo funcione correctamente y eso hace una gran diferencia.\n\nSi alguien está buscando un lugar moderno, cómodo y bien ubicado para vivir, definitivamente recomendaría conocer Spot Nueva Kennedy. En mi caso, ha cumplido e incluso superado lo que esperaba.",
-    "usuario": "Felipe Reyes",
-    "primer_nombre": "Felipe",
-    "sexo": "male",
-    "sentimiento": "Positiva",
-    "temas": [
-      "buen servicio",
-      "Atención del personal",
-      "Diseño/calidad interior",
-      "Ubicación",
-      "Seguridad",
-      "Amenities"
-    ],
-    "amenidades": [
-      "spa"
-    ],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
-    "fecha": "2026-06-01",
-    "score": 4.0,
-    "texto": "No insonorizado",
-    "usuario": "Lu Ziye",
-    "primer_nombre": "Lu",
-    "sexo": "andy",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Otros"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot nueva kennedy",
     "fecha": "2026-06-01",
     "score": 4.0,
     "texto": "不隔音",
@@ -32106,22 +30098,6 @@
     "usuario": "Saray Pineda",
     "primer_nombre": "Saray",
     "sexo": "andy",
-    "sentimiento": "Positiva",
-    "temas": [
-      "Sin Comentario"
-    ],
-    "amenidades": [],
-    "comuna": "Las Condes",
-    "operador": "LarGroup"
-  },
-  {
-    "edificio": "spot residence manquehue",
-    "fecha": "2026-06-07",
-    "score": 5.0,
-    "texto": "",
-    "usuario": "TM",
-    "primer_nombre": "TM",
-    "sexo": "unknown",
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"

@@ -34,7 +34,6 @@ export default function DistribucionEstrellas({ reviews }) {
 
   return (
     <div className="card">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Distribución de Estrellas</h2>
@@ -44,6 +43,8 @@ export default function DistribucionEstrellas({ reviews }) {
         <select value={selected} onChange={e => setSelected(e.target.value)} className="select">
           {edificios.map(ed => <option key={ed} value={ed}>{ed}</option>)}
         </select>
+      <div ref={chartRef} id="content-distribucion-estrellas">
+        <p className="chart-context">{selected}</p>
         <div className="sentiment-row">
           <div className="sentiment-pill green">👍 {posCount} positivas</div>
           <div className="sentiment-pill amber">😐 {neuCount} neutras</div>
@@ -61,7 +62,7 @@ export default function DistribucionEstrellas({ reviews }) {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="distribucion-estrellas" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="distribucion-estrellas" title="Distribución de Estrellas" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

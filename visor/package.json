@@ -12,10 +12,13 @@
   "dependencies": {
     "firebase": "^12.14.0",
     "html-to-image": "^1.11.13",
-    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.8",
+    "pptxgenjs": "^4.0.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "recharts": "^3.8.1"
+    "recharts": "^3.8.1",
+    "svg2pdf.js": "^2.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

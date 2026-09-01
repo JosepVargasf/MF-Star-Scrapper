@@ -3,6 +3,7 @@ import { useAuth } from './hooks/useAuth'
 import LoginScreen from './components/LoginScreen'
 import { useData } from './hooks/useData'
 import KpiCards from './components/KpiCards'
+import ExportReportButton from './components/ExportReportButton'
 import RankingEdificios from './components/RankingEdificios'
 import EvolucionMensual from './components/EvolucionMensual'
 import DistribucionEstrellas from './components/DistribucionEstrellas'
@@ -138,6 +139,7 @@ function Dashboard({ user, onLogout }) {
           </div>
 
           {lastUpdate && <div className="topbar-badge">Datos a {lastUpdate}</div>}
+          <ExportReportButton subtitle={hasFilter ? `${filterComuna !== 'todas' ? filterComuna : ''} ${filterOperador !== 'todos' ? filterOperador : ''}`.trim() : undefined} />
           <div className="topbar-user">
             <img src={user.photoURL} className="user-avatar" alt={user.displayName} referrerPolicy="no-referrer" />
             <span className="user-name">{user.displayName?.split(' ')[0]}</span>

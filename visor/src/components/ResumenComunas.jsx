@@ -68,13 +68,15 @@ export default function ResumenComunas({ metrics, reviews }) {
   if (!rows.length) return null
 
   return (
-    <div className="card card-full" ref={chartRef}>
+    <div className="card card-full">
       <div className="card-header">
         <div>
           <h2>Resumen por comuna</h2>
           <p className="card-sub">Métricas agregadas por zona geográfica</p>
         </div>
       </div>
+
+    <div ref={chartRef} id="content-resumen-comunas">
 
       <div className="rc-table-wrap">
         <table className="rc-table" style={{ fontSize }}>
@@ -131,8 +133,9 @@ export default function ResumenComunas({ metrics, reviews }) {
           </tbody>
         </table>
       </div>
+    </div>
 
-      <ExportPanel chartRef={chartRef} chartName="resumen-comunas" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="resumen-comunas" title="Resumen por Comuna" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

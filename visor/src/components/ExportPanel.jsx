@@ -25,19 +25,74 @@ function PreviewModal({ src, chartName, onClose, onDownload }) {
   )
 }
 
-async function captureWithRatio(el, bg, ratio) {
-  const raw = await toPng(el, {
-    backgroundColor: bg === 'white' ? '#ffffff' : undefined,
-    pixelRatio: 2,
-  })
-  if (ratio === 'auto') return raw
+const HEADER_H = 64
+const FOOTER_H = 36
+const PAD = 28
 
-  const img = await new Promise(resolve => {
+async function loadImage(src) {
+  return new Promise(resolve => {
     const i = new Image()
     i.onload = () => resolve(i)
-    i.src = raw
+    i.src = src
+  })
+}
+
+// Compone el screenshot crudo del gráfico dentro de una tarjeta de reporte
+// con encabezado de marca, título y pie de fecha, lista para presentación.
+async function composeReport(rawSrc, title, bg) {
+  const img = await loadImage(rawSrc)
+  const innerW = img.width, innerH = img.height
+  const w = innerW + PAD * 2
+  const h = innerH + PAD * 2 + HEADER_H + FOOTER_H
+
+  const canvas = document.createElement('canvas')
+  canvas.width = w; canvas.height = h
+  const ctx = canvas.getContext('2d')
+
+  ctx.fillStyle = '#ffffff'
+  ctx.fillRect(0, 0, w, h)
+
+  ctx.fillStyle = '#96323C'
+  ctx.font = '700 22px system-ui, -apple-system, sans-serif'
+  ctx.textBaseline = 'middle'
+  ctx.fillText('MF Star', PAD, HEADER_H / 2 - 8)
+  ctx.fillStyle = '#0f172a'
+  ctx.font = '600 15px system-ui, -apple-system, sans-serif'
+  ctx.fillText(title, PAD, HEADER_H / 2 + 16)
+
+  const dateStr = new Date().toLocaleDateString('es-CL', { day: '2-digit', month: 'long', year: 'numeric' })
+  ctx.textAlign = 'right'
+  ctx.fillStyle = '#94a3b8'
+  ctx.font = '500 12px system-ui, -apple-system, sans-serif'
+  ctx.fillText(dateStr, w - PAD, HEADER_H / 2)
+  ctx.textAlign = 'left'
+
+  ctx.strokeStyle = '#e2e8f0'
+  ctx.lineWidth = 1
+  ctx.beginPath(); ctx.moveTo(PAD, HEADER_H); ctx.lineTo(w - PAD, HEADER_H); ctx.stroke()
+
+  if (bg === 'transparent') {
+    ctx.clearRect(PAD, HEADER_H + PAD / 2, innerW, innerH)
+  }
+  ctx.drawImage(img, PAD, HEADER_H + PAD / 2, innerW, innerH)
+
+  ctx.fillStyle = '#cbd5e1'
+  ctx.font = '500 11px system-ui, -apple-system, sans-serif'
+  ctx.fillText('Análisis de Reseñas · Edificios multifamily · Chile', PAD, h - FOOTER_H / 2)
+
+  return canvas
+}
+
+async function captureWithRatio(el, bg, ratio, title) {
+  const raw = await toPng(el, {
+    backgroundColor: bg === 'white' ? '#ffffff' : undefined,
+    pixelRatio: 3,
   })
 
+  const reportCanvas = await composeReport(raw, title, bg)
+  if (ratio === 'auto') return reportCanvas.toDataURL('image/png')
+
+  const img = await loadImage(reportCanvas.toDataURL('image/png'))
   const [rw, rh] = ratio.split(':').map(Number)
   const targetW = 1920
   const targetH = Math.round(targetW * rh / rw)
@@ -51,7 +106,8 @@ async function captureWithRatio(el, bg, ratio) {
   return canvas.toDataURL('image/png')
 }
 
-export default function ExportPanel({ chartRef, chartName = 'grafico', fontSize, onFontSizeChange }) {
+export default function ExportPanel({ chartRef, chartName = 'grafico', title, fontSize, onFontSizeChange }) {
+  const reportTitle = title ?? chartName.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
   const [ratio,       setRatio]       = useState('auto')
   const [bg,          setBg]          = useState('white')
   const [preview,     setPreview]     = useState(null)
@@ -61,7 +117,7 @@ export default function ExportPanel({ chartRef, chartName = 'grafico', fontSize,
 
   async function getDataUrl() {
     if (!chartRef.current) return null
-    return captureWithRatio(chartRef.current, bg, ratio)
+    return captureWithRatio(chartRef.current, bg, ratio, reportTitle)
   }
 
   async function handlePreview() {

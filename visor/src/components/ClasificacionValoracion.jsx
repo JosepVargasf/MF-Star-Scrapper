@@ -40,18 +40,19 @@ export default function ClasificacionValoracion({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Clasificación Reseñas por Edificio</h2>
             <p className="card-sub">Porcentaje de reseñas positivas y negativas por edificio</p>
           </div>
-          <div className="evol-legend">
-            <span className="legend-dot" style={{ background: COLOR_POS }} />
-            <span className="legend-label">Positivo</span>
-            <span className="legend-dot" style={{ background: COLOR_NEG, marginLeft: 12 }} />
-            <span className="legend-label">Negativo</span>
-          </div>
+        </div>
+
+      <div ref={chartRef} id="content-clasificacion-valoracion">
+        <div className="evol-legend">
+          <span className="legend-dot" style={{ background: COLOR_POS }} />
+          <span className="legend-label">Positivo</span>
+          <span className="legend-dot" style={{ background: COLOR_NEG, marginLeft: 12 }} />
+          <span className="legend-label">Negativo</span>
         </div>
 
         <div className="clasif-grid">
@@ -89,7 +90,7 @@ export default function ClasificacionValoracion({ reviews }) {
           })}
         </div>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="clasificacion-valoracion" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="clasificacion-valoracion" title="Clasificación Reseñas por Edificio" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

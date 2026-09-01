@@ -103,7 +103,6 @@ export default function EvolucionMensual({ reviews }) {
 
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Evolución del Rating</h2>
@@ -133,6 +132,7 @@ export default function EvolucionMensual({ reviews }) {
           </div>
         </div>
 
+      <div ref={chartRef} id="content-evolucion-rating">
         {mode === 'anual' ? (
           <ResponsiveContainer width="100%" height={280}>
             <BarChart data={data} margin={{ left: 0, right: 16, top: 28, bottom: 4 }} barCategoryGap="30%">
@@ -186,7 +186,7 @@ export default function EvolucionMensual({ reviews }) {
           {stC && <StatBlock label={compare} s={stC} color={colorC} mode={mode} />}
         </div>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="evolucion-rating" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="evolucion-rating" title="Evolución del Rating" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }

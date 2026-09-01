@@ -83,15 +83,14 @@ export default function RankingEdificios({ metrics, reviews }) {
   const chartHeight = data.length * ROW_HEIGHT + 24 // alto total = filas fijas + margen, nunca achica las barras
   const starColor   = STAR_COLORS[star]
 
+  const subtitle = mode === 'rating' ? 'Ordenado por rating promedio' : `Ordenado por % de reseñas de ${'★'.repeat(star)}`
+
   return (
     <div className="card card-full">
-      <div ref={chartRef}>
         <div className="card-header">
           <div>
             <h2>Ranking de Edificios</h2>
-            <p className="card-sub">
-              {mode === 'rating' ? 'Ordenado por rating promedio' : `Ordenado por % de reseñas de ${'★'.repeat(star)}`}
-            </p>
+            <p className="card-sub">{subtitle}</p>
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
             {mode === 'estrellas' && (
@@ -110,6 +109,8 @@ export default function RankingEdificios({ metrics, reviews }) {
           </div>
         </div>
 
+      <div ref={chartRef} id="content-ranking-edificios">
+        <p className="chart-context">{subtitle}</p>
         {mode === 'rating' && (
           <div className="legend-inline" style={{ marginBottom: 12 }}>
             <span className="dot green" /> ≥ 4.5
@@ -143,7 +144,7 @@ export default function RankingEdificios({ metrics, reviews }) {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <ExportPanel chartRef={chartRef} chartName="ranking-edificios" fontSize={fontSize} onFontSizeChange={setFontSize} />
+      <ExportPanel chartRef={chartRef} chartName="ranking-edificios" title="Ranking de Edificios" fontSize={fontSize} onFontSizeChange={setFontSize} />
     </div>
   )
 }
