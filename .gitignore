@@ -1,5 +1,6 @@
-﻿# Variables de entorno (API keys)
-.env
+# Variables de entorno (API keys)
+.env*
+!.env.example
 
 # Datos generados
 data/
