@@ -1,33 +1,33 @@
 [
   {
     "edificio":"blend apoquindo",
-    "calif_actual":4.63,
-    "calif_previo":4.61,
-    "variacion":0.02,
-    "resenastot":19,
-    "nuevas_mes":1,
-    "pos_pct":94.7,
-    "neg_pct":5.3
+    "calif_actual":4.68,
+    "calif_previo":4.68,
+    "variacion":0.0,
+    "resenastot":22,
+    "nuevas_mes":0,
+    "pos_pct":95.5,
+    "neg_pct":4.5
   },
   {
     "edificio":"boldo club de campo",
-    "calif_actual":4.84,
-    "calif_previo":4.84,
+    "calif_actual":4.85,
+    "calif_previo":4.85,
     "variacion":0.0,
-    "resenastot":25,
+    "resenastot":26,
     "nuevas_mes":0,
-    "pos_pct":96.0,
-    "neg_pct":4.0
+    "pos_pct":96.2,
+    "neg_pct":3.8
   },
   {
     "edificio":"collective bustamante",
-    "calif_actual":3.32,
-    "calif_previo":3.27,
-    "variacion":0.05,
-    "resenastot":34,
-    "nuevas_mes":1,
-    "pos_pct":52.9,
-    "neg_pct":41.2
+    "calif_actual":3.37,
+    "calif_previo":3.37,
+    "variacion":0.0,
+    "resenastot":35,
+    "nuevas_mes":0,
+    "pos_pct":54.3,
+    "neg_pct":40.0
   },
   {
     "edificio":"collective santiago san francisco",
@@ -51,13 +51,13 @@
   },
   {
     "edificio":"imu san cristóbal",
-    "calif_actual":4.34,
+    "calif_actual":4.35,
     "calif_previo":4.34,
-    "variacion":0.0,
-    "resenastot":67,
-    "nuevas_mes":0,
-    "pos_pct":83.6,
-    "neg_pct":16.4
+    "variacion":0.01,
+    "resenastot":68,
+    "nuevas_mes":1,
+    "pos_pct":83.8,
+    "neg_pct":16.2
   },
   {
     "edificio":"insitu echaurren",
@@ -81,41 +81,41 @@
   },
   {
     "edificio":"nativo riesco",
-    "calif_actual":3.5,
-    "calif_previo":3.71,
+    "calif_actual":3.57,
+    "calif_previo":3.78,
     "variacion":-0.21,
-    "resenastot":58,
+    "resenastot":61,
     "nuevas_mes":0,
-    "pos_pct":63.8,
-    "neg_pct":36.2
+    "pos_pct":65.6,
+    "neg_pct":34.4
   },
   {
     "edificio":"nomad bellet",
     "calif_actual":4.19,
-    "calif_previo":4.22,
-    "variacion":-0.03,
+    "calif_previo":4.32,
+    "variacion":-0.13,
     "resenastot":85,
-    "nuevas_mes":11,
+    "nuevas_mes":0,
     "pos_pct":78.8,
     "neg_pct":18.8
   },
   {
     "edificio":"nomad holley",
-    "calif_actual":4.26,
-    "calif_previo":4.12,
-    "variacion":0.14,
-    "resenastot":62,
-    "nuevas_mes":9,
-    "pos_pct":80.6,
-    "neg_pct":16.1
+    "calif_actual":4.3,
+    "calif_previo":4.41,
+    "variacion":-0.11,
+    "resenastot":66,
+    "nuevas_mes":0,
+    "pos_pct":81.8,
+    "neg_pct":15.2
   },
   {
     "edificio":"park santiago",
     "calif_actual":4.79,
-    "calif_previo":4.92,
+    "calif_previo":4.93,
     "variacion":-0.13,
     "resenastot":179,
-    "nuevas_mes":8,
+    "nuevas_mes":0,
     "pos_pct":96.6,
     "neg_pct":3.4
   },
@@ -124,20 +124,20 @@
     "calif_actual":4.61,
     "calif_previo":4.58,
     "variacion":0.03,
-    "resenastot":139,
+    "resenastot":140,
     "nuevas_mes":0,
-    "pos_pct":89.9,
-    "neg_pct":9.4
+    "pos_pct":90.0,
+    "neg_pct":9.3
   },
   {
     "edificio":"soho barrio italia",
     "calif_actual":4.45,
     "calif_previo":4.42,
     "variacion":0.03,
-    "resenastot":139,
+    "resenastot":141,
     "nuevas_mes":0,
-    "pos_pct":84.9,
-    "neg_pct":7.2
+    "pos_pct":85.1,
+    "neg_pct":7.1
   },
   {
     "edificio":"somma asturias",
@@ -151,23 +151,23 @@
   },
   {
     "edificio":"somma inés de suárez",
-    "calif_actual":3.46,
-    "calif_previo":3.53,
-    "variacion":-0.07,
-    "resenastot":187,
-    "nuevas_mes":2,
-    "pos_pct":61.0,
-    "neg_pct":37.4
+    "calif_actual":3.48,
+    "calif_previo":3.56,
+    "variacion":-0.08,
+    "resenastot":190,
+    "nuevas_mes":0,
+    "pos_pct":61.6,
+    "neg_pct":36.8
   },
   {
     "edificio":"somma las clarisas",
-    "calif_actual":3.3,
-    "calif_previo":3.3,
+    "calif_actual":3.69,
+    "calif_previo":3.69,
     "variacion":0.0,
-    "resenastot":10,
+    "resenastot":13,
     "nuevas_mes":0,
-    "pos_pct":60.0,
-    "neg_pct":40.0
+    "pos_pct":69.2,
+    "neg_pct":30.8
   },
   {
     "edificio":"somma plaza bustamante",
@@ -182,10 +182,10 @@
   {
     "edificio":"somma plaza ñuñoa",
     "calif_actual":3.55,
-    "calif_previo":3.56,
-    "variacion":-0.01,
+    "calif_previo":3.55,
+    "variacion":0.0,
     "resenastot":230,
-    "nuevas_mes":1,
+    "nuevas_mes":0,
     "pos_pct":63.0,
     "neg_pct":35.7
   },
@@ -202,40 +202,40 @@
   {
     "edificio":"spot nueva kennedy",
     "calif_actual":4.27,
-    "calif_previo":4.25,
-    "variacion":0.02,
+    "calif_previo":4.27,
+    "variacion":0.0,
     "resenastot":139,
-    "nuevas_mes":3,
+    "nuevas_mes":0,
     "pos_pct":82.0,
     "neg_pct":17.3
   },
   {
     "edificio":"spot residence manquehue",
-    "calif_actual":3.95,
-    "calif_previo":3.95,
+    "calif_actual":4.0,
+    "calif_previo":4.0,
     "variacion":0.0,
-    "resenastot":22,
+    "resenastot":24,
     "nuevas_mes":0,
-    "pos_pct":72.7,
-    "neg_pct":27.3
+    "pos_pct":75.0,
+    "neg_pct":25.0
   },
   {
     "edificio":"switch vespucio",
     "calif_actual":4.53,
     "calif_previo":4.53,
     "variacion":0.0,
-    "resenastot":80,
+    "resenastot":81,
     "nuevas_mes":0,
-    "pos_pct":90.0,
-    "neg_pct":8.8
+    "pos_pct":90.1,
+    "neg_pct":8.6
   },
   {
     "edificio":"the place",
     "calif_actual":4.36,
-    "calif_previo":4.6,
-    "variacion":-0.24,
+    "calif_previo":4.36,
+    "variacion":0.0,
     "resenastot":11,
-    "nuevas_mes":1,
+    "nuevas_mes":0,
     "pos_pct":81.8,
     "neg_pct":18.2
   }

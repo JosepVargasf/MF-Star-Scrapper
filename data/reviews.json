@@ -322,6 +322,59 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "blend apoquindo",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Fue una agradable experiencia compartir y conocer a los vecinos. Buena música, rica comida y buen ambiente.\nFelices fiestas patrias para todos.🥳🌭🥤🥳…",
+    "usuario": "kelly quiñones (Kellynails186)",
+    "primer_nombre": "kelly",
+    "sexo": "mostly_female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "buen ambiente",
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "blend apoquindo",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Excelente Blend Apoquindo, instalaciones 10/10 y el equipo administrativo detrás siempre pendiente y brindando todo su apoyo!!",
+    "usuario": "Matias Leighton",
+    "primer_nombre": "Matias",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "blend apoquindo",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Edificio bastante bonito, bien equipado, salida casi directa al jumbo, la administración muy amable y guardias muy atentos",
+    "usuario": "Francisco Montecinos Sepúlveda",
+    "primer_nombre": "Francisco",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Seguridad"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "boldo club de campo",
     "fecha": "2024-05-27",
     "score": 5.0,
@@ -729,6 +782,27 @@
     "sentimiento": "Positiva",
     "temas": [
       "Sin Comentario"
+    ],
+    "amenidades": [],
+    "comuna": "Vitacura",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "boldo club de campo",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Un excelente lugar para vivir, que destaca por su seguridad, limpieza y agradable ambiente. La atención es excepcional y se percibe un gran compromiso por brindar una buena experiencia a quienes viven aquí. Quiero destacar especialmente a…",
+    "usuario": "Patricia Taiba",
+    "primer_nombre": "Patricia",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Limpieza/mantenimiento",
+      "Seguridad",
+      "Felicitaciones"
     ],
     "amenidades": [],
     "comuna": "Vitacura",
@@ -1319,6 +1393,27 @@
     "sentimiento": "Positiva",
     "temas": [
       "Atención del personal",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Ñuñoa",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "collective bustamante",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Mi marido y yo vinimos a conocer este lugar luego de un suceso traumatico y necesitabamos un nuevo hogar. Sólo fue traspasar las puertas de calle de este edificio y sentir, junto con la amabilidad y profesionalismo de Maximiliano, que este…",
+    "usuario": "Flor Danza",
+    "primer_nombre": "Flor",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Ubicación",
       "Amenities"
     ],
     "amenidades": [
@@ -5639,6 +5734,23 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "imu san cristóbal",
+    "fecha": "2026-10-27",
+    "score": 5.0,
+    "texto": "Muy buena atención de parte del staff. Todo el equipo de conserjes  siempre amable y el equipo administrativo también, siempre atentos y abiertos a conversar. Destaco especialmente a Jesús y Roxana por su cercanía y disposición.…",
+    "usuario": "Francisca Pino",
+    "primer_nombre": "Francisca",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "insitu echaurren",
     "fecha": "2024-10-16 18:30:12",
     "score": 5.0,
@@ -8580,6 +8692,56 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "nativo riesco",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Mi experiencia en Nativo Riesco es la mejor que he tenido,encontré todo lo que uno necesita para tener paz y felicidad en el hogar.…",
+    "usuario": "Maria Constanza Hernandez Maestre",
+    "primer_nombre": "Maria",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "nativo riesco",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Excelente atención del equipo de Nativo Riesco. Muy amables, atentos y profesionales en todo momento. Se nota la preocupación por entregar una buena experiencia.",
+    "usuario": "Pablo Mena",
+    "primer_nombre": "Pablo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "nativo riesco",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "excelente servicio y una excelente atención por parte de todo el staff me he sentido muy cómodo y a gusto en especial con Ivan y con Ivette",
+    "usuario": "Gustavo Inostroza",
+    "primer_nombre": "Gustavo",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "nomad bellet",
     "fecha": "2023-08-31 18:13:12",
     "score": 5.0,
@@ -11098,6 +11260,81 @@
       "Limpieza/mantenimiento"
     ],
     "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "nomad holley",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Me encantó!!! El espacio es muy cómodo, grande, súper moderno, y lo mejor, el\nTremendo visual de Santiago, la cordillera, el costanera.. 100/10 😍😍…",
+    "usuario": "RRVini No Ar",
+    "primer_nombre": "RRVini",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "nomad holley",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Excelente ubicación, a pasos del metro y con muy buena conectividad. Los conserjes son muy atentos, amables y siempre tienen una excelente disposición. Además, las áreas comunes son espectaculares y están muy bien cuidadas. Ha sido una muy buena experiencia vivir aquí.",
+    "usuario": "Florencia Guzman",
+    "primer_nombre": "Florencia",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "excelente ubicación",
+      "Atención del personal",
+      "Ubicación",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "nomad holley",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Después de 1 año viviendo acá puedo decir que no tengo ni una sola queja! ✨ me e mudado muchas veces en mi vida y administraciones así hay pocas, fueron muy amables y comprensivos durante mi estadía acá. Me demostraron ser humanos y…",
+    "usuario": "Javi Palacios",
+    "primer_nombre": "Javi",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "nomad holley",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Pude conocer este lugar y es maravilloso, no solo por su ubicacion estrategica en pleno providencia y cerca del metro, sino por la calidad de sus instalaciones, de verdad sorprende. Lo mejor es la vista que tienes desde el quincho",
+    "usuario": "miguel Belisario",
+    "primer_nombre": "miguel",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "quincho"
+    ],
     "comuna": "Providencia",
     "operador": "LarGroup"
   },
@@ -16508,6 +16745,25 @@
     "operador": "Greystar"
   },
   {
+    "edificio": "ronda santo domingo",
+    "fecha": "2026-09-01",
+    "score": 5.0,
+    "texto": "No puedo precipitarme por ser un nuevo residente pero si puedo destacar el estado de la propiedad, los espacio comunes y la accesibilidad a nivel de transporte que facilita está ubicación metro, micro, conectividad para autopista muy cerca,…",
+    "usuario": "Pierre Allais",
+    "primer_nombre": "Pierre",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Ubicación",
+      "Amenities"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Santiago",
+    "operador": "Greystar"
+  },
+  {
     "edificio": "soho barrio italia",
     "fecha": "2017-01-16 12:00:39",
     "score": 5.0,
@@ -18781,6 +19037,38 @@
     "temas": [
       "Diseño/calidad interior",
       "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Renovate Inmobiliaria"
+  },
+  {
+    "edificio": "soho barrio italia",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Muy cómodo, la organización del edificio es muy buena y es un agrado vivir acá, es acogedor y los problemas, que rara vez hay, se solucionan muy rapido.",
+    "usuario": "Alexandra González",
+    "primer_nombre": "Alexandra",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Ñuñoa",
+    "operador": "Renovate Inmobiliaria"
+  },
+  {
+    "edificio": "soho barrio italia",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "La administración y contacto con el equipo del edifico en general es a otro nivel, se siente uno realmente en una comunidad que te permite vivir tranquilo. Yo venía de otro multifamily, y en general es muy muy diferente, positivamente hablando.",
+    "usuario": "Ismael M",
+    "primer_nombre": "Ismael",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal"
     ],
     "amenidades": [],
     "comuna": "Ñuñoa",
@@ -23076,6 +23364,59 @@
     "operador": "Greystar"
   },
   {
+    "edificio": "somma inés de suárez",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Cinco estrellas al equipo. Cuatro capas son el equipo de administración. Tres accesos para estar de visita. Una dupla de lujo en recepción. Y una gran estrella es la bandera de Chile.",
+    "usuario": "Matías Infante Middleton",
+    "primer_nombre": "Matías",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Ubicación"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma inés de suárez",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Hoy tuve un tour y me pareció muy bonito, espero arrendar aunque no tenían departamentos de 1 dormitorio 1 baño, le comenté a mi ejecutiva que esperaré a que se liberen en octubre pero de que me quedo me quedo :)",
+    "usuario": "keep tomate",
+    "primer_nombre": "keep",
+    "sexo": "unknown",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior"
+    ],
+    "amenidades": [],
+    "comuna": "Providencia",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma inés de suárez",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Me encanta! Es muy tranquilo y con espacios comunes geniales. Muy agradecida de Yanis que siempre me ha atendido muy bien y resuelve todas mis dudas",
+    "usuario": "Vania Díaz Armijo",
+    "primer_nombre": "Vania",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Providencia",
+    "operador": "Greystar"
+  },
+  {
     "edificio": "somma las clarisas",
     "fecha": "2026-04-22",
     "score": 5.0,
@@ -23248,6 +23589,62 @@
       "gimnasio",
       "spa"
     ],
+    "comuna": "Las Condes",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma las clarisas",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Me encantó el edificio, es muy lindo y tiene espacios súper bien diseñados. Lamentablemente, el valor se escapa de mi presupuesto y no se ajusta a mis ingresos actuales. Si hubiera alguna posibilidad de conversar el precio, feliz lo podría considerar.",
+    "usuario": "rosangela perez",
+    "primer_nombre": "rosangela",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Diseño/calidad interior",
+      "Precio/Costo",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [
+      "spa"
+    ],
+    "comuna": "Las Condes",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma las clarisas",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Un amigo se mudó acá y fui a visitar piloto y excelentes unidades, el trato con la corredora excelente.",
+    "usuario": "Gilberto Paredes",
+    "primer_nombre": "Gilberto",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "Greystar"
+  },
+  {
+    "edificio": "somma las clarisas",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "El edificio es hermoso. Y la atención del personal es excelente!",
+    "usuario": "Francis",
+    "primer_nombre": "Francis",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Diseño/calidad interior",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
     "comuna": "Las Condes",
     "operador": "Greystar"
   },
@@ -32506,6 +32903,40 @@
     "operador": "LarGroup"
   },
   {
+    "edificio": "spot residence manquehue",
+    "fecha": "2026-10-01",
+    "score": 4.0,
+    "texto": "Siempre están muy atentos, educados y dispuestos a colaborar en todo lo que necesitamos. De hecho, las dificultades que hemos tenido se deben puramente a la logística que deben hacer las visitas para acceder a los estacionamientos y al…",
+    "usuario": "Michelle Raimondeau Aparicio",
+    "primer_nombre": "Michelle",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
+    "edificio": "spot residence manquehue",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Con mi familia estamos encantados del trato de todo el personal, las instalaciones son inigualables, la verdad es un agrado vivir aquí,",
+    "usuario": "Teresa Velásquez",
+    "primer_nombre": "Teresa",
+    "sexo": "female",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Atención del personal",
+      "Amenities",
+      "Felicitaciones"
+    ],
+    "amenidades": [],
+    "comuna": "Las Condes",
+    "operador": "LarGroup"
+  },
+  {
     "edificio": "switch vespucio",
     "fecha": "2023-05-25",
     "score": 5.0,
@@ -33922,6 +34353,22 @@
     "amenidades": [
       "spa"
     ],
+    "comuna": "Las Condes",
+    "operador": "Assetplan"
+  },
+  {
+    "edificio": "switch vespucio",
+    "fecha": "2026-10-01",
+    "score": 5.0,
+    "texto": "Viví durante 3 años en Switch 345, siendo de los primeros residentes de Torre Manquehue, y tuve una muy buena experiencia.…",
+    "usuario": "Jose Luis Ossa Valenzuela",
+    "primer_nombre": "Jose",
+    "sexo": "male",
+    "sentimiento": "Positiva",
+    "temas": [
+      "Otros"
+    ],
+    "amenidades": [],
     "comuna": "Las Condes",
     "operador": "Assetplan"
   },
