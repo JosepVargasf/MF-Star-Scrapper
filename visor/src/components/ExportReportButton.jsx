@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { exportFullReport } from '../lib/reportExport'
 import { exportToPowerPoint } from '../lib/pptxExport'
+import { exportLaminasInsitu } from '../lib/insituPptx'
 
-export default function ExportReportButton({ subtitle }) {
+export default function ExportReportButton({ subtitle, metrics, reviews }) {
   const [status, setStatus] = useState(null)
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
@@ -30,6 +31,7 @@ export default function ExportReportButton({ subtitle }) {
       {open && (
         <div className="topbar-export-menu">
           <button onClick={() => run(exportToPowerPoint)}>🖥️ PowerPoint (.pptx)</button>
+          <button onClick={() => run(o => exportLaminasInsitu({ ...o, metrics, reviews }))}>⭐ Láminas Estrellas INSITU (.pptx)</button>
           <button onClick={() => run(exportFullReport)}>📄 PDF</button>
         </div>
       )}

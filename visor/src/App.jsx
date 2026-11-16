@@ -139,7 +139,7 @@ function Dashboard({ user, onLogout }) {
           </div>
 
           {lastUpdate && <div className="topbar-badge">Datos a {lastUpdate}</div>}
-          <ExportReportButton subtitle={hasFilter ? `${filterComuna !== 'todas' ? filterComuna : ''} ${filterOperador !== 'todos' ? filterOperador : ''}`.trim() : undefined} />
+          <ExportReportButton metrics={metricsFiltradas} reviews={reviewsFiltradas} subtitle={hasFilter ? `${filterComuna !== 'todas' ? filterComuna : ''} ${filterOperador !== 'todos' ? filterOperador : ''}`.trim() : undefined} />
           <div className="topbar-user">
             <img src={user.photoURL} className="user-avatar" alt={user.displayName} referrerPolicy="no-referrer" />
             <span className="user-name">{user.displayName?.split(' ')[0]}</span>

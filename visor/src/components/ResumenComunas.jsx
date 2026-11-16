@@ -36,11 +36,6 @@ export default function ResumenComunas({ metrics, reviews }) {
     return [...ordered, ...rest]
   }, [edificioComuna])
 
-  // Mes más reciente en el dataset
-  const lastMonth = useMemo(() => {
-    return reviews.reduce((max, r) => r.fecha > max ? r.fecha : max, '').slice(0, 7)
-  }, [reviews])
-
   const rows = useMemo(() => comunas.map(comuna => {
     // métricas de edificios que pertenecen a esta comuna
     const mets = metrics.filter(m => edificioComuna[m.edificio] === comuna)
@@ -58,12 +53,11 @@ export default function ResumenComunas({ metrics, reviews }) {
       ? validPos.reduce((s, m) => s + m.pos_pct, 0) / validPos.length
       : null
 
-    const resMes = lastMonth
-      ? reviews.filter(r => r.comuna === comuna && r.fecha?.startsWith(lastMonth)).length
-      : null
+    // Igual que "Nuevas" en métricas y el KPI "Reseñas este mes"
+    const resMes = mets.reduce((s, m) => s + (m.nuevas_mes ?? 0), 0)
 
     return { comuna, edificios: edificios.length, totalReseñas, rating, posPct, resMes }
-  }), [metrics, reviews, comunas, edificioComuna, lastMonth])
+  }), [metrics, comunas, edificioComuna])
 
   if (!rows.length) return null
 
